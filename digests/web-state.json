@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-06-14T02:46:50.925Z",
+      "lastChecked": "2026-06-15T02:51:27.478Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -510,7 +510,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-06-14T02:46:51.254Z",
+      "lastChecked": "2026-06-15T02:51:27.800Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2578,11 +2578,13 @@
         "https://openai.com/index/academy-courses-applying-ai-at-work": "2026-06-12T10:00:00.000Z",
         "https://openai.com/index/academy-courses-applying-ai-at-work/": "2026-06-12T10:00:00.000Z",
         "https://openai.com/index/preply": "2026-06-12T00:00:00.000Z",
-        "https://openai.com/index/preply/": "2026-06-12T00:00:00.000Z"
+        "https://openai.com/index/preply/": "2026-06-12T00:00:00.000Z",
+        "https://openai.com/index/introducing-openai-partner-network": "2026-06-14T17:00:00.000Z",
+        "https://openai.com/index/introducing-openai-partner-network/": "2026-06-14T17:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-06-14T02:46:51.119Z",
+      "lastChecked": "2026-06-15T02:51:27.549Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
