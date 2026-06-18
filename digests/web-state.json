@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-06-17T00:38:08.348Z",
+      "lastChecked": "2026-06-18T00:39:17.369Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -510,7 +510,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-06-17T00:38:08.625Z",
+      "lastChecked": "2026-06-18T00:39:17.519Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2582,11 +2582,15 @@
         "https://openai.com/index/introducing-openai-partner-network": "2026-06-14T17:00:00.000Z",
         "https://openai.com/index/introducing-openai-partner-network/": "2026-06-14T17:00:00.000Z",
         "https://openai.com/index/deployment-simulation": "2026-06-16T00:00:00.000Z",
-        "https://openai.com/index/deployment-simulation/": "2026-06-16T00:00:00.000Z"
+        "https://openai.com/index/deployment-simulation/": "2026-06-16T00:00:00.000Z",
+        "https://openai.com/index/ai-chemist-improves-reaction": "2026-06-17T10:00:00.000Z",
+        "https://openai.com/index/ai-chemist-improves-reaction/": "2026-06-17T10:00:00.000Z",
+        "https://openai.com/index/introducing-life-sci-bench": "2026-06-17T00:00:00.000Z",
+        "https://openai.com/index/introducing-life-sci-bench/": "2026-06-17T00:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-06-17T00:38:08.457Z",
+      "lastChecked": "2026-06-18T00:39:17.578Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2749,7 +2753,15 @@
         "1Ng3fFBbnnbu6qxP1HMqpB": "2026-06-16T13:00:00.000Z",
         "1Ng3fFBbnnbu6qxP1HMqpB/": "2026-06-16T13:00:00.000Z",
         "https://blog.cloudflare.com/dmarc-management-ga/": "2026-06-16T13:00:00.000Z",
-        "https://blog.cloudflare.com/dmarc-management-ga": "2026-06-16T13:00:00.000Z"
+        "https://blog.cloudflare.com/dmarc-management-ga": "2026-06-16T13:00:00.000Z",
+        "48yPgdpb7RGTBdh4DPPCUF": "2026-06-17T19:35:00.000Z",
+        "48yPgdpb7RGTBdh4DPPCUF/": "2026-06-17T19:35:00.000Z",
+        "https://blog.cloudflare.com/agents-platform-flue-sdk/": "2026-06-17T19:35:00.000Z",
+        "https://blog.cloudflare.com/agents-platform-flue-sdk": "2026-06-17T19:35:00.000Z",
+        "1LDBKUul6cfW72f1DQaLyE": "2026-06-17T13:00:00.000Z",
+        "1LDBKUul6cfW72f1DQaLyE/": "2026-06-17T13:00:00.000Z",
+        "https://blog.cloudflare.com/cloudflare-one-stack/": "2026-06-17T13:00:00.000Z",
+        "https://blog.cloudflare.com/cloudflare-one-stack": "2026-06-17T13:00:00.000Z"
       }
     }
   }
