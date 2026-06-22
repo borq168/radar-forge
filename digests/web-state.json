@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-06-21T00:36:34.178Z",
+      "lastChecked": "2026-06-22T00:36:54.753Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -512,7 +512,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-06-21T00:36:34.546Z",
+      "lastChecked": "2026-06-22T00:36:55.098Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2594,11 +2594,13 @@
         "https://openai.com/index/improving-health-intelligence-in-chatgpt": "2026-06-18T11:00:00.000Z",
         "https://openai.com/index/improving-health-intelligence-in-chatgpt/": "2026-06-18T11:00:00.000Z",
         "https://openai.com/index/diagnose-rare-childhood-diseases": "2026-06-18T08:00:00.000Z",
-        "https://openai.com/index/diagnose-rare-childhood-diseases/": "2026-06-18T08:00:00.000Z"
+        "https://openai.com/index/diagnose-rare-childhood-diseases/": "2026-06-18T08:00:00.000Z",
+        "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment": "2026-06-21T23:00:00.000Z",
+        "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/": "2026-06-21T23:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-06-21T00:36:34.297Z",
+      "lastChecked": "2026-06-22T00:36:54.832Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
