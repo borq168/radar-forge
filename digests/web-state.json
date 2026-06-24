@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-06-23T00:34:21.704Z",
+      "lastChecked": "2026-06-24T00:28:54.033Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -512,7 +512,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-06-23T00:34:21.759Z",
+      "lastChecked": "2026-06-24T00:28:53.983Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2602,11 +2602,17 @@
         "https://openai.com/index/patch-the-planet": "2026-06-22T10:00:00.000Z",
         "https://openai.com/index/patch-the-planet/": "2026-06-22T10:00:00.000Z",
         "https://openai.com/index/codex-maxxing-long-running-work": "2026-06-22T00:00:00.000Z",
-        "https://openai.com/index/codex-maxxing-long-running-work/": "2026-06-22T00:00:00.000Z"
+        "https://openai.com/index/codex-maxxing-long-running-work/": "2026-06-22T00:00:00.000Z",
+        "https://openai.com/index/gpt-5-immunology-mystery": "2026-06-23T17:00:00.000Z",
+        "https://openai.com/index/gpt-5-immunology-mystery/": "2026-06-23T17:00:00.000Z",
+        "https://openai.com/index/helping-build-shared-standards-for-advanced-ai": "2026-06-23T13:00:00.000Z",
+        "https://openai.com/index/helping-build-shared-standards-for-advanced-ai/": "2026-06-23T13:00:00.000Z",
+        "https://openai.com/index/omio": "2026-06-23T00:00:00.000Z",
+        "https://openai.com/index/omio/": "2026-06-23T00:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-06-23T00:34:21.782Z",
+      "lastChecked": "2026-06-24T00:28:54.010Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2793,7 +2799,11 @@
         "5X4Vz9KDcjIBXgHIFSuJFZ": "2026-06-22T18:00:00.000Z",
         "5X4Vz9KDcjIBXgHIFSuJFZ/": "2026-06-22T18:00:00.000Z",
         "https://blog.cloudflare.com/hyper-bug/": "2026-06-22T18:00:00.000Z",
-        "https://blog.cloudflare.com/hyper-bug": "2026-06-22T18:00:00.000Z"
+        "https://blog.cloudflare.com/hyper-bug": "2026-06-22T18:00:00.000Z",
+        "6ecffq4Al52D0ka1U4p2OR": "2026-06-23T18:25:18.000Z",
+        "6ecffq4Al52D0ka1U4p2OR/": "2026-06-23T18:25:18.000Z",
+        "https://blog.cloudflare.com/post-quantum-eo-2026/": "2026-06-23T18:25:18.000Z",
+        "https://blog.cloudflare.com/post-quantum-eo-2026": "2026-06-23T18:25:18.000Z"
       }
     }
   }
