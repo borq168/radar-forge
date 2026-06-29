@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-06-28T00:32:05.093Z",
+      "lastChecked": "2026-06-29T00:33:40.501Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -514,7 +514,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-06-28T00:32:05.358Z",
+      "lastChecked": "2026-06-29T00:33:40.445Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2616,11 +2616,13 @@
         "https://openai.com/index/how-agents-are-transforming-work": "2026-06-25T02:00:00.000Z",
         "https://openai.com/index/how-agents-are-transforming-work/": "2026-06-25T02:00:00.000Z",
         "https://openai.com/index/previewing-gpt-5-6-sol": "2026-06-26T10:00:00.000Z",
-        "https://openai.com/index/previewing-gpt-5-6-sol/": "2026-06-26T10:00:00.000Z"
+        "https://openai.com/index/previewing-gpt-5-6-sol/": "2026-06-26T10:00:00.000Z",
+        "https://openai.com/index/hp-frontier-partnership": "2026-06-28T17:00:00.000Z",
+        "https://openai.com/index/hp-frontier-partnership/": "2026-06-28T17:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-06-28T00:32:05.193Z",
+      "lastChecked": "2026-06-29T00:33:40.477Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
