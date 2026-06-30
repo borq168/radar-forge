@@ -1,6 +1,6 @@
 # OpenClaw Ecosystem Digest 2026-06-30
 
-> Issues: 354 | PRs: 500 | Projects covered: 4 | Generated: 2026-06-29 22:49 UTC
+> Issues: 375 | PRs: 500 | Projects covered: 4 | Generated: 2026-06-30 00:32 UTC
 
 - [OpenClaw](https://github.com/openclaw/openclaw)
 - [NanoBot](https://github.com/HKUDS/nanobot)
@@ -14,62 +14,63 @@
 # OpenClaw Project Digest: 2026-06-30
 
 ## 1. Today's Activity Brief
-Over the past 24 hours, OpenClaw recorded 354 updated issues (277 open/active, 77 closed) and 500 updated pull requests (443 open, 57 merged/closed). The project published `v2026.6.11-beta.2`, introducing enhanced channel control features like Slack relay mode and native Mattermost commands. Maintainer activity heavily focused on hardening the agent-core against unreadable tool descriptors, resolving subagent delivery cascades, and addressing provider-specific latency regressions.
+On 2026-06-30, OpenClaw saw high development velocity with 375 issues updated (304 open/active, 71 closed) and 500 pull requests updated (447 open, 53 merged/closed). Activity heavily concentrated on channel integration hardening (Telegram, Discord, Signal, iMessage), session state and transcript storage refactoring, and tool schema validation. No new releases were published today.
 
 ## 2. Releases
-- **v2026.6.11-beta.2**:
-  - **Highlights**: Expanded channel control capabilities, including Slack relay mode, native Mattermost `/oc_queue` support, and per-DM model overrides to facilitate channel automation and tuning (#94707, #95546, #95120).
+None.
 
 ## 3. Project Progress
-- **Merged/Closed PRs & Issues**:
-  - Fixed Ollama Cloud tool calls failing on the second turn due to JSON object serialization in replay ([#96474](https://github.com/openclaw/openclaw/pull/96474)).
-  - Resolved an issue where heartbeat-driven agent replies left `pendingFinalDelivery` stuck, blocking subsequent heartbeats ([#83184](https://github.com/openclaw/openclaw/issues/83184)).
-  - Fixed the GitHub Copilot provider where a static default model list shadowed live entitlement discovery ([#88548](https://github.com/openclaw/openclaw/issues/88548)).
-  - Addressed a memory search failure where `scopeHash` mismatched after a `--force` rebuild ([#91592](https://github.com/openclaw/openclaw/issues/91592)).
-  - Closed a performance bug causing a silent ~48s gap between `embedded run done` and `lane task done` on Discord turns ([#85822](https://github.com/openclaw/openclaw/issues/85822)).
-  - Required admin or explicit owner authority before Talk Voice persists a new voice selection to prevent unauthorized changes ([#97874](https://github.com/openclaw/openclaw/pull/97874)).
+Today saw 53 PRs merged/closed and 71 issues closed, reflecting significant cleanup and stabilization efforts.
+*   **Closed Issues**: Notable resolutions include [#81525](https://github.com/openclaw/openclaw/issues/81525) (media-understanding silently routing images to non-vision models), [#88548](https://github.com/openclaw/openclaw/issues/88548) (GitHub Copilot static default model list shadowing live discovery), [#91592](https://github.com/openclaw/openclaw/issues/91592) (`memory_search` "index scope changed" error after force rebuild), and [#95500](https://github.com/openclaw/openclaw/issues/95500) (plugin model provider resolution failing in isolated cron sessions).
+*   **Merged/Closed PRs**: Includes [#95051](https://github.com/openclaw/openclaw/pull/95051) and [#97875](https://github.com/openclaw/openclaw/pull/97875), which address delivering durable reasoning replies for Telegram.
+*   **Advancing Open PRs**: Major architectural PRs progressing include [#96625](https://github.com/openclaw/openclaw/pull/96625) (refactoring sessions and transcripts to SQLite storage, XL size) and [#89469](https://github.com/openclaw/openclaw/pull/89469) (inheriting requester model for subagents). A large batch of schema and tool-list hardening PRs by @vincentkoc (e.g., [#89539](https://github.com/openclaw/openclaw/pull/89539), [#89529](https://github.com/openclaw/openclaw/pull/89529), [#89493](https://github.com/openclaw/openclaw/pull/89493)) are also advancing through review.
 
 ## 4. Community Hot Topics
-- **Linux/Windows Clawdbot Apps** ([#75](https://github.com/openclaw/openclaw/issues/75)): With 110 comments and 81 👍, this long-standing issue requests feature-parity desktop apps for Linux and Windows, matching the existing macOS/iOS/Android nodes.
-- **Session write-lock timeouts block subagent delivery lanes** ([#86538](https://github.com/openclaw/openclaw/issues/86538)): 18 comments. Users report that JSONL write-lock timeouts block main and subagent lanes, surfacing as delivery failures without sufficient owner diagnostics.
-- **QA tool-defaults suite conflates Codex-native tools** ([#80319](https://github.com/openclaw/openclaw/issues/80319)): 17 comments. Clarifies that a perceived broad Codex runtime tool dropout was actually a QA harness/mock-provider architecture issue rather than a runtime failure.
-- **Telegram messages silently dropped** ([#80520](https://github.com/openclaw/openclaw/issues/80520)): 11 comments. The gateway processes messages but fails to log or execute the `sendMessage` API call, resulting in lost replies and user confusion.
+*   **Cross-Platform Desktop Apps**: Issue [#75](https://github.com/openclaw/openclaw/issues/75) (Linux/Windows Clawdbot Apps) remains the most active discussion with 110 comments and 81 👍. Users are requesting feature parity with the existing macOS/iOS/Android apps.
+*   **Session State & Concurrency**: Issue [#86538](https://github.com/openclaw/openclaw/issues/86538) (Session write-lock timeouts block subagent delivery lanes) has 18 comments, highlighting architectural bottlenecks in session JSONL write-locks affecting subagent and cron lanes.
+*   **DeepSeek Caching Regression**: Issue [#94518](https://github.com/openclaw/openclaw/issues/94518) (DeepSeek cache hit rate <10% after 6.x upgrade) has 8 👍 and 6 comments, with users reporting that boundary-aware caching broke prefix matching for DeepSeek V4 models.
 
 ## 5. Bugs & Stability
-*Severity: High (P1 / Message Loss / Regressions)*
-- **Node v26 Gzip Regression**: Discord and other HTTP responses fail with `Unexpected token '\u001f'` because gzip is not decompressed under Node v26 on macOS ([#79752](https://github.com/openclaw/openclaw/issues/79752)).
-- **DeepSeek Cache Hit Drop**: Cache hit rate fell below 10% after the 6.x upgrade due to boundary-aware caching breaking prefix matching ([#94518](https://github.com/openclaw/openclaw/issues/94518)).
-- **Empty-Error-Retry Blocked**: Transient 5xx errors silently fail if any prior tool call in the session set `hadPotentialSideEffects` to true ([#97877](https://github.com/openclaw/openclaw/issues/97877)).
-- **Subagent Completion Routing**: Subagent completion spawns a fresh run on the parent's route instead of resuming the yielded session ([#81490](https://github.com/openclaw/openclaw/issues/81490)).
-- **Silent Drops on Quota Rejection**: Followup agents silently drop messages when hitting billing/quota limits, providing no user-facing notice ([#80700](https://github.com/openclaw/openclaw/issues/80700)).
-- **CLI Cold-Start Regression**: CLI commands take ~14s to complete after the 2026.5.12 update on Linux ([#82070](https://github.com/openclaw/openclaw/issues/82070)).
+**Message Delivery & Silent Drops**
+*   [#80520](https://github.com/openclaw/openclaw/issues/80520): Telegram messages silently dropped with no `sendMessage` logged (P1).
+*   [#81484](https://github.com/openclaw/openclaw/issues/81484): Discord guild reply regression causing malformed send payloads and repeated outbound loops (P1).
+*   [#80700](https://github.com/openclaw/openclaw/issues/80700): Followup agent silent-drops on billing/quota rejection without user-facing notice (P1).
 
-*Severity: Medium (P2 / Provider & Tooling)*
-- **Codex OAuth Latency**: Trivial `gpt-5.5` turns through the Codex/OAuth path spend ~28s after prompt submission ([#95121](https://github.com/openclaw/openclaw/issues/95121)).
-- **macOS TCC Permission Spam**: The macOS app rebuilds `CLLocationManager` every second, causing continuous TCC permission requests ([#94147](https://github.com/openclaw/openclaw/issues/94147)).
-- **Tool Output Degradation**: Normal tool text outputs degrade to `(see attached image)` placeholders in agent context ([#96857](https://github.com/openclaw/openclaw/issues/96857)).
-- **MiniMax Usage Semantics**: Usage count field semantics are inverted, displaying % left as % used ([#81156](https://github.com/openclaw/openclaw/issues/81156)).
+**Latency & Performance Regressions**
+*   [#82070](https://github.com/openclaw/openclaw/issues/82070): CLI commands experiencing ~14s cold-start regression after 2026.5.12 update (P1).
+*   [#95121](https://github.com/openclaw/openclaw/issues/95121): Codex OAuth/Appserver turns spending ~28s after prompt submission for tiny replies (P2).
+*   [#80607](https://github.com/openclaw/openclaw/issues/80607): Non-default multi-agent uses `embedded_run` instead of direct session, causing 10-17s latency (P2).
+
+**Runtime & Execution Failures**
+*   [#91363](https://github.com/openclaw/openclaw/issues/91363): Isolated cron consistently fails with "LLM request failed" on model-call-started phase (P1).
+*   [#97877](https://github.com/openclaw/openclaw/issues/97877): `empty-error-retry` blocked by `hadPotentialSideEffects`, causing silent terminal failures on transient 5xx errors (P1).
+*   [#79752](https://github.com/openclaw/openclaw/issues/79752): Discord HTTP responses fail with gzip not decompressed under Node v26 on macOS (P1).
+
+**Security & Authorization Fixes (Open PRs)**
+*   [#97961](https://github.com/openclaw/openclaw/pull/97961): fix(imessage): require authorization for group actions (P0).
+*   [#97952](https://github.com/openclaw/openclaw/pull/97952): fix(codex): require admin for native controls.
+*   [#97944](https://github.com/openclaw/openclaw/pull/97944): fix(exec): harden script preflight carrier unwrapping to prevent shell-bleed patterns.
 
 ## 6. Feature Request Clusters
-- **Channel & Gateway Architecture**:
-  - Support for Telegram's new bot-to-bot and guest-bot modes released in May 2026 ([#79077](https://github.com/openclaw/openclaw/issues/79077)).
-  - Request for a "Gateway-lite" mode that runs channel gateways, webhooks, and cron without loading the AI harness for deterministic deployments ([#86881](https://github.com/openclaw/openclaw/issues/86881)).
-  - Addition of a `before_route_inbound_message` hook for pre-routing interception ([#81061](https://github.com/openclaw/openclaw/issues/81061)).
-- **Plugin & Skill SDK**:
-  - Exposing a stable public SDK surface for plugins operating on installed skills ([#81913](https://github.com/openclaw/openclaw/issues/81913)).
-  - Adding a `setup.script` hook in SKILL.md frontmatter for post-install/update scripts ([#80213](https://github.com/openclaw/openclaw/issues/80213)).
-- **Session & State Management**:
-  - Adding companion-friendly SQLite transcript/session seams on top of the database-first runtime ([#79902](https://github.com/openclaw/openclaw/issues/79902)).
-  - Implementing a JSONL session-replay harness for testing agents against real session histories ([#80176](https://github.com/openclaw/openclaw/issues/80176)).
+*   **Channel-Specific Enhancements**:
+    *   *Telegram*: [#79077](https://github.com/openclaw/openclaw/issues/79077) requests support for Telegram's May-7 bot-to-bot and guest-bot modes. PR [#97806](https://github.com/openclaw/openclaw/pull/97806) lays the bot-to-bot policy foundation.
+    *   *Signal*: PR [#95718](https://github.com/openclaw/openclaw/pull/95718) adds native Signal reply quotes.
+    *   *Discord*: PR [#96106](https://github.com/openclaw/openclaw/pull/96106) surfaces Anthropic reasoning and pre-tool commentary on Discord.
+*   **Plugin & Skill Ecosystem**:
+    *   [#80213](https://github.com/openclaw/openclaw/issues/80213) requests a skill author-defined setup hook (`setup.script` in SKILL.md) for post-install scripts.
+    *   [#81913](https://github.com/openclaw/openclaw/issues/81913) requests a stable plugin SDK surface for installed skill workflows to prevent reliance on internal `src/agents/*` paths.
+*   **Subagent & Routing Architecture**:
+    *   [#81061](https://github.com/openclaw/openclaw/issues/81061) requests a `before_route_inbound_message` hook for pre-routing interception.
+    *   PR [#89469](https://github.com/openclaw/openclaw/pull/89469) introduces model inheritance for subagents (`model: "inherit"`).
 
 ## 7. User Feedback Summary
-- **Pain Points**: Users are experiencing significant latency regressions, notably a 10-15s synchronous block during the embedded-run "auth" stage ([#75782](https://github.com/openclaw/openclaw/issues/75782)) and a 14s CLI cold-start overhead ([#82070](https://github.com/openclaw/openclaw/issues/82070)). Message loss remains a critical frustration, with Telegram messages dropping silently ([#80520](https://github.com/openclaw/openclaw/issues/80520)) and Discord guild replies entering repeated outbound loops ([#81484](https://github.com/openclaw/openclaw/issues/81484)). The Node v26 upgrade silently breaking gzip decompression has caused unexpected HTTP parsing failures for Discord users ([#79752](https://github.com/openclaw/openclaw/issues/79752)).
-- **Use Cases**: Developers are building deterministic, non-AI deployments using OpenClaw purely for webhook and cron routing ([#86881](https://github.com/openclaw/openclaw/issues/86881)). There is also active development of companion apps that require direct SQLite access to session transcripts without scraping opaque blobs ([#79902](https://github.com/openclaw/openclaw/issues/79902)).
+Users are expressing frustration over "silent drops" where messages fail to deliver or retry without notifying the sender across Telegram, Discord, and quota rejections. Latency is a major pain point, with multiple independent reports of 10-28 second delays in CLI cold starts, Codex OAuth turns, and multi-agent embedded runs. The Node v26 upgrade has caused unexpected gzip decompression failures for some macOS users. Conversely, there is strong and sustained demand for Linux and Windows desktop clients to match the macOS experience.
 
 ## 8. Backlog Watch
-- **Linux/Windows Clawdbot Apps** ([#75](https://github.com/openclaw/openclaw/issues/75)): Opened on 2026-01-01, this remains the most commented and upvoted issue, highlighting a persistent gap in cross-platform desktop support.
-- **Pre-routing Interception Hook** ([#81061](https://github.com/openclaw/openclaw/issues/81061)): Opened on 2026-05-12. The lack of a `before_route_inbound_message` hook limits channel bridging and proxying architectures, requiring maintainer product decisions.
-- **CLI Subagent Metadata** ([#80286](https://github.com/openclaw/openclaw/issues/80286)): Opened on 2026-05-10. `sessions --json` missing `spawnedBy` and `status` fields blocks external tools from reasoning about subagent lineage.
+*   [#75](https://github.com/openclaw/openclaw/issues/75): Linux/Windows Clawdbot Apps (Open since 2026-01-01, 110 comments, P2) - High community interest but lacks maintainer implementation.
+*   [#81061](https://github.com/openclaw/openclaw/issues/81061): Hook: `before_route_inbound_message` (Open since 2026-05-12, marked stale, P2) - Architectural request for pre-routing interception.
+*   [#80176](https://github.com/openclaw/openclaw/issues/80176): JSONL session-replay harness (Open since 2026-05-10, P3) - Part of the Codex×Pi parity Phase 5, waiting on drift classifier dependency.
+*   [#80040](https://github.com/openclaw/openclaw/issues/80040): Cascading failure involving invalidated OAuth, duplicate tool execution, and cold-cache bootstrap (Open since 2026-05-10, P2) - Complex multi-part bug needing product decision.
 
 ---
 
@@ -78,44 +79,46 @@ Over the past 24 hours, OpenClaw recorded 354 updated issues (277 open/active, 7
 # Cross-Project Ecosystem Report: 2026-06-30
 
 ## 1. Daily Cross-Project Overview
-On 2026-06-30, the tracked AI agent ecosystem exhibited highly asymmetric activity levels, with OpenClaw dominating in volume while NanoBot, Zeroclaw, and PicoClaw maintained focused, lower-volume development. OpenClaw was the only project to publish a new release, emphasizing channel control and gateway automation, whereas the other projects concentrated on advancing PR pipelines without new releases. Cross-project technical efforts heavily targeted LLM inference cost reduction, multi-agent/subagent routing complexities, and the expansion of decentralized or niche messaging gateways.
+On 2026-06-30, the tracked AI agent ecosystem saw no new releases, with development efforts concentrated on messaging channel integrations, context optimization, and execution security patching. OpenClaw dominated the activity volume, focusing heavily on multi-channel delivery hardening and session storage refactoring, while NanoBot and Zeroclaw addressed critical execution security vulnerabilities and provider compatibility bugs. PicoClaw maintained a smaller footprint, prioritizing privacy-centric messaging gateways and LLM cost-tracking features. Overall, cross-project friction points today centered around silent message drops, context/token cost management, and tool-call serialization errors.
 
 ## 2. Activity Comparison
 
-| Project | Issues Updated | PRs Updated | Release Status | Activity Note |
+| Project | Issues Updated | PRs Updated | Releases | Activity Note |
 | :--- | :--- | :--- | :--- | :--- |
-| **OpenClaw** | 354 | 500 | `v2026.6.11-beta.2` | High volume; focus on channel control, subagent routing, and provider latency regressions. |
-| **Zeroclaw** | 50 | 50 | None | Moderate volume; focus on SOP event engine, WASM plugins, and reasoning model tool serialization. |
-| **NanoBot** | 5 | 31 | None | Moderate PR activity; focus on security hardening, A2A delegation, and context compaction. |
-| **PicoClaw** | 3 | 3 | None | Low volume; focus on decentralized messaging gateways and AWS Bedrock cost optimization. |
+| **OpenClaw** | 375 | 500 | None | High velocity; channel hardening, session refactoring, schema validation. |
+| **NanoBot** | 7 | 32 | None | Moderate; context optimization, A2A delegation, security patches. |
+| **Zeroclaw** | 50 | 50 | None | Moderate; provider compatibility, WASM plugins, channel integrations. |
+| **PicoClaw** | 3 | 3 | None | Low; privacy gateways, LLM cost tracking, minor bug closures. |
 
 ## 3. OpenClaw Compared With Peers
-*   **Activity Volume:** OpenClaw’s daily footprint (354 issues, 500 PRs) dwarfs the other three projects combined. This indicates a significantly larger maintainer workforce and a broader user base generating diverse bug reports and feature requests.
-*   **Technical Focus:** OpenClaw's development is heavily oriented toward broad channel integration (Slack, Mattermost, Telegram) and runtime hardening (Node v26 regressions, session write-locks). In contrast, peers are more specialized: Zeroclaw is building structured execution (SOP) and WASM isolation, NanoBot is optimizing context windows and local execution security, and PicoClaw is integrating privacy-centric gateways.
-*   **Community Surface Area:** OpenClaw’s community reports a wide array of environmental regressions (CLI cold starts, macOS TCC spam, Discord gzip failures). Peer communities have tighter, more specific feedback loops, such as NanoBot users scrutinizing Docker image bloat and API costs, or Zeroclaw users reporting TUI keybinding friction and Telegram quickstart failures.
+*   **Activity Volume**: OpenClaw’s development velocity (375 issues, 500 PRs) vastly exceeds its peers, indicating a much larger maintainer and contributor base. Zeroclaw maintains a steady mid-tier pace (50/50), while NanoBot (7/32) and PicoClaw (3/3) operate with significantly smaller daily footprints.
+*   **Technical Focus**: OpenClaw is currently deep in architectural refactoring (migrating session states to SQLite) and hardening complex multi-channel delivery pipelines. In contrast, NanoBot is focused on agent-to-agent (A2A) mechanics and context compaction, Zeroclaw is advancing a WASM plugin architecture and broad provider compatibility, and PicoClaw is targeting decentralized messaging and edge cost-tracking.
+*   **Community Surface Area**: OpenClaw’s community is highly active and demanding, driving massive discussion threads for cross-platform desktop parity and reporting complex concurrency/latency regressions. The peer projects have more focused communities dealing with specific integration friction, security bypasses, or niche protocol requests.
 
 ## 4. Shared Technical Focus Areas
-*   **Inference Cost & Context Optimization:** Multiple projects are actively addressing token costs and context limits. NanoBot is developing standalone compaction modules for large tool outputs (#4581, #4588) and fixing prompt caching invalidation (#4222). PicoClaw is implementing AWS Bedrock prompt caching (#3163) and per-turn token telemetry (#3156). OpenClaw is addressing a DeepSeek cache hit drop regression (#94518).
-*   **Multi-Agent & Subagent Routing:** The ecosystem is moving beyond simple agent spawning to complex routing. OpenClaw is fixing subagent completion routing (#81490) and session write-lock timeouts (#86538). NanoBot is introducing Agent-to-Agent (A2A) peer delegation with depth guards (#4571). Zeroclaw is proposing A2A discovery via `.well-known/agent-card.json` (#7218).
-*   **Messaging Gateway Expansion:** All projects are expanding their communication surfaces. OpenClaw added Slack relay and Mattermost support in its latest release. Zeroclaw is adding native Inkbox and WhatsApp Web location support. PicoClaw is integrating decentralized protocols like DeltaChat, SimpleX, and Tox.
+*   **Messaging Channel Integrations & Delivery**: All projects are actively expanding or fixing messaging gateways. OpenClaw is hardening Telegram, Discord, Signal, and iMessage; Zeroclaw is adding Inkbox and GitHub channels while fixing WhatsApp and Telegram; PicoClaw has an open PR for DeltaChat and user requests for SimpleX/Tox.
+*   **Silent Drops & Message Routing Failures**: Message delivery reliability is a shared pain point. OpenClaw users report silent drops on Telegram/Discord and quota rejections; Zeroclaw users report agents sending literal "NO_REPLY" strings or empty messages; NanoBot is fixing a WeChat relay bug that silently drops streaming `tool_use` IDs.
+*   **Context, Token Costs, and Caching**: Managing LLM operational costs is driving updates across the board. NanoBot is merging context compaction modules and fixing prompt-caching invalidations; PicoClaw has open PRs for AWS Bedrock prompt caching and per-turn token tracking; OpenClaw is troubleshooting a DeepSeek cache hit rate regression.
+*   **Subagent & Multi-Agent Architecture**: OpenClaw is advancing subagent model inheritance and pre-routing hooks, while NanoBot is introducing native A2A peer delegation and configurable model presets for subagents.
 
 ## 5. Differentiation Analysis
-*   **Feature Focus:** OpenClaw focuses on enterprise-grade channel automation, session state management, and broad provider compatibility. Zeroclaw emphasizes deterministic, structured execution via its SOP event engine and secure WASM-based plugins. NanoBot targets lightweight, secure local execution with aggressive memory and context hygiene. PicoClaw focuses on privacy-centric messaging and strict cost/usage telemetry.
-*   **Target Users:** OpenClaw serves power users and developers needing extensive channel bridging and complex subagent orchestration. Zeroclaw appeals to developers building structured workflows and secure, isolated tool environments. NanoBot serves cost-conscious developers needing secure local execution. PicoClaw attracts privacy-focused users and those integrating with decentralized networks.
-*   **Technical Architecture:** OpenClaw utilizes a database-first runtime with JSONL/SQLite session seams. Zeroclaw is pushing a WASM-first plugin architecture and an event-driven SOP engine. NanoBot relies on a Python/Node.js stack with standalone compaction modules. PicoClaw operates as a lightweight gateway focusing on specific provider API integrations.
+*   **Feature Focus**: OpenClaw prioritizes omnichannel delivery, persistent session state, and complex routing. NanoBot emphasizes lightweight execution, A2A delegation, and context microcompacting. Zeroclaw focuses on extensible WASM plugins, broad provider support, and Standard Operating Procedure (SOP) engines. PicoClaw targets privacy/decentralized messaging and granular LLM observability.
+*   **Target Users**: OpenClaw targets power users needing robust, persistent multi-channel assistants with desktop app parity. NanoBot targets developers needing cost-efficient, highly delegating background agents. Zeroclaw targets enterprise/prosumer users needing extensible plugin ecosystems and procedural memory. PicoClaw targets privacy-conscious users and edge-deployment scenarios.
+*   **Technical Architecture**: OpenClaw relies on heavy session state management (transitioning to SQLite) and complex delivery lanes. NanoBot utilizes filesystem queues and aggressive context truncation to maintain a lightweight footprint. Zeroclaw is building a WASM-first plugin host with OCI registries. PicoClaw focuses on lightweight web panels and direct provider API integrations.
 
 ## 6. Community Activity Notes
-*   **Tier 1 (High Activity):** **OpenClaw** (354 issues, 500 PRs, 1 release). The sheer volume of updates and the publication of a beta release demonstrate a large, highly active maintainer and user base.
-*   **Tier 2 (Moderate Activity):** **Zeroclaw** (50 issues, 50 PRs) and **NanoBot** (5 issues, 31 PRs). Zeroclaw shows balanced issue/PR engagement. NanoBot shows high PR throughput relative to its low issue count, indicating active internal or contributor-driven development rather than high user-reported friction.
-*   **Tier 3 (Low Activity):** **PicoClaw** (3 issues, 3 PRs). Minimal daily footprint, suggesting a smaller community or a project in a quiet maintenance and niche development phase.
+*   **Tier 1 (High Activity)**: **OpenClaw**. With 375 issues and 500 PRs updated, it exhibits massive ongoing development, high community reporting volume, and complex architectural debates.
+*   **Tier 2 (Moderate Activity)**: **Zeroclaw** and **NanoBot**. Both show steady development and active bug triage. Zeroclaw (50/50) is heavily focused on provider/channel integrations, while NanoBot (7/32) is pushing concentrated PR batches for security and context optimization.
+*   **Tier 3 (Low Activity)**: **PicoClaw**. With only 3 issues and 3 PRs updated, daily movement is minimal, consisting mostly of stale or slow-moving feature requests and minor bug closures.
+*   *Note: No projects in the tracked ecosystem published new releases today.*
 
 ## 7. Evidence-Backed Observations
-1.  **Inference cost and context window management are immediate, shared priorities.**
-    *Evidence:* NanoBot’s context compaction PRs (#4581, #4588) and prompt caching fixes (#4222); PicoClaw’s AWS Bedrock caching PR (#3163) and token telemetry (#3156); OpenClaw’s DeepSeek cache hit regression (#94518).
-2.  **Multi-agent architectures are transitioning from simple background spawning to complex, guarded routing and delegation.**
-    *Evidence:* OpenClaw fixing subagent completion routing (#81490) and session write-locks (#86538); NanoBot introducing A2A peer delegation with cross-delegation depth guards (#4571); Zeroclaw proposing A2A discovery standards (#7218).
-3.  **Security and execution containment remain critical friction points in agent tooling.**
-    *Evidence:* NanoBot patching an ExecTool workspace bypass (#4592) and MCP credential leakage (#4584); Zeroclaw enforcing payload safety ingress for its SOP engine (#8502) and pushing WASM-first plugins (#8135) for runtime isolation.
+*   **Observation 1: Messaging channel reliability and silent failures are primary ecosystem pain points.**
+    *Evidence*: OpenClaw reports P1 silent drops on Telegram/Discord and followup agent quota rejections; Zeroclaw reports agents sending literal "NO_REPLY" strings and empty messages when conditions aren't met; NanoBot is patching a WeChat relay bug that silently drops tool IDs.
+*   **Observation 2: LLM context limits and token costs are driving immediate architectural optimizations.**
+    *Evidence*: NanoBot merged fixes for prompt-caching invalidation and opened PRs for standalone command-output compaction; PicoClaw opened PRs for AWS Bedrock prompt caching and per-turn token tracking; OpenClaw is actively debugging a DeepSeek V4 cache hit rate regression.
+*   **Observation 3: Execution containment and credential security require continuous patching across agent frameworks.**
+    *Evidence*: NanoBot is patching an `ExecTool` path extraction bypass and MCP credential leakage; Zeroclaw is fixing a WASM plugin mutex poison and gating sub-tool execution with access policies; OpenClaw is hardening script preflight carrier unwrapping to prevent shell-bleed patterns.
 
 ---
 
@@ -124,130 +127,145 @@ On 2026-06-30, the tracked AI agent ecosystem exhibited highly asymmetric activi
 <details>
 <summary><strong>NanoBot</strong> — <a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></summary>
 
-## Today's Activity Brief
-In the last 24 hours, NanoBot saw updates across 5 issues (3 open, 2 closed) and 31 pull requests (21 open, 10 merged/closed). Development activity is heavily concentrated on security hardening for execution and MCP integrations, context window optimization to reduce API token costs, and advancing multi-agent (A2A) collaboration capabilities. Several WebUI enhancements and provider configuration fixes are also actively in review.
+# NanoBot Project Digest: 2026-06-30
 
-## Project Progress
-While no new releases were published, several foundational features and fixes advanced through the PR pipeline:
-- **Multi-Agent & Subagents**: PR [#4571](https://github.com/HKUDS/nanobot/pull/4571) introduces native Agent-to-Agent (A2A) peer delegation with cross-delegation depth guards, moving beyond simple background spawning.
-- **WebUI Enhancements**: PR [#4587](https://github.com/HKUDS/nanobot/pull/4587) adds Markdown export for WebUI sessions, and PR [#4586](https://github.com/HKUDS/nanobot/pull/4586) enables session timestamps by default.
-- **Provider & Gateway**: PR [#4578](https://github.com/HKUDS/nanobot/pull/4578) adds provider-scoped proxy configurations for OpenAI-compatible clients. PR [#4502](https://github.com/HKUDS/nanobot/pull/4502) (gateway webhook triggers) was closed, and PR [#4570](https://github.com/HKUDS/nanobot/pull/4570) (per-subagent model override) was closed as a duplicate of broader A2A efforts.
+## 1. Today's Activity Brief
+In the last 24 hours, NanoBot saw moderate activity with 7 issues updated (4 open, 3 closed) and 32 pull requests updated (22 open, 10 merged/closed). Development efforts heavily focused on context window optimization, subagent/Agent-to-Agent (A2A) delegation mechanics, and patching security/stability bugs in the execution and configuration pipelines. Additionally, several PRs were introduced to improve WebUI functionalities and refine the "Dream" memory consolidation prompts.
 
-## Community Hot Topics
-- **Docker Image Bloat vs. "Ultra-lightweight" Claim**: Issue [#660](https://github.com/HKUDS/nanobot/issues/660) generated the most discussion (15 comments, 5 👍) regarding the contradiction between the project's "ultra-lightweight" description and its Dockerfile requiring both Python and Node.js. The issue is now closed.
-- **Reasoning Effort Escalation**: Issue [#4419](https://github.com/HKUDS/nanobot/issues/4419) requests a feature to automatically escalate the `reasoningEffort` parameter for reasoning models based on task complexity, highlighting user interest in dynamic compute allocation.
+## 2. Releases
+No new releases were published in the last 24 hours.
 
-## Bugs & Stability
-- **[Security] ExecTool Workspace Bypass**: Issue [#4592](https://github.com/HKUDS/nanobot/issues/4592) reports that the shell command guard fails to extract absolute paths following an `=` sign (e.g., `curl --output=/etc/passwd`), bypassing workspace containment. Fix proposed in PR [#4594](https://github.com/HKUDS/nanobot/pull/4594).
-- **[Security] MCP Credential Leakage**: PR [#4584](https://github.com/HKUDS/nanobot/pull/4584) fixes a vulnerability where MCP server URLs containing userinfo or query string tokens were being logged in plain text during connection/validation.
-- **[Stability] Config Migration Crash**: PR [#4583](https://github.com/HKUDS/nanobot/pull/4583) addresses a crash in `load_config()` where tool-key migration fails if the `tools` or `exec` sections are explicitly set to null.
-- **[Integration] WeChat Relay Bug**: PR [#4567](https://github.com/HKUDS/nanobot/pull/4567) fixes an issue where the WeChat channel silently dropped `streaming` configs, forcing a non-streaming API that broke upstream Anthropic-compatible relays dropping `tool_use` IDs.
-- **[Performance] Prompt Caching Invalidation**: Issue [#4222](https://github.com/HKUDS/nanobot/issues/4222) (now closed) detailed how `max_messages` truncation and microcompacting continuously mutated the message prefix, defeating LLM prompt caching.
+## 3. Project Progress
+While 10 PRs were merged or closed, the provided data highlights the closure of several key issues and one notable PR:
+*   **Closed Issues**:
+    *   [#660](https://github.com/HKUDS/nanobot/issues/660): Addressed community concerns regarding the project's "ultra-lightweight" claim versus its Node.js and Python Dockerfile dependencies.
+    *   [#4222](https://github.com/HKUDS/nanobot/issues/4222): Resolved a bug where `max_messages` truncation and microcompacting continuously invalidated prefix/prompt caching.
+    *   [#4597](https://github.com/HKUDS/nanobot/issues/4597): Closed a test issue.
+*   **Closed PRs**:
+    *   [#4502](https://github.com/HKUDS/nanobot/pull/4502): The "Add gateway webhook triggers" PR was closed, likely superseded by the newly opened [#4591](https://github.com/HKUDS/nanobot/pull/4591) which introduces session-bound local triggers via a filesystem queue.
 
-## Feature Request Clusters
-- **Context & Cost Optimization**: PR [#4581](https://github.com/HKUDS/nanobot/pull/4581) and PR [#4588](https://github.com/HKUDS/nanobot/pull/4588) introduce standalone compaction modules to prune, compress, and process large tool outputs (JSON, diffs, logs) before injecting them into the context, directly addressing token costs.
-- **Memory & Dream Agent Hygiene**: PR [#4554](https://github.com/HKUDS/nanobot/pull/4554) adds a write guard to prevent the Dream agent from creating duplicate skill directories. PR [#4589](https://github.com/HKUDS/nanobot/pull/4589) updates the Dream prompt with memory hygiene directives to curb `MEMORY.md` bloat and prevent fact rot.
-- **Execution Environments**: Issue [#4580](https://github.com/HKUDS/nanobot/issues/4580) requests native support and convenient wrappers for using `conda` virtual environments in subprocess execution, rather than relying on the default system path.
+## 4. Community Hot Topics
+*   **Dependency Bloat vs. "Ultra-Lightweight" Branding**: Issue [#660](https://github.com/HKUDS/nanobot/issues/660) remains the most discussed item with 15 comments and 5 👍 reactions. Users questioned the inclusion of Node.js alongside Python in the Dockerfile, contradicting the "ultra-lightweight" marketing. The issue is now closed, indicating maintainers have either addressed the dependency or clarified the architectural requirements.
+*   **Context & Cost Optimization**: PRs [#4581](https://github.com/HKUDS/nanobot/pull/4581) and [#4588](https://github.com/HKUDS/nanobot/pull/4588) represent a concerted effort to reduce input tokens and context usage. These PRs introduce standalone command-output compaction modules and route common command families through focused compactors to lower API costs and extend the utility of low-context models.
 
-## User Feedback Summary
-Users are highly sensitive to API costs and context window limits, driving multiple community PRs focused on aggressive token reduction and output compaction (`#4581`, `#4588`). There is also noticeable friction in initial provider setup; PR [#4573](https://github.com/HKUDS/nanobot/pull/4573) addresses user complaints that OAuth logins do not automatically set the authenticated provider as the main default, wasting setup time. Additionally, the community actively scrutinizes the project's deployment footprint, as evidenced by the pushback on Docker image dependencies (`#660`).
+## 5. Bugs & Stability
+*   **[High/Security] ExecTool Path Extraction Bypass**: Issue [#4592](https://github.com/HKUDS/nanobot/issues/4592) / PR [#4594](https://github.com/HKUDS/nanobot/pull/4594). The shell command guard failed to treat `=` as a valid preceding delimiter for absolute paths. Commands like `curl --output=/etc/passwd` bypassed workspace containment checks. A fix PR is open.
+*   **[High/Security] MCP Credential Leakage**: PR [#4584](https://github.com/HKUDS/nanobot/pull/4584). MCP server URLs carrying secrets in userinfo or query strings were being logged in raw form during validation and connection paths. A fix PR is open to redact these credentials.
+*   **[High/Data Corruption] Tool Call ID Overwrites**: Issue [#4595](https://github.com/HKUDS/nanobot/issues/4595) / PR [#4596](https://github.com/HKUDS/nanobot/pull/4596). `StreamingFileEditTracker.apply_final_call_ids()` was overwriting correct `tool_call.id` values for non-file-edit tools during parallel streaming, causing permanent session poisoning. A fix PR is open.
+*   **[Medium/Stability] Config Migration Crash**: PR [#4583](https://github.com/HKUDS/nanobot/pull/4583). `load_config()` crashed during tool-key migration if the `tools` or `exec` sections were explicitly set to `null` rather than absent. A fix PR is open.
+*   **[Medium/Integration] WeChat Relay Bug**: PR [#4567](https://github.com/HKUDS/nanobot/pull/4567). The WeChat channel was silently dropping the `streaming` config field, forcing non-streaming API calls which caused upstream Anthropic-compatible relays to drop `tool_use` IDs. A fix PR is open to stream LLM calls and buffer reply delivery.
 
-## Backlog Watch
-- **Subagent Routing & Injection**: PR [#4291](https://github.com/HKUDS/nanobot/pull/4291) (configurable model presets for subagents) and PR [#4293](https://github.com/HKUDS/nanobot/pull/4293) (pending_queue for subagent result injection) have been open since June 11. These are critical for advanced multi-agent workflows and require maintainer review.
-- **Reasoning Model Configuration**: Issue [#4419](https://github.com/HKUDS/nanobot/issues/4419) (automatic reasoning effort escalation) remains open and needs design input on how to implement dynamic effort scaling without breaking existing agent configurations.
+## 6. Feature Request Clusters
+*   **Subagent & A2A Collaboration**:
+    *   PR [#4571](https://github.com/HKUDS/nanobot/pull/4571) introduces native Agent-to-Agent (A2A) peer delegation with cross-delegation depth guards, moving beyond anonymous background subagents.
+    *   PR [#4291](https://github.com/HKUDS/nanobot/pull/4291) allows subagents to use configurable model presets (different provider/model/temperature than the parent).
+    *   PR [#4293](https://github.com/HKUDS/nanobot/pull/4293) adds a `pending_queue` to `process_direct` to properly inject subagent results mid-turn.
+*   **Execution & Environment Control**:
+    *   Issue [#4580](https://github.com/HKUDS/nanobot/issues/4580) requests `conda` virtual environment compatibility and wrappers for subprocess execution.
+    *   PR [#4591](https://github.com/HKUDS/nanobot/pull/4591) adds workspace-scoped external triggers bound to chat sessions via a local filesystem queue.
+*   **Advanced Reasoning**:
+    *   Issue [#4419](https://github.com/HKUDS/nanobot/issues/4419) requests automatic reasoning effort escalation (default + escalated levels) utilizing the `reasoningEffort` config field.
+
+## 7. User Feedback Summary
+*   **Cost and Context Limits**: Users are actively feeling the pain of high token costs and context window exhaustion. This is evidenced by the closure of the prompt-caching invalidation bug ([#4222](https://github.com/HKUDS/nanobot/issues/4222)) and the opening of multiple optimization PRs ([#4581](https://github.com/HKUDS/nanobot/pull/4581), [#4588](https://github.com/HKUDS/nanobot/pull/4588)) aimed at compacting oversized subagent announcements and noisy exec outputs.
+*   **Developer Environment Friction**: Issue [#4580](https://github.com/HKUDS/nanobot/issues/4580) highlights that the default subprocess execution path lacks virtual environment support, forcing users to manually manage environments outside of NanoBot's `exec` tool.
+*   **Onboarding/Setup Clarity**: PR [#4573](https://github.com/HKUDS/nanobot/pull/4573) notes that users waste time during `nanobot setup` when trying to use an OAuth provider, as it wasn't intuitively set as the main provider by default.
+
+## 8. Backlog Watch
+*   **Subagent Enhancements**: PR [#4291](https://github.com/HKUDS/nanobot/pull/4291) (configurable model presets for subagents) and PR [#4293](https://github.com/HKUDS/nanobot/pull/4293) (pending_queue for subagent result injection) were both created on 2026-06-11 and remain open. These are critical for the broader A2A architecture being built in [#4571](https://github.com/HKUDS/nanobot/pull/4571).
+*   **Reasoning Effort Escalation**: Issue [#4419](https://github.com/HKUDS/nanobot/issues/4419) (created 2026-06-20) requesting automatic reasoning effort escalation remains open without an attached PR, requiring maintainer design input.
 
 </details>
 
 <details>
 <summary><strong>Zeroclaw</strong> — <a href="https://github.com/zeroclaw-labs/zeroclaw">zeroclaw-labs/zeroclaw</a></summary>
 
-# Zeroclaw Project Digest: 2026-06-30
+# Zeroclaw Project Digest (2026-06-30)
 
 ## 1. Today's Activity Brief
-In the last 24 hours, the Zeroclaw repository saw high activity with 50 issues updated (43 open/active, 7 closed) and 50 pull requests updated (40 open, 10 merged/closed). No new releases were published. Development efforts are heavily concentrated on expanding the SOP (Standard Operating Procedure) event engine, advancing the WASM-first plugin architecture, and resolving critical provider/tool serialization bugs that affect reasoning models and native tool calling.
+On 2026-06-30, the Zeroclaw project saw 50 issues updated (43 open/active, 7 closed) and 50 pull requests updated (40 open, 10 merged/closed), with no new releases published. Development activity heavily concentrated on provider compatibility fixes (OpenAI, Anthropic, Groq, Kimi), channel integrations (Telegram, WhatsApp, Inkbox, GitHub), and advancing the WASM plugin architecture. Maintainers and contributors also actively addressed critical bugs related to native tool calling serialization and system prompt tool-availability mismatches across different runtime entry points.
 
 ## 2. Releases
-*None.*
+No new releases were published in the last 24 hours.
 
 ## 3. Project Progress
-Several notable PRs and issues were closed or merged today, advancing core runtime stability and channel integrations:
-*   **SOP Engine Advancements**: Closed PR [#8502](https://github.com/zeroclaw-labs/zeroclaw/pull/8502) completed payload safety ingress for the SOP engine, and [#8493](https://github.com/zeroclaw-labs/zeroclaw/pull/8493) enforced step scope and mode events during live execution.
-*   **Provider & Tool Fixes**: Closed PR [#8441](https://github.com/zeroclaw-labs/zeroclaw/pull/8441) fixed compatible providers (like Groq) rejecting native tool-result messages missing a `name` field. Closed issue [#8327](https://github.com/zeroclaw-labs/zeroclaw/issues/8327) resolved a bug where `[IMAGE:data:...]` markers in tool results were sent as plain text, inflating token counts.
-*   **Channel & Routing Fixes**: Closed issue [#2128](https://github.com/zeroclaw-labs/zeroclaw/issues/2128) fixed cron and heartbeat tasks from sending the literal "NO_REPLY" sentinel text to channels. Closed issue [#6841](https://github.com/zeroclaw-labs/zeroclaw/issues/6841) fixed inbound images being silently routed to fallback providers instead of the configured `vision_provider`.
-*   **Documentation**: Closed PR [#8436](https://github.com/zeroclaw-labs/zeroclaw/pull/8436) updated runtime docs to clarify the `max_history_messages` hard cap alongside whole-turn trimming.
+Several issues and PRs were closed or merged, advancing channel features and fixing provider quirks:
+- **WhatsApp & Cron Fixes**: Closed [#8379](https://github.com/zeroclaw-labs/zeroclaw/issues/8379) (opt-in passive group context for WhatsApp Web) and [#2128](https://github.com/zeroclaw-labs/zeroclaw/issues/2128) (cron/heartbeat delivery sending literal "NO_REPLY" text to channels).
+- **Provider & Tool Fixes**: Closed [#8327](https://github.com/zeroclaw-labs/zeroclaw/issues/8327) (native tool calling image markers inflating token counts) and [#6841](https://github.com/zeroclaw-labs/zeroclaw/issues/6841) (vision_provider silently ignored for inbound images).
+- **PR Closures**: Closed PR [#8441](https://github.com/zeroclaw-labs/zeroclaw/pull/8441) (adding tool name to native tool-result messages for Groq compatibility) and PR [#8436](https://github.com/zeroclaw-labs/zeroclaw/pull/8436) (documenting `max_history_messages` hard cap alongside whole-turn trim).
 
 ## 4. Community Hot Topics
-The most discussed items today highlight user friction with provider integrations and architectural RFCs for future capabilities:
-*   **[#5600](https://github.com/zeroclaw-labs/zeroclaw/issues/5600) (11 comments)**: An S1 bug where using the `kimi-code` provider in streaming chat calls results in a 400 Bad Request due to missing `reasoning_content` when thinking is enabled.
-*   **[#8054](https://github.com/zeroclaw-labs/zeroclaw/issues/8054) (9 comments)**: A P1 bug where the system prompt tells reasoning models "No tools are available" despite native/MCP tools being present in the request. This mismatch affects multiple entry points (channels, gateway, WebSocket).
-*   **[#6909](https://github.com/zeroclaw-labs/zeroclaw/issues/6909) (6 comments)**: An RFC proposing "Computer-use" support, allowing agents to capture screenshots and send mouse/keyboard events to control the local desktop GUI.
-*   **[#7800](https://github.com/zeroclaw-labs/zeroclaw/issues/7800) & [#7218](https://github.com/zeroclaw-labs/zeroclaw/issues/7218) (5 comments each)**: Discussions around misleading/unreachable ZeroCode TUI keybindings on macOS, and an RFC for A2A (Agent-to-Agent) discovery via `.well-known/agent-card.json` for multi-agent installs.
+- **Provider Streaming Errors**: Issue [#5600](https://github.com/zeroclaw-labs/zeroclaw/issues/5600) (11 comments) reports a 400 Bad Request when using the kimi-code provider in streaming chat calls due to missing `reasoning_content` in the assistant payload.
+- **System Prompt Tool Mismatches**: Issue [#8054](https://github.com/zeroclaw-labs/zeroclaw/issues/8054) (9 comments) highlights that system prompts incorrectly state "No tools are available" to reasoning models across various entry points (channels, gateway, WebSocket), despite native/MCP tools being present in the request.
+- **Computer-Use RFC**: Issue [#6909](https://github.com/zeroclaw-labs/zeroclaw/issues/6909) (6 comments) proposes adding desktop screen interaction and input control, reflecting user demand for local GUI automation capabilities.
+- **A2A Agent Discovery**: Issue [#7218](https://github.com/zeroclaw-labs/zeroclaw/issues/7218) (5 comments) discusses implementing `.well-known/agent-card.json` for multi-agent installs to enable interoperability with external agent systems.
 
 ## 5. Bugs & Stability
-*   **S1 - Workflow Blocked**:
-    *   [#5600](https://github.com/zeroclaw-labs/zeroclaw/issues/5600): Kimi-code provider streaming fails with 400 Bad Request.
-    *   [#8505](https://github.com/zeroclaw-labs/zeroclaw/issues/8505): Telegram channel cannot be configured; `zeroclaw channels doctor` claims channels are not set up even after quickstart configuration.
-*   **P1 - High Priority**:
-    *   [#7756](https://github.com/zeroclaw-labs/zeroclaw/issues/7756): Native/MCP tools are unavailable on OpenAI Responses/reasoning and Anthropic turns depending on the model.
-    *   [#8054](https://github.com/zeroclaw-labs/zeroclaw/issues/8054): System prompt tool-availability mismatch across entry points. (Note: PR [#8496](https://github.com/zeroclaw-labs/zeroclaw/pull/8496) is open to centralize deferred-MCP access policy to address surface 1(b) of this issue).
-    *   [#8312](https://github.com/zeroclaw-labs/zeroclaw/issues/8312): `fill-translations` leak-repair leaves stale map entries that re-ship leaked text.
-*   **S2 - Degraded Behavior**:
-    *   [#8410](https://github.com/zeroclaw-labs/zeroclaw/issues/8410): Channel tasks lack a first-class intentional no-reply outcome, causing visible empty responses when conditions aren't met.
-    *   [#7904](https://github.com/zeroclaw-labs/zeroclaw/issues/7904): `always-inject` SKILL.md frontmatter no longer works in compact prompt mode.
+*Severity 1 / Priority 1 (Workflow Blocked):*
+- [#5600](https://github.com/zeroclaw-labs/zeroclaw/issues/5600): Kimi-code provider streaming failure (400 Bad Request).
+- [#7756](https://github.com/zeroclaw-labs/zeroclaw/issues/7756) & [#8054](https://github.com/zeroclaw-labs/zeroclaw/issues/8054): Native/MCP tools unavailable on OpenAI/Anthropic turns due to system prompt mismatches. (Related fix PR [#8496](https://github.com/zeroclaw-labs/zeroclaw/pull/8496) is open to centralize deferred-MCP access policy).
+- [#8505](https://github.com/zeroclaw-labs/zeroclaw/issues/8505): Telegram channel configuration fails; bot does not respond despite quickstart setup.
+- [#8334](https://github.com/zeroclaw-labs/zeroclaw/issues/8334): `skills install` CLI targets `data_dir`, which multi-agent runtimes do not load, breaking skill installation.
+
+*Severity 2 / Priority 2 (Degraded Behavior):*
+- [#8410](https://github.com/zeroclaw-labs/zeroclaw/issues/8410): Channel tasks lack a first-class intentional no-reply outcome, causing visible empty responses when conditions aren't met.
+- [#7800](https://github.com/zeroclaw-labs/zeroclaw/issues/7800): ZeroCode TUI keybindings are misleading or unreachable on macOS.
+- [#7904](https://github.com/zeroclaw-labs/zeroclaw/issues/7904): `always-inject` SKILL.md frontmatter fails in compact prompt mode.
+
+*Notable Fix PRs:*
+- [#8510](https://github.com/zeroclaw-labs/zeroclaw/pull/8510): Omits empty assistant tool-call content in OpenAI-compatible requests to prevent strict backend rejections.
+- [#8149](https://github.com/zeroclaw-labs/zeroclaw/pull/8149): Tolerates mutex poison in the WASM plugin host to prevent host application panics during plugin HTTP handling.
+- [#7960](https://github.com/zeroclaw-labs/zeroclaw/pull/7960): Gates `execute_pipeline` sub-tool execution with per-agent `ToolAccessPolicy` to fix a security bypass.
 
 ## 6. Feature Request Clusters
-*   **WASM & Plugin Architecture**: A major push to make WASM the default plugin runtime. Active RFCs and trackers include [#8135](https://github.com/zeroclaw-labs/zeroclaw/issues/8135) (Wasm-first plugin runtime), [#7497](https://github.com/zeroclaw-labs/zeroclaw/issues/7497) (OCI-compliant registries for plugin storage), [#6140](https://github.com/zeroclaw-labs/zeroclaw/issues/6140) (hybrid skills + WASM tools), and tracker [#7314](https://github.com/zeroclaw-labs/zeroclaw/issues/7314).
-*   **SOP (Standard Operating Procedure) Engine**: Heavy feature work on the SOP event fan-in and execution. Open PRs include [#8504](https://github.com/zeroclaw-labs/zeroclaw/pull/8504) (GitHub channel with SOP ingress), [#8506](https://github.com/zeroclaw-labs/zeroclaw/pull/8506) (consume CAS run claims), and [#8461](https://github.com/zeroclaw-labs/zeroclaw/pull/8461) (filesystem SOP event source).
-*   **New Channels & Integrations**: PR [#8384](https://github.com/zeroclaw-labs/zeroclaw/pull/8384) adds a native Inkbox channel (email, SMS, voice, iMessage). PR [#8427](https://github.com/zeroclaw-labs/zeroclaw/pull/8427) adds native location pin support for WhatsApp Web. PR [#8508](https://github.com/zeroclaw-labs/zeroclaw/pull/8508) adds MCP resources-as-context and named-prompt rendering.
-*   **Observability & CI Security**: RFC [#8462](https://github.com/zeroclaw-labs/zeroclaw/issues/8462) proposes runtime policies for OTel LLM and tool content. Issues [#8056](https://github.com/zeroclaw-labs/zeroclaw/issues/8056) and [#8057](https://github.com/zeroclaw-labs/zeroclaw/issues/8057) outline required PR gates and scheduled jobs for CodeQL, cargo audit, and Trivy.
+- **Channel Integrations**: PR [#8384](https://github.com/zeroclaw-labs/zeroclaw/pull/8384) adds a native Inkbox channel (email, SMS, voice, iMessage). PR [#8504](https://github.com/zeroclaw-labs/zeroclaw/pull/8504) introduces a GitHub channel with SOP ingress. PR [#8427](https://github.com/zeroclaw-labs/zeroclaw/pull/8427) adds native location pin support for WhatsApp Web, and PR [#8440](https://github.com/zeroclaw-labs/zeroclaw/pull/8440) adds per-channel inbound debounce for Telegram.
+- **WASM & Plugin Architecture**: Multiple RFCs and trackers aim to mature the plugin system, including [#6140](https://github.com/zeroclaw-labs/zeroclaw/issues/6140) (hybrid skills + WASM tools), [#7497](https://github.com/zeroclaw-labs/zeroclaw/issues/7497) (OCI registries for plugin storage), [#8135](https://github.com/zeroclaw-labs/zeroclaw/issues/8135) (Wasm-first default runtime), and tracker [#7314](https://github.com/zeroclaw-labs/zeroclaw/issues/7314).
+- **Agent Memory & Context**: PR [#8508](https://github.com/zeroclaw-labs/zeroclaw/pull/8508) adds MCP resources-as-context and named-prompt rendering. PR [#8509](https://github.com/zeroclaw-labs/zeroclaw/pull/8509) and [#8461](https://github.com/zeroclaw-labs/zeroclaw/pull/8461) expand the SOP (Standard Operating Procedure) engine with procedural memory workshops and filesystem event sources.
 
 ## 7. User Feedback Summary
-*   **Onboarding & Configuration Friction**: Users are reporting complete blockers when setting up Telegram via the quickstart/CLI, with the daemon failing to recognize the configuration ([#8505](https://github.com/zeroclaw-labs/zeroclaw/issues/8505)).
-*   **UI/UX Discoverability**: macOS users note that ZeroCode TUI help and keybindings advertise actions that are unreachable or misleading in the current input state ([#7800](https://github.com/zeroclaw-labs/zeroclaw/issues/7800)).
-*   **Channel Noise**: Users expressed frustration over automated cron/heartbeat tasks and conditional channel tasks spamming chats with literal "NO_REPLY" strings or empty messages when no action was required ([#2128](https://github.com/zeroclaw-labs/zeroclaw/issues/2128), [#8410](https://github.com/zeroclaw-labs/zeroclaw/issues/8410)).
-*   **Group Chat Context**: WhatsApp Web users requested the ability to store unaddressed group messages as passive context without triggering an agent turn, which was addressed and closed today ([#8379](https://github.com/zeroclaw-labs/zeroclaw/issues/8379)).
+- **Configuration & Onboarding**: Users report friction with Telegram setup, where the CLI claims channels are configured but the bot remains unresponsive ([#8505](https://github.com/zeroclaw-labs/zeroclaw/issues/8505)). Multi-agent skill installation is also broken due to directory targeting issues ([#8334](https://github.com/zeroclaw-labs/zeroclaw/issues/8334)).
+- **UX & TUI**: macOS users find the ZeroCode TUI help and keybindings misleading or unreachable in certain input states ([#7800](https://github.com/zeroclaw-labs/zeroclaw/issues/7800)).
+- **Agent Behavior**: Users are frustrated by agents sending literal "NO_REPLY" strings or empty messages when conditional tasks evaluate to false, prompting requests for a first-class silent/no-reply outcome ([#8410](https://github.com/zeroclaw-labs/zeroclaw/issues/8410)).
 
 ## 8. Backlog Watch
-*   **[#6074](https://github.com/zeroclaw-labs/zeroclaw/issues/6074)**: *Audit and recover 153 commits lost in bulk revert c3ff635.* Created on April 24, this technical debt item tracks bug fixes and features that were accidentally rolled back during a master branch restoration. It requires maintainer attention to cherry-pick lost work.
-*   **[#6157](https://github.com/zeroclaw-labs/zeroclaw/issues/6157)**: *Nextcloud Talk use correct bot message API.* Created on April 27, this S3 bug notes that the wrong bot message API URL is being constructed, causing response failures.
-*   **[#6557](https://github.com/zeroclaw-labs/zeroclaw/issues/6557)**: *Reconcile runtime model switching with provider structure for v0.8.0.* Created on May 10, this enhancement is critical before v0.8.0 hardens provider/config semantics, as model-switch behavior currently spans multiple disjointed surfaces.
+- [#6074](https://github.com/zeroclaw-labs/zeroclaw/issues/6074): (Created 2026-04-24) Tracks 153 commits lost in a bulk revert (`c3ff635`) that need recovery. This is a high-risk data-loss issue requiring maintainer attention.
+- [#6157](https://github.com/zeroclaw-labs/zeroclaw/issues/6157): (Created 2026-04-27) Nextcloud Talk integration uses the wrong bot message API, causing response failures.
+- [#6557](https://github.com/zeroclaw-labs/zeroclaw/issues/6557): (Created 2026-05-10) Reconciling runtime model switching with the provider structure before v0.8.0 hardens semantics.
+- [#7497](https://github.com/zeroclaw-labs/zeroclaw/issues/7497) & [#8462](https://github.com/zeroclaw-labs/zeroclaw/issues/8462): Both RFCs are tagged `needs-maintainer-review`, covering OCI-compliant plugin registries and OTel runtime policies for LLM/tool content.
 
 </details>
 
 <details>
 <summary><strong>PicoClaw</strong> — <a href="https://github.com/sipeed/picoclaw">sipeed/picoclaw</a></summary>
 
-# PicoClaw Project Digest: 2026-06-30
+### 1. Today's Activity Brief
+On 2026-06-30, PicoClaw saw updates across 3 issues and 3 pull requests, with no new releases published. Issue activity included the closure of a legacy iOS Safari compatibility bug and ongoing discussions around privacy-focused messaging gateways and LLM provider integrations. All three updated pull requests remain open, focusing on DeltaChat gateway support, AWS Bedrock prompt caching, and granular token usage tracking.
 
-## 1. Today's Activity Brief
-On 2026-06-30, PicoClaw recorded moderate activity with 3 issues and 3 pull requests updated in the last 24 hours. No new releases were published. The day's updates center on community-driven efforts to expand messaging gateway integrations, optimize AWS Bedrock inference costs, and improve LLM token telemetry. Additionally, one stale bug report regarding legacy iOS Safari compatibility was closed, while discussions continue around agent execution reliability with specific regional LLM providers.
-
-## 2. Releases
+### 2. Releases
 No new releases were published in the last 24 hours.
 
-## 3. Project Progress
-No pull requests were merged today. One issue, [#3090](https://github.com/sipeed/picoclaw/issues/3090), detailing a UI panel failure on Safari for iOS versions below 16.4, was closed. The three open pull requests (#3063, #3156, #3163) remain under review or in progress, focusing on new gateway integrations, token usage telemetry, and AWS Bedrock prompt caching.
+### 3. Project Progress
+No pull requests were merged today. One issue, [#3090](https://github.com/sipeed/picoclaw/issues/3090), regarding a UI panel failure on Safari for iOS versions below 16.4, was closed. The closed issue was marked as `[stale]`, indicating it was likely closed due to inactivity rather than a direct code fix in today's updates.
 
-## 4. Community Hot Topics
-*   **Messaging Gateway Integrations:** Issue [#3093](https://github.com/sipeed/picoclaw/issues/3093) (4 comments, 1 👍) requests support for SimpleX, Wire, or Tox gateways. This aligns with PR [#3063](https://github.com/sipeed/picoclaw/pull/3063), which proposes adding a DeltaChat gateway, indicating active community interest in expanding decentralized and privacy-focused messaging protocols.
-*   **AWS Bedrock Cost Optimization:** PR [#3163](https://github.com/sipeed/picoclaw/pull/3163) introduces prompt caching via explicit cache points for the AWS Bedrock Converse API. This highlights a contributor-driven effort to reduce inference costs by caching system prompts and tools, billing reads at approximately 0.1× the standard input rate.
+### 4. Community Hot Topics
+The most active discussion is on issue [#3093](https://github.com/sipeed/picoclaw/issues/3093) (4 comments, 1 👍), where a user is requesting support for privacy-focused messaging gateways like SimpleX, Wire, or Tox. This highlights a community interest in expanding PicoClaw's communication channels toward decentralized or secure networks. Issue [#3090](https://github.com/sipeed/picoclaw/issues/3090) also saw notable discussion (3 comments) regarding legacy iOS browser compatibility prior to being closed.
 
-## 5. Bugs & Stability
-*   **LLM Tool Call Parsing Failure (Medium Severity):** Issue [#3153](https://github.com/sipeed/picoclaw/issues/3153) reports that when using PicoClaw v0.2.8 with Volcengine's `doubao-seed-2.0-pro` model, tool calls occasionally leak to the user as raw `<seed:tool_call>` XML text instead of being executed by the agent. This disrupts the agent workflow. No fix PR is currently linked.
-*   **Legacy iOS Safari UI Bug (Closed):** Issue [#3090](https://github.com/sipeed/picoclaw/issues/3090) detailed a login and panel rendering failure on Safari for iOS versions below 16.4 (tested on PicoClaw v0.2.9). This issue has been closed, suggesting it was either resolved, deemed out-of-scope for legacy browsers, or addressed in a recent update.
+### 5. Bugs & Stability
+*   **Medium Severity:** [#3153](https://github.com/sipeed/picoclaw/issues/3153) - When using Volcengine's `doubao-seed-2.0-pro` model, tool calls occasionally leak to the user as raw `<seed:tool_call>` XML text instead of being executed by the agent. This disrupts the agent workflow and exposes backend formatting. No fix PR is currently linked.
+*   **Low Severity / Closed:** [#3090](https://github.com/sipeed/picoclaw/issues/3090) - The web panel failed to function on Safari for iOS versions below 16.4. This issue was closed today (marked stale).
 
-## 6. Feature Request Clusters
-*   **Decentralized/Alternative Messaging Gateways:** Users are requesting support for privacy-centric networks like SimpleX, Wire, and Tox ([#3093](https://github.com/sipeed/picoclaw/issues/3093)). Concurrently, a community PR is actively adding DeltaChat support ([#3063](https://github.com/sipeed/picoclaw/pull/3063)).
-*   **LLM Telemetry and Cost Management:** Contributors are pushing for better visibility and control over LLM usage. PR [#3156](https://github.com/sipeed/picoclaw/pull/3156) adds per-turn input/output token usage emission to the Pico channel for downstream tracking, while PR [#3163](https://github.com/sipeed/picoclaw/pull/3163) implements AWS Bedrock prompt caching to lower API billing costs.
+### 6. Feature Request Clusters
+*   **Alternative Messaging Gateways:** Users are requesting privacy-centric or decentralized messaging integrations. Issue [#3093](https://github.com/sipeed/picoclaw/issues/3093) requests SimpleX, Wire, or Tox. Concurrently, PR [#3063](https://github.com/sipeed/picoclaw/pull/3063) is open to add a DeltaChat gateway, showing active development in expanding supported communication protocols.
+*   **LLM Observability and Cost Optimization:** Two open PRs by @loafoe target better tracking and optimization of LLM usage. PR [#3163](https://github.com/sipeed/picoclaw/pull/3163) introduces AWS Bedrock Converse API prompt caching via explicit cache points to reduce input costs. PR [#3156](https://github.com/sipeed/picoclaw/pull/3156) adds per-turn input/output token usage emission on finalized messages for downstream tracking.
 
-## 7. User Feedback Summary
-*   **Agent Execution Reliability:** Users integrating specific LLM providers, such as Volcengine's Doubao Seed, are experiencing friction when the agent fails to parse and execute tool calls, exposing raw XML to the end-user instead of performing the requested action ([#3153](https://github.com/sipeed/picoclaw/issues/3153)).
-*   **Mobile Accessibility:** There is ongoing feedback regarding the web panel's compatibility with older mobile environments, specifically Safari on iOS < 16.4, though the related issue was recently closed without detailed public resolution notes ([#3090](https://github.com/sipeed/picoclaw/issues/3090)).
-*   **Cost and Usage Tracking:** Contributors operating PicoClaw at scale are actively seeking ways to monitor exact token consumption per turn and reduce API costs through provider-specific features like Bedrock caching ([#3156](https://github.com/sipeed/picoclaw/pull/3156), [#3163](https://github.com/sipeed/picoclaw/pull/3163)).
+### 7. User Feedback Summary
+Users are actively seeking to deploy PicoClaw across diverse messaging platforms, with specific requests for decentralized networks (SimpleX, Tox) indicating use cases where data sovereignty and privacy are priorities. On the provider side, users integrating Volcengine's Doubao Seed model are experiencing friction due to raw XML tool-call leaks, which degrades the end-user experience. Additionally, the push for granular token tracking and prompt caching in open PRs reflects a user base highly conscious of LLM operational costs and observability.
 
-## 8. Backlog Watch
-*   **PR [#3063](https://github.com/sipeed/picoclaw/pull/3063) (DeltaChat Gateway):** Opened on June 8 by @trufae, this feature PR has been open for over three weeks and requires maintainer review to determine if the new gateway integration aligns with the project's architectural roadmap.
-*   **Issue [#3153](https://github.com/sipeed/picoclaw/issues/3153) (Volcengine Tool Call Leak):** Marked as stale, this bug affects agent execution reliability for Volcengine users and needs triage to determine if a parser update, regex fallback, or provider-specific workaround is required.
-*   **PR [#3156](https://github.com/sipeed/picoclaw/pull/3156) (Token Usage Telemetry):** Also marked as stale, this PR by @loafoe provides valuable telemetry for downstream consumers and awaits maintainer feedback on the implementation details and message schema.
+### 8. Backlog Watch
+Several items updated today are marked as `[stale]` or have been open for multiple weeks without merging, requiring maintainer review:
+*   **PR [#3063](https://github.com/sipeed/picoclaw/pull/3063)** (feat: add deltachat gateway) - Open since June 8.
+*   **Issue [#3093](https://github.com/sipeed/picoclaw/issues/3093)** (Feature: SimpleX or tox) - Open since June 10, marked stale.
+*   **PR [#3156](https://github.com/sipeed/picoclaw/pull/3156)** (feat: emit per-turn LLM token usage) - Open since June 22, marked stale.
+*   **Issue [#3153](https://github.com/sipeed/picoclaw/issues/3153)** (Bug: Volcengine tool call leak) - Open since June 22, marked stale.
 
 </details>
