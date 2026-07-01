@@ -6,7 +6,21 @@
     <description>Agent-powered open-source project radar · AI ecosystem daily digest</description>
     <language>zh-CN</language>
     <atom:link href="https://borq168.github.io/radar-forge/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 30 Jun 2026 00:48:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 06:24:21 +0000</lastBuildDate>
+    <item>
+      <title>AI 工具生态月报 2026-07-01</title>
+      <link>https://borq168.github.io/radar-forge/#2026-07-01/ai-monthly</link>
+      <guid isPermaLink="true">https://borq168.github.io/radar-forge/#2026-07-01/ai-monthly</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <description>AI 工具生态月报 2026-07-01</description>
+    </item>
+    <item>
+      <title>AI Tools Monthly Digest 2026-07-01</title>
+      <link>https://borq168.github.io/radar-forge/#2026-07-01/ai-monthly-en</link>
+      <guid isPermaLink="true">https://borq168.github.io/radar-forge/#2026-07-01/ai-monthly-en</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <description>AI Tools Monthly Digest 2026-07-01</description>
+    </item>
     <item>
       <title>AI 生态整合日报 2026-06-30</title>
       <link>https://borq168.github.io/radar-forge/#2026-06-30/ai-daily</link>
@@ -202,20 +216,6 @@
       <guid isPermaLink="true">https://borq168.github.io/radar-forge/#2026-06-29/ai-hn-en</guid>
       <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
       <description>Hacker News AI Community Digest 2026-06-29</description>
-    </item>
-    <item>
-      <title>AI 工具生态周报 2026-06-29</title>
-      <link>https://borq168.github.io/radar-forge/#2026-06-29/ai-weekly</link>
-      <guid isPermaLink="true">https://borq168.github.io/radar-forge/#2026-06-29/ai-weekly</guid>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
-      <description>AI 工具生态周报 2026-06-29</description>
-    </item>
-    <item>
-      <title>AI Tools Weekly Digest 2026-06-29</title>
-      <link>https://borq168.github.io/radar-forge/#2026-06-29/ai-weekly-en</link>
-      <guid isPermaLink="true">https://borq168.github.io/radar-forge/#2026-06-29/ai-weekly-en</guid>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
-      <description>AI Tools Weekly Digest 2026-06-29</description>
     </item>
   </channel>
 </rss>
