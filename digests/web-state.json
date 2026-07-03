@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-06-30T00:32:43.243Z",
+      "lastChecked": "2026-07-03T00:28:26.072Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -510,11 +510,17 @@
         "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem": "2026-06-17T00:00:00.000Z",
         "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem/": "2026-06-17T00:00:00.000Z",
         "https://www.anthropic.com/news/introducing-claude-tag": "2026-06-23T00:00:00.000Z",
-        "https://www.anthropic.com/news/introducing-claude-tag/": "2026-06-23T00:00:00.000Z"
+        "https://www.anthropic.com/news/introducing-claude-tag/": "2026-06-23T00:00:00.000Z",
+        "https://www.anthropic.com/news/claude-sonnet-5": "2026-06-30T00:00:00.000Z",
+        "https://www.anthropic.com/news/claude-sonnet-5/": "2026-06-30T00:00:00.000Z",
+        "https://www.anthropic.com/news/claude-science-ai-workbench": "2026-06-30T00:00:00.000Z",
+        "https://www.anthropic.com/news/claude-science-ai-workbench/": "2026-06-30T00:00:00.000Z",
+        "https://www.anthropic.com/news/redeploying-fable-5": "2026-06-30T00:00:00.000Z",
+        "https://www.anthropic.com/news/redeploying-fable-5/": "2026-06-30T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-06-30T00:32:43.150Z",
+      "lastChecked": "2026-07-03T00:28:26.358Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2620,11 +2626,19 @@
         "https://openai.com/index/hp-frontier-partnership": "2026-06-28T17:00:00.000Z",
         "https://openai.com/index/hp-frontier-partnership/": "2026-06-28T17:00:00.000Z",
         "https://openai.com/index/mapping-ai-jobs-transition-eu": "2026-06-29T07:00:00.000Z",
-        "https://openai.com/index/mapping-ai-jobs-transition-eu/": "2026-06-29T07:00:00.000Z"
+        "https://openai.com/index/mapping-ai-jobs-transition-eu/": "2026-06-29T07:00:00.000Z",
+        "https://openai.com/index/how-chatgpt-adoption-has-expanded": "2026-06-30T09:00:00.000Z",
+        "https://openai.com/index/how-chatgpt-adoption-has-expanded/": "2026-06-30T09:00:00.000Z",
+        "https://openai.com/index/genebench-pro/case-studies": "2026-06-30T00:00:00.000Z",
+        "https://openai.com/index/genebench-pro/case-studies/": "2026-06-30T00:00:00.000Z",
+        "https://openai.com/index/introducing-genebench-pro": "2026-06-30T00:00:00.000Z",
+        "https://openai.com/index/introducing-genebench-pro/": "2026-06-30T00:00:00.000Z",
+        "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug": "2026-06-30T00:00:00.000Z",
+        "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/": "2026-06-30T00:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-06-30T00:32:43.188Z",
+      "lastChecked": "2026-07-03T00:28:26.205Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2823,7 +2837,27 @@
         "6BmERiKIIt4pIJoFmNy7Jn": "2026-06-25T13:00:00.000Z",
         "6BmERiKIIt4pIJoFmNy7Jn/": "2026-06-25T13:00:00.000Z",
         "https://blog.cloudflare.com/rollbacks-for-workflows/": "2026-06-25T13:00:00.000Z",
-        "https://blog.cloudflare.com/rollbacks-for-workflows": "2026-06-25T13:00:00.000Z"
+        "https://blog.cloudflare.com/rollbacks-for-workflows": "2026-06-25T13:00:00.000Z",
+        "6dNg0U03j4cnbacP8txDok": "2026-07-01T13:00:00.000Z",
+        "6dNg0U03j4cnbacP8txDok/": "2026-07-01T13:00:00.000Z",
+        "https://blog.cloudflare.com/monetization-gateway/": "2026-07-01T13:00:00.000Z",
+        "https://blog.cloudflare.com/monetization-gateway": "2026-07-01T13:00:00.000Z",
+        "3qEwyKxigFNDK4JTlPfl8A": "2026-07-01T13:00:00.000Z",
+        "3qEwyKxigFNDK4JTlPfl8A/": "2026-07-01T13:00:00.000Z",
+        "https://blog.cloudflare.com/agentic-internet-bot-report/": "2026-07-01T13:00:00.000Z",
+        "https://blog.cloudflare.com/agentic-internet-bot-report": "2026-07-01T13:00:00.000Z",
+        "YqZRSH26JlDBUNvwASOr2": "2026-07-01T13:00:00.000Z",
+        "YqZRSH26JlDBUNvwASOr2/": "2026-07-01T13:00:00.000Z",
+        "https://blog.cloudflare.com/making-ai-search-smarter/": "2026-07-01T13:00:00.000Z",
+        "https://blog.cloudflare.com/making-ai-search-smarter": "2026-07-01T13:00:00.000Z",
+        "FWKHybUFEZFSsFCrbEwAd": "2026-07-01T13:00:00.000Z",
+        "FWKHybUFEZFSsFCrbEwAd/": "2026-07-01T13:00:00.000Z",
+        "https://blog.cloudflare.com/content-independence-day-ai-options/": "2026-07-01T13:00:00.000Z",
+        "https://blog.cloudflare.com/content-independence-day-ai-options": "2026-07-01T13:00:00.000Z",
+        "3wrqj94tEFsKCZ8OBUE52R": "2026-07-01T06:00:00.000Z",
+        "3wrqj94tEFsKCZ8OBUE52R/": "2026-07-01T06:00:00.000Z",
+        "https://blog.cloudflare.com/attribution-business-insights/": "2026-07-01T06:00:00.000Z",
+        "https://blog.cloudflare.com/attribution-business-insights": "2026-07-01T06:00:00.000Z"
       }
     }
   }
