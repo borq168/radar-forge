@@ -115,9 +115,16 @@ export function stripThinkBlocks(content: string): string {
 }
 
 function extractTextContent(content: unknown): string {
-  if (typeof content === "string") return content.trim();
+  const text = stringifyTextContent(content).trim();
+  if (text) return text;
+  if (typeof content === "string") return text;
+  throw new Error("Unexpected response type from LLM");
+}
+
+function stringifyTextContent(content: unknown): string {
+  if (typeof content === "string") return content;
   if (Array.isArray(content)) {
-    const text = content
+    return content
       .map((part) => {
         if (typeof part === "string") return part;
         if (
@@ -132,11 +139,105 @@ function extractTextContent(content: unknown): string {
         }
         return "";
       })
-      .join("")
-      .trim();
-    if (text) return text;
+      .join("");
   }
   throw new Error("Unexpected response type from LLM");
+}
+
+interface OpenAiCompatibleChoice {
+  message?: {
+    content?: unknown;
+  };
+  delta?: {
+    content?: unknown;
+  };
+}
+
+interface OpenAiCompatibleResponse {
+  error?:
+    | string
+    | {
+        message?: string;
+        type?: string;
+        code?: string;
+      };
+  choices?: OpenAiCompatibleChoice[];
+}
+
+function formatLlmApiError(data: OpenAiCompatibleResponse, fallback: string): string {
+  const error = data.error;
+  if (typeof error === "string" && error.trim()) return error.trim();
+  if (error && typeof error === "object") {
+    const parts = [error.message, error.type, error.code].filter(
+      (part): part is string => typeof part === "string" && part.trim().length > 0,
+    );
+    if (parts.length > 0) return parts.join(" ");
+  }
+  return fallback;
+}
+
+function parseJsonObject(text: string): OpenAiCompatibleResponse {
+  return JSON.parse(text) as OpenAiCompatibleResponse;
+}
+
+function parseSseDataMessages(text: string): string[] {
+  const messages: string[] = [];
+  let current: string[] = [];
+
+  function flush(): void {
+    if (current.length === 0) return;
+    const message = current.join("\n").trim();
+    if (message && message !== "[DONE]") messages.push(message);
+    current = [];
+  }
+
+  for (const rawLine of text.replace(/\r\n/g, "\n").split("\n")) {
+    const line = rawLine.trimEnd();
+    if (line === "") {
+      flush();
+      continue;
+    }
+    if (line.startsWith("data:")) {
+      current.push(line.slice("data:".length).trimStart());
+    }
+  }
+
+  flush();
+  return messages;
+}
+
+function extractStreamContent(body: string): string {
+  let output = "";
+  let lastParsedChunk: OpenAiCompatibleResponse | undefined;
+
+  for (const message of parseSseDataMessages(body)) {
+    const chunk = parseJsonObject(message);
+    lastParsedChunk = chunk;
+
+    if (chunk.error) {
+      throw new Error(`LLM API stream error: ${formatLlmApiError(chunk, message)}`);
+    }
+
+    for (const choice of chunk.choices ?? []) {
+      const content = choice.delta?.content ?? choice.message?.content;
+      if (content === undefined || content === null) continue;
+      output += stringifyTextContent(content);
+    }
+  }
+
+  const trimmed = output.trim();
+  if (trimmed) return trimmed;
+  if (lastParsedChunk) throw new Error("LLM API returned no usable output");
+  throw new Error("LLM API returned empty stream");
+}
+
+function extractCompletionContent(data: OpenAiCompatibleResponse): string {
+  if (data.error) {
+    throw new Error(`LLM API error: ${formatLlmApiError(data, JSON.stringify(data))}`);
+  }
+
+  const content = data.choices?.[0]?.message?.content;
+  return extractTextContent(content);
 }
 
 async function callOpenAiCompatibleLlm(prompt: string, maxTokens: number): Promise<string> {
@@ -156,19 +257,18 @@ async function callOpenAiCompatibleLlm(prompt: string, maxTokens: number): Promi
       max_tokens: maxTokens,
     }),
   });
+  const body = await resp.text();
+
   if (!resp.ok) {
-    throw new Error(`LLM API ${resp.status}: ${await resp.text()}`);
+    throw new Error(`LLM API ${resp.status}: ${body}`);
   }
 
-  const data = (await resp.json()) as {
-    choices?: Array<{
-      message?: {
-        content?: unknown;
-      };
-    }>;
-  };
-  const content = data.choices?.[0]?.message?.content;
-  return extractTextContent(content);
+  const contentType = resp.headers.get("content-type") ?? "";
+  if (contentType.includes("text/event-stream") || body.trimStart().startsWith("data:")) {
+    return extractStreamContent(body);
+  }
+
+  return extractCompletionContent(parseJsonObject(body));
 }
 
 export async function callLlm(prompt: string, maxTokens = 4096): Promise<string> {
