@@ -1,6 +1,13 @@
 {
-  "generated": "2026-07-05T00:44:21.307Z",
+  "generated": "2026-07-06T03:31:43.168Z",
   "dates": [
+    {
+      "date": "2026-07-06",
+      "reports": [
+        "ai-weekly",
+        "ai-weekly-en"
+      ]
+    },
     {
       "date": "2026-07-05",
       "reports": [
