@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-05T00:28:14.889Z",
+      "lastChecked": "2026-07-08T00:55:48.915Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -518,11 +518,13 @@
         "https://www.anthropic.com/news/redeploying-fable-5": "2026-06-30T00:00:00.000Z",
         "https://www.anthropic.com/news/redeploying-fable-5/": "2026-06-30T00:00:00.000Z",
         "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework": "2026-07-02T00:00:00.000Z",
-        "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework/": "2026-07-02T00:00:00.000Z"
+        "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework/": "2026-07-02T00:00:00.000Z",
+        "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-06T00:00:00.000Z",
+        "https://www.anthropic.com/news/alberta-government-claude-cybersecurity/": "2026-07-06T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-07-05T00:28:15.048Z",
+      "lastChecked": "2026-07-08T00:55:49.208Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2535,8 +2537,8 @@
         "https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/": "2026-05-29T03:00:00.000Z",
         "https://openai.com/index/trustworthy-third-party-evaluations-foundations": "2026-05-29T00:00:00.000Z",
         "https://openai.com/index/trustworthy-third-party-evaluations-foundations/": "2026-05-29T00:00:00.000Z",
-        "https://openai.com/index/mufg": "2026-05-28T00:00:00.000Z",
-        "https://openai.com/index/mufg/": "2026-05-28T00:00:00.000Z",
+        "https://openai.com/index/mufg": "2026-07-07T00:00:00.000Z",
+        "https://openai.com/index/mufg/": "2026-07-07T00:00:00.000Z",
         "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy": "2026-06-01T17:00:00.000Z",
         "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy/": "2026-06-01T17:00:00.000Z",
         "https://openai.com/index/stargate-michigan-data-center": "2026-06-01T12:00:00.000Z",
@@ -2636,11 +2638,25 @@
         "https://openai.com/index/introducing-genebench-pro": "2026-06-30T00:00:00.000Z",
         "https://openai.com/index/introducing-genebench-pro/": "2026-06-30T00:00:00.000Z",
         "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug": "2026-06-30T00:00:00.000Z",
-        "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/": "2026-06-30T00:00:00.000Z"
+        "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug/": "2026-06-30T00:00:00.000Z",
+        "https://openai.com/index/australian-payments-plus": "2026-07-07T00:00:00.000Z",
+        "https://openai.com/index/australian-payments-plus/": "2026-07-07T00:00:00.000Z",
+        "https://openai.com/deployco/news/designing-organisations-that-can-keep-up-with-ai": "2026-06-25T12:00:00.000Z",
+        "https://openai.com/deployco/news/designing-organisations-that-can-keep-up-with-ai/": "2026-06-25T12:00:00.000Z",
+        "https://openai.com/deployco/news/meta-harness-enterprise-self-improvement-long-horizon-ai-workflows": "2026-06-23T12:00:00.000Z",
+        "https://openai.com/deployco/news/meta-harness-enterprise-self-improvement-long-horizon-ai-workflows/": "2026-06-23T12:00:00.000Z",
+        "https://openai.com/deployco/news/building-realtime-voice-experiences-at-scale": "2026-05-28T12:00:00.000Z",
+        "https://openai.com/deployco/news/building-realtime-voice-experiences-at-scale/": "2026-05-28T12:00:00.000Z",
+        "https://openai.com/deployco/news/conversational-design-five-patterns-to-shape-customer-facing-ai-experiences": "2026-05-19T12:00:00.000Z",
+        "https://openai.com/deployco/news/conversational-design-five-patterns-to-shape-customer-facing-ai-experiences/": "2026-05-19T12:00:00.000Z",
+        "https://openai.com/deployco/news/deploying-business-critical-ai-confidence-accountability-go-live": "2026-03-31T12:00:00.000Z",
+        "https://openai.com/deployco/news/deploying-business-critical-ai-confidence-accountability-go-live/": "2026-03-31T12:00:00.000Z",
+        "https://openai.com/deployco/news/evals-your-bridge-from-ai-experimentation-to-confident-production-deployments": "2026-02-18T12:00:00.000Z",
+        "https://openai.com/deployco/news/evals-your-bridge-from-ai-experimentation-to-confident-production-deployments/": "2026-02-18T12:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-05T00:28:15.118Z",
+      "lastChecked": "2026-07-08T00:55:48.984Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2859,7 +2875,15 @@
         "3wrqj94tEFsKCZ8OBUE52R": "2026-07-01T06:00:00.000Z",
         "3wrqj94tEFsKCZ8OBUE52R/": "2026-07-01T06:00:00.000Z",
         "https://blog.cloudflare.com/attribution-business-insights/": "2026-07-01T06:00:00.000Z",
-        "https://blog.cloudflare.com/attribution-business-insights": "2026-07-01T06:00:00.000Z"
+        "https://blog.cloudflare.com/attribution-business-insights": "2026-07-01T06:00:00.000Z",
+        "3xHevpKOOM76zUSrlPcQno": "2026-07-07T13:00:00.000Z",
+        "3xHevpKOOM76zUSrlPcQno/": "2026-07-07T13:00:00.000Z",
+        "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-07T13:00:00.000Z",
+        "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge": "2026-07-07T13:00:00.000Z",
+        "1WYEYtVwQSo4H3jKHTcKmO": "2026-07-06T13:00:00.000Z",
+        "1WYEYtVwQSo4H3jKHTcKmO/": "2026-07-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/workers-cache/": "2026-07-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/workers-cache": "2026-07-06T13:00:00.000Z"
       }
     }
   }
