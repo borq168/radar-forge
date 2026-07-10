@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-09T00:39:03.231Z",
+  "generated": "2026-07-10T00:40:56.567Z",
   "tracks": [
     {
       "id": "ai-cli",
@@ -19,29 +19,14 @@
           "name": "OpenAI Codex"
         },
         {
-          "id": "gemini-cli",
-          "repo": "google-gemini/gemini-cli",
-          "name": "Gemini CLI"
-        },
-        {
-          "id": "copilot-cli",
-          "repo": "github/copilot-cli",
-          "name": "GitHub Copilot CLI"
-        },
-        {
-          "id": "kimi-cli",
-          "repo": "MoonshotAI/kimi-cli",
-          "name": "Kimi Code CLI"
+          "id": "kimi-code",
+          "repo": "MoonshotAI/kimi-code",
+          "name": "Kimi Code"
         },
         {
           "id": "opencode",
           "repo": "anomalyco/opencode",
           "name": "OpenCode"
-        },
-        {
-          "id": "qwen-code",
-          "repo": "QwenLM/qwen-code",
-          "name": "Qwen Code"
         }
       ],
       "report": {
@@ -61,7 +46,12 @@
         {
           "id": "claude-skills",
           "repo": "anthropics/skills",
-          "name": "Claude Code Skills"
+          "name": "Claude Skills"
+        },
+        {
+          "id": "codex-skills",
+          "repo": "openai/skills",
+          "name": "Codex Skills"
         }
       ],
       "report": {
@@ -85,21 +75,9 @@
           "paginated": true
         },
         {
-          "id": "nanobot",
-          "repo": "HKUDS/nanobot",
-          "name": "NanoBot",
-          "paginated": true
-        },
-        {
-          "id": "zeroclaw",
-          "repo": "zeroclaw-labs/zeroclaw",
-          "name": "Zeroclaw"
-        },
-        {
-          "id": "picoclaw",
-          "repo": "sipeed/picoclaw",
-          "name": "PicoClaw",
-          "paginated": true
+          "id": "youdao",
+          "repo": "netease-youdao/lobsterai",
+          "name": "youdao lobster"
         }
       ],
       "primaryMemberId": "openclaw",
