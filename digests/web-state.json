@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-09T00:28:19.661Z",
+      "lastChecked": "2026-07-10T00:29:16.287Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -520,11 +520,13 @@
         "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework": "2026-07-02T00:00:00.000Z",
         "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework/": "2026-07-02T00:00:00.000Z",
         "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-06T00:00:00.000Z",
-        "https://www.anthropic.com/news/alberta-government-claude-cybersecurity/": "2026-07-06T00:00:00.000Z"
+        "https://www.anthropic.com/news/alberta-government-claude-cybersecurity/": "2026-07-06T00:00:00.000Z",
+        "https://www.anthropic.com/news/reflect-with-claude": "2026-07-09T00:00:00.000Z",
+        "https://www.anthropic.com/news/reflect-with-claude/": "2026-07-09T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-07-09T00:28:19.485Z",
+      "lastChecked": "2026-07-10T00:29:16.523Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2660,11 +2662,27 @@
         "https://openai.com/index/k-12-educators-practical-skills": "2026-07-08T10:00:00.000Z",
         "https://openai.com/index/k-12-educators-practical-skills/": "2026-07-08T10:00:00.000Z",
         "https://openai.com/index/introducing-gpt-live": "2026-07-08T00:00:00.000Z",
-        "https://openai.com/index/introducing-gpt-live/": "2026-07-08T00:00:00.000Z"
+        "https://openai.com/index/introducing-gpt-live/": "2026-07-08T00:00:00.000Z",
+        "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot": "2026-07-09T13:00:00.000Z",
+        "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/": "2026-07-09T13:00:00.000Z",
+        "https://openai.com/index/chatgpt-for-your-most-ambitious-work": "2026-07-09T10:00:00.000Z",
+        "https://openai.com/index/chatgpt-for-your-most-ambitious-work/": "2026-07-09T10:00:00.000Z",
+        "https://openai.com/index/bio-bug-bounty": "2026-07-09T10:00:00.000Z",
+        "https://openai.com/index/bio-bug-bounty/": "2026-07-09T10:00:00.000Z",
+        "https://openai.com/index/gpt-5-6": "2026-07-09T10:00:00.000Z",
+        "https://openai.com/index/gpt-5-6/": "2026-07-09T10:00:00.000Z",
+        "https://openai.com/academy/chatgpt-sites": "2026-06-02T10:00:00.000Z",
+        "https://openai.com/academy/chatgpt-sites/": "2026-06-02T10:00:00.000Z",
+        "https://openai.com/index/ai-first-hire-small-business": "2026-05-25T00:00:00.000Z",
+        "https://openai.com/index/ai-first-hire-small-business/": "2026-05-25T00:00:00.000Z",
+        "https://openai.com/index/modeling-ai-jobs-transition": "2026-04-25T00:00:00.000Z",
+        "https://openai.com/index/modeling-ai-jobs-transition/": "2026-04-25T00:00:00.000Z",
+        "https://openai.com/academy/how-to-use-chatgpt-work-for-everyday-tasks": "2026-04-23T10:00:00.000Z",
+        "https://openai.com/academy/how-to-use-chatgpt-work-for-everyday-tasks/": "2026-04-23T10:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-09T00:28:19.292Z",
+      "lastChecked": "2026-07-10T00:29:16.412Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2895,7 +2913,11 @@
         "7zbgYCOZDfvIIsVrPpZ8xJ": "2026-07-08T13:00:00.000Z",
         "7zbgYCOZDfvIIsVrPpZ8xJ/": "2026-07-08T13:00:00.000Z",
         "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-08T13:00:00.000Z",
-        "https://blog.cloudflare.com/meerkat-introduction": "2026-07-08T13:00:00.000Z"
+        "https://blog.cloudflare.com/meerkat-introduction": "2026-07-08T13:00:00.000Z",
+        "5wMIF1Oa7DES2YNRpqiVB0": "2026-07-09T14:00:00.000Z",
+        "5wMIF1Oa7DES2YNRpqiVB0/": "2026-07-09T14:00:00.000Z",
+        "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-09T14:00:00.000Z",
+        "https://blog.cloudflare.com/ml-dsa-will-have-to-do": "2026-07-09T14:00:00.000Z"
       }
     }
   }
