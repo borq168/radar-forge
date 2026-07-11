@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-10T00:29:16.287Z",
+      "lastChecked": "2026-07-11T00:23:11.707Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -522,11 +522,17 @@
         "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-06T00:00:00.000Z",
         "https://www.anthropic.com/news/alberta-government-claude-cybersecurity/": "2026-07-06T00:00:00.000Z",
         "https://www.anthropic.com/news/reflect-with-claude": "2026-07-09T00:00:00.000Z",
-        "https://www.anthropic.com/news/reflect-with-claude/": "2026-07-09T00:00:00.000Z"
+        "https://www.anthropic.com/news/reflect-with-claude/": "2026-07-09T00:00:00.000Z",
+        "https://www.anthropic.com/news/hard-questions": "2026-07-09T00:00:00.000Z",
+        "https://www.anthropic.com/news/hard-questions/": "2026-07-09T00:00:00.000Z",
+        "https://www.anthropic.com/news/ust-claude": "2026-07-09T00:00:00.000Z",
+        "https://www.anthropic.com/news/ust-claude/": "2026-07-09T00:00:00.000Z",
+        "https://www.anthropic.com/news/ben-bernanke": "2026-07-09T00:00:00.000Z",
+        "https://www.anthropic.com/news/ben-bernanke/": "2026-07-09T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-07-10T00:29:16.523Z",
+      "lastChecked": "2026-07-11T00:23:11.666Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2678,11 +2684,13 @@
         "https://openai.com/index/modeling-ai-jobs-transition": "2026-04-25T00:00:00.000Z",
         "https://openai.com/index/modeling-ai-jobs-transition/": "2026-04-25T00:00:00.000Z",
         "https://openai.com/academy/how-to-use-chatgpt-work-for-everyday-tasks": "2026-04-23T10:00:00.000Z",
-        "https://openai.com/academy/how-to-use-chatgpt-work-for-everyday-tasks/": "2026-04-23T10:00:00.000Z"
+        "https://openai.com/academy/how-to-use-chatgpt-work-for-everyday-tasks/": "2026-04-23T10:00:00.000Z",
+        "https://openai.com/index/deutsche-telekom": "2026-07-10T07:00:00.000Z",
+        "https://openai.com/index/deutsche-telekom/": "2026-07-10T07:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-10T00:29:16.412Z",
+      "lastChecked": "2026-07-11T00:23:11.729Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2917,7 +2925,11 @@
         "5wMIF1Oa7DES2YNRpqiVB0": "2026-07-09T14:00:00.000Z",
         "5wMIF1Oa7DES2YNRpqiVB0/": "2026-07-09T14:00:00.000Z",
         "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-09T14:00:00.000Z",
-        "https://blog.cloudflare.com/ml-dsa-will-have-to-do": "2026-07-09T14:00:00.000Z"
+        "https://blog.cloudflare.com/ml-dsa-will-have-to-do": "2026-07-09T14:00:00.000Z",
+        "2smERhDvpGH6FbC035djwD": "2026-07-10T13:00:00.000Z",
+        "2smERhDvpGH6FbC035djwD/": "2026-07-10T13:00:00.000Z",
+        "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-10T13:00:00.000Z",
+        "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds": "2026-07-10T13:00:00.000Z"
       }
     }
   }
