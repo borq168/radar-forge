@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-15T00:20:11.344Z",
+      "lastChecked": "2026-07-16T00:22:46.968Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -530,11 +530,13 @@
         "https://www.anthropic.com/news/ben-bernanke": "2026-07-09T00:00:00.000Z",
         "https://www.anthropic.com/news/ben-bernanke/": "2026-07-09T00:00:00.000Z",
         "https://www.anthropic.com/news/canadian-ai-research": "2026-07-14T00:00:00.000Z",
-        "https://www.anthropic.com/news/canadian-ai-research/": "2026-07-14T00:00:00.000Z"
+        "https://www.anthropic.com/news/canadian-ai-research/": "2026-07-14T00:00:00.000Z",
+        "https://www.anthropic.com/news/claude-for-teachers": "2026-07-14T00:00:00.000Z",
+        "https://www.anthropic.com/news/claude-for-teachers/": "2026-07-14T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-07-15T00:20:11.428Z",
+      "lastChecked": "2026-07-16T00:22:47.181Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2690,11 +2692,15 @@
         "https://openai.com/index/deutsche-telekom": "2026-07-10T07:00:00.000Z",
         "https://openai.com/index/deutsche-telekom/": "2026-07-10T07:00:00.000Z",
         "https://openai.com/index/managing-ai-investments-in-agentic-era": "2026-07-14T10:00:00.000Z",
-        "https://openai.com/index/managing-ai-investments-in-agentic-era/": "2026-07-14T10:00:00.000Z"
+        "https://openai.com/index/managing-ai-investments-in-agentic-era/": "2026-07-14T10:00:00.000Z",
+        "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-15T12:00:00.000Z",
+        "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action/": "2026-07-15T12:00:00.000Z",
+        "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-15T10:00:00.000Z",
+        "https://openai.com/index/unlocking-self-improvement-gpt-red/": "2026-07-15T10:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-15T00:20:11.455Z",
+      "lastChecked": "2026-07-16T00:22:46.912Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2914,26 +2920,26 @@
         "3wrqj94tEFsKCZ8OBUE52R/": "2026-07-01T06:00:00.000Z",
         "https://blog.cloudflare.com/attribution-business-insights/": "2026-07-01T06:00:00.000Z",
         "https://blog.cloudflare.com/attribution-business-insights": "2026-07-01T06:00:00.000Z",
-        "3xHevpKOOM76zUSrlPcQno": "2026-07-07T13:00:00.000Z",
-        "3xHevpKOOM76zUSrlPcQno/": "2026-07-07T13:00:00.000Z",
-        "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-07T13:00:00.000Z",
-        "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge": "2026-07-07T13:00:00.000Z",
+        "3xHevpKOOM76zUSrlPcQno": "2026-07-07T12:00:00.000Z",
+        "3xHevpKOOM76zUSrlPcQno/": "2026-07-07T12:00:00.000Z",
+        "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge/": "2026-07-07T12:00:00.000Z",
+        "https://blog.cloudflare.com/cloudflare-joins-uk-cyber-resilience-pledge": "2026-07-07T12:00:00.000Z",
         "1WYEYtVwQSo4H3jKHTcKmO": "2026-07-06T13:00:00.000Z",
         "1WYEYtVwQSo4H3jKHTcKmO/": "2026-07-06T13:00:00.000Z",
         "https://blog.cloudflare.com/workers-cache/": "2026-07-06T13:00:00.000Z",
         "https://blog.cloudflare.com/workers-cache": "2026-07-06T13:00:00.000Z",
-        "7zbgYCOZDfvIIsVrPpZ8xJ": "2026-07-08T13:00:00.000Z",
-        "7zbgYCOZDfvIIsVrPpZ8xJ/": "2026-07-08T13:00:00.000Z",
-        "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-08T13:00:00.000Z",
-        "https://blog.cloudflare.com/meerkat-introduction": "2026-07-08T13:00:00.000Z",
-        "5wMIF1Oa7DES2YNRpqiVB0": "2026-07-09T14:00:00.000Z",
-        "5wMIF1Oa7DES2YNRpqiVB0/": "2026-07-09T14:00:00.000Z",
-        "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-09T14:00:00.000Z",
-        "https://blog.cloudflare.com/ml-dsa-will-have-to-do": "2026-07-09T14:00:00.000Z",
-        "2smERhDvpGH6FbC035djwD": "2026-07-10T13:00:00.000Z",
-        "2smERhDvpGH6FbC035djwD/": "2026-07-10T13:00:00.000Z",
-        "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-10T13:00:00.000Z",
-        "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds": "2026-07-10T13:00:00.000Z",
+        "7zbgYCOZDfvIIsVrPpZ8xJ": "2026-07-08T12:00:00.000Z",
+        "7zbgYCOZDfvIIsVrPpZ8xJ/": "2026-07-08T12:00:00.000Z",
+        "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-08T12:00:00.000Z",
+        "https://blog.cloudflare.com/meerkat-introduction": "2026-07-08T12:00:00.000Z",
+        "5wMIF1Oa7DES2YNRpqiVB0": "2026-07-09T13:40:47.000Z",
+        "5wMIF1Oa7DES2YNRpqiVB0/": "2026-07-09T13:40:47.000Z",
+        "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-09T13:40:47.000Z",
+        "https://blog.cloudflare.com/ml-dsa-will-have-to-do": "2026-07-09T13:40:47.000Z",
+        "2smERhDvpGH6FbC035djwD": "2026-07-10T12:00:00.000Z",
+        "2smERhDvpGH6FbC035djwD/": "2026-07-10T12:00:00.000Z",
+        "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-10T12:00:00.000Z",
+        "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds": "2026-07-10T12:00:00.000Z",
         "6ePF6Vl7bAXNNpdFDoFbqs": "2026-07-13T13:00:00.000Z",
         "6ePF6Vl7bAXNNpdFDoFbqs/": "2026-07-13T13:00:00.000Z",
         "https://blog.cloudflare.com/introducing-precursor/": "2026-07-13T13:00:00.000Z",
