@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-16T00:22:46.968Z",
+      "lastChecked": "2026-07-17T00:24:32.591Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -536,7 +536,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-07-16T00:22:47.181Z",
+      "lastChecked": "2026-07-17T00:24:32.901Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2696,11 +2696,15 @@
         "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action": "2026-07-15T12:00:00.000Z",
         "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action/": "2026-07-15T12:00:00.000Z",
         "https://openai.com/index/unlocking-self-improvement-gpt-red": "2026-07-15T10:00:00.000Z",
-        "https://openai.com/index/unlocking-self-improvement-gpt-red/": "2026-07-15T10:00:00.000Z"
+        "https://openai.com/index/unlocking-self-improvement-gpt-red/": "2026-07-15T10:00:00.000Z",
+        "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-16T16:00:00.000Z",
+        "https://openai.com/index/why-teens-deserve-access-safe-ai/": "2026-07-16T16:00:00.000Z",
+        "https://openai.com/index/cars24": "2026-07-16T00:00:00.000Z",
+        "https://openai.com/index/cars24/": "2026-07-16T00:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-16T00:22:46.912Z",
+      "lastChecked": "2026-07-17T00:24:32.542Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
