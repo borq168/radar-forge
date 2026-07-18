@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-17T00:24:32.591Z",
+      "lastChecked": "2026-07-18T00:22:26.886Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -536,7 +536,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-07-17T00:24:32.901Z",
+      "lastChecked": "2026-07-18T00:22:27.042Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2700,11 +2700,13 @@
         "https://openai.com/index/why-teens-deserve-access-safe-ai": "2026-07-16T16:00:00.000Z",
         "https://openai.com/index/why-teens-deserve-access-safe-ai/": "2026-07-16T16:00:00.000Z",
         "https://openai.com/index/cars24": "2026-07-16T00:00:00.000Z",
-        "https://openai.com/index/cars24/": "2026-07-16T00:00:00.000Z"
+        "https://openai.com/index/cars24/": "2026-07-16T00:00:00.000Z",
+        "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-17T10:00:00.000Z",
+        "https://openai.com/index/a-scorecard-for-the-ai-age/": "2026-07-17T10:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-17T00:24:32.542Z",
+      "lastChecked": "2026-07-18T00:22:26.794Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2951,7 +2953,11 @@
         "4k8LbDKkNXwcJVEFYF1ije": "2026-07-14T13:00:00.000Z",
         "4k8LbDKkNXwcJVEFYF1ije/": "2026-07-14T13:00:00.000Z",
         "https://blog.cloudflare.com/dnssec-nta-ede-33/": "2026-07-14T13:00:00.000Z",
-        "https://blog.cloudflare.com/dnssec-nta-ede-33": "2026-07-14T13:00:00.000Z"
+        "https://blog.cloudflare.com/dnssec-nta-ede-33": "2026-07-14T13:00:00.000Z",
+        "01KXQS1XDD7HKB324JEWG6BZDA": "2026-07-17T21:30:43.000Z",
+        "01KXQS1XDD7HKB324JEWG6BZDA/": "2026-07-17T21:30:43.000Z",
+        "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-17T21:30:43.000Z",
+        "https://blog.cloudflare.com/wordpress-vulnerabilities": "2026-07-17T21:30:43.000Z"
       }
     }
   }
