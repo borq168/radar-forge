@@ -1,6 +1,6 @@
 # Skills 生态热点 2026-07-23
 
-> 生成时间: 2026-07-23 03:03 UTC | 覆盖仓库: 2 个
+> 生成时间: 2026-07-23 03:54 UTC | 覆盖仓库: 2 个
 
 数据来源:
 - [Claude Skills](https://github.com/anthropics/skills)
@@ -12,97 +12,79 @@
 
 > Codex Skills: PR fetch failed: GitHub API error 404 (https://api.github.com/repos/openai/skills/pulls): {"message":"Not Found","documentation_url":"https://docs.github.com/rest/pulls/pulls#list-pull-requests","status":"404"}
 
-# 跨仓库 Skills 生态热点报告
-**2026-07-23**
+# 跨仓库 Skills 生态热点报告（2026-07-23）
 
 ## 1. 全生态热门 Skills
-按 Issue 评论数、👍 数及跨仓库关注度综合排序，涵盖 Skill 提案、缺陷与需求讨论：
+（按 Issue 评论数降序，关联 PR 作为同一话题列出）
 
-1. **Security: Community skills under anthropic/ namespace enable trust boundary abuse**（Claude Skills）
-   - 评论 43 · 👍 2 · 讨论社区技能在 `anthropic/` 命名空间下冒充官方技能，形成信任边界漏洞。
-   - 链接：https://github.com/anthropics/skills/issues/492
+| 话题 | 仓库 | 类型 | 评论 | 👍 |
+|------|------|------|------|----|
+| 社区技能冒充官方命名空间，信任边界被滥用 | anthropics/skills | Issue #492 | 43 | 2 |
+| 组织内技能共享需求 | anthropics/skills | Issue #228 | 14 | 7 |
+| 技能评估工具 `run_eval.py` 永远报告 0% 触发率（关联 PR #1298、#1099） | anthropics/skills | Issue #556 | 12 | 7 |
+| 已创建技能突然消失 | anthropics/skills | Issue #62 | 10 | 2 |
+| 紧凑记忆技能提案（符号化代理状态） | anthropics/skills | Issue #1329 | 9 | 0 |
+| `skill-creator` 应更新至最佳实践 | anthropics/skills | Issue #202 (已关闭) | 8 | 1 |
+| `playwright-interactive` 技能依赖已移除的 `js_repl` 功能 | openai/skills | Issue #386 (已关闭) | 4 | 4 |
+| 实验性技能无法被找到 | openai/skills | Issue #153 | 4 | 3 |
 
-2. **Enable org-wide skill sharing in Claude.ai**（Claude Skills）
-   - 评论 14 · 👍 7 · 请求在组织内直接共享技能，避免手动文件传输。
-   - 链接：https://github.com/anthropics/skills/issues/228
-
-3. **run_eval.py: claude -p never triggers skills/commands**（Claude Skills）
-   - 评论 12 · 👍 7 · 评估脚本无法触发技能，导致优化循环依赖噪声。
-   - 链接：https://github.com/anthropics/skills/issues/556
-
-4. **All my skills have disappeared**（Claude Skills）
-   - 评论 10 · 👍 2 · 用户创建的 12 个技能突然全部消失，文件重命名可能导致关联丢失。
-   - 链接：https://github.com/anthropics/skills/issues/62
-
-5. **Proposing a second skill: compact-memory**（Claude Skills）
-   - 评论 9 · 👍 0 · 提议使用符号化紧凑表示法压缩长期代理状态内存。
-   - 链接：https://github.com/anthropics/skills/issues/1329
-
-6. **skill-creator should be updated to best practice**（Claude Skills，已关闭）
-   - 评论 8 · 👍 1 · 认为 skill-creator 更像开发者文档而非操作技能，优化 token 效率。
-   - 链接：https://github.com/anthropics/skills/issues/202
-
-7. **document-skills and example-skills install identical content**（Claude Skills）
-   - 评论 6 · 👍 9 · 两个插件安装相同技能导致重复，违背 README 设计。
-   - 链接：https://github.com/anthropics/skills/issues/189
-
-8. **playwright-interactive skill still depends on removed js_repl feature**（Codex Skills，已关闭）
-   - 评论 4 · 👍 4 · 策划技能依赖已移除的功能，导致不可用。
-   - 链接：https://github.com/openai/skills/issues/386
-
-9. **Experimental skills not found**（Codex Skills）
-   - 评论 4 · 👍 3 · 实验性技能路径无法被技能安装器发现。
-   - 链接：https://github.com/openai/skills/issues/153
-
-10. **gh-address-comments can’t find scripts/fetch_comments.py**（Codex Skills）
-    - 评论 2 · 👍 4 · 技能脚本路径问题导致回退到 GraphQL，影响功能。
-    - 链接：https://github.com/openai/skills/issues/96
-
-> 注：PR 评论数在数据中均为 undefined，因此未纳入热度排序；主要依据 Issue 讨论量。
+> 注：Claude Skills 的 PR 评论数未采集，但多个 PR 直指上述 Issue，构成实质讨论热点。
 
 ## 2. 各仓库亮点
-**Claude Skills (github.com/anthropics/skills)**
-- 社区贡献持续活跃，PR 涵盖文档排版、ODT 模板、前端设计、质量/安全分析器、自我审计等新技能，以及多处 eval、PDF、DOCX 的修复。
-- 讨论热点集中在安全信任边界（#492）、组织级共享（#228）、eval 工具严重缺陷（#556）及技能消失（#62），同时已出现紧凑记忆、代理治理等高级技能提案。
-- 维护者回应可见于 eval 问题（#556 关联多个修复 PR），但整体 PR 合并进度不明。
 
-**Codex Skills (github.com/openai/skills)**
-- 本期无新 PR，维护重点在于解决已有技能的功能退化：playwright-interactive 依赖已移除的 `js_repl`（#386），`gh-address-comments` 脚本路径异常（#96）。
-- 用户反馈集中在安装器改进（无更新路径 #127）、实验性技能发现（#153）及开发者工具需求（linter/CLI 工具 #121）。
-- 活跃度相对较低，但仍有用户持续报告问题，反映对技能可靠性的依赖。
+**anthropics/skills**
+- 评估工具可靠性成为焦点：`run_eval.py` 的 0% 触发率 bug（#556）催生了至少两个修复 PR（#1298、#1099），影响技能描述优化循环。
+- 安全与治理讨论升温：社区技能混入 `anthropic/` 命名空间引发信任危机（#492，43 评论），同时有 agent-governance 技能提案（#412，已关闭）。
+- 新技能提案活跃：文档排版（#514）、ODT 创建（#486）、自我审计（#1367）等 PR 持续提交，但多数保持开放，合并进度缓慢。
+
+**openai/skills**
+- 技能依赖管理暴露问题：`playwright-interactive` 仍引用已移除的 `js_repl` 功能（#386，已关闭），表明 curated 技能与 CLI 版本脱节。
+- 技能安装器体验不佳：安装路径冲突无更新/重装路径（#127），实验性技能无法被安装器发现（#153），阻碍用户使用。
+- 社区贡献较低：无 PR 提交，Issue 评论数均未超过 4，讨论活跃度远低于 Claude 生态。
 
 ## 3. 社区需求归类
-将两个仓库中出现的 Skill 方向与诉求合并，按相近主题归类（不夸大趋势强度）：
+跨仓库诉求可归纳为以下方向，但单一仓库的重复出现尚不构成全生态趋势。
 
-- **文档生成与排版**：`document-typography`（防孤行/寡行）、ODT 模板填充与转换（PR #514, #486）。
-- **安全与治理**：代理治理安全模式（#412）、社区技能信任边界修复（#492）。
-- **评估与质量保障**：技能评估工具 `run_eval` 修复（#556, #1298, #1099）、技能质量/安全分析器（#83）、skill-creator 最佳实践（#202）。
-- **记忆与状态管理**：紧凑记忆符号化表示（#1329）。
-- **组织共享与部署**：组织内技能共享（#228）、插件重复安装问题（#189）、安装器更新/重新安装路径（#127）。
-- **前端/UI 设计**：前端设计技能清晰度与可操作性改进（#210）。
-- **开发工具链**：技能编写 linter/IDE 插件/CLI 工具（#121）、技能依赖管理（#386）、脚本路径可靠性（#96）。
+- **技能评估与测试工具**
+  Claude 的 `run_eval.py` 修复（#556、#1298、#1099）与 `skill-quality-analyzer` 提案（#83）均指向对技能触发、质量自动化评估的需求。
+- **文档生成与格式技能**
+  文档排版（#514）、ODT 模板填充（#486）以及 PDF 文件引用修复（#538）呈现对专业文档输出的持续需求。
+- **安全与治理**
+  信任边界（#492）、agent-governance 提案（#412）和技能安全分析器（#83）共同反映对 Agent 安全运行的关注。
+- **技能管理与共享**
+  组织内共享（#228）、插件重复安装（#189）、技能消失（#62）和 Codex 的安装/更新限制（#127）均指向技能生命周期管理不足。
+- **技能开发工具**
+  skill-creator 最佳实践（#202）、YAML 校验（#539）和 Codex 的 linter/IDE 诉求（#121）提示技能作者缺乏配套工具链。
+- **记忆与状态压缩**
+  compact-memory 提案（#1329）试图用符号记法降低长时间代理的上下文成本。
 
 ## 4. 活跃待合并 Skills
-由于本期 PR 评论数均为 undefined，无法直接判断讨论活跃度。以下为值得关注的待合并 PR，但缺少活跃讨论迹象：
+以下 PR 处于开放状态，涉及实际功能改进或新技能，当前讨论多为技术细节，尚未合并。
 
-- **[#1298] fix(skill-creator): run_eval.py always reports 0% recall** — 修复 eval 工具核心缺陷，影响多个下游脚本，关联 Issue #556 有 12 条评论。当前状态 OPEN，实际用途：恢复技能描述优化循环的有效性。
-  链接：https://github.com/anthropics/skills/pull/1298
-
-- **[#514] Add document-typography skill** — 新增文档排版质量控制技能，解决 AI 生成文档中的常见排版问题。状态 OPEN，无活跃讨论记录。
-  链接：https://github.com/anthropics/skills/pull/514
-
-- **[#1367] feat(skills): add self-audit** — 通用输出审计技能，先机械验证再四维推理审查。状态 OPEN，2026-06-28 创建，暂无评论。
-  链接：https://github.com/anthropics/skills/pull/1367
-
-- **[#83] Add skill-quality-analyzer and skill-security-analyzer** — 元技能用于评估技能质量与安全。状态 OPEN，创建于 2025-11-06，更新至 2026-01-07，无评论。
-  链接：https://github.com/anthropics/skills/pull/83
-
-> 所有这些 PR 均处于 OPEN 状态，相关讨论散落在 Issue 中，合并进度未知。
+- **修复技能评估工具**
+  - #1298：修复 `run_eval.py` 的 0% recall 问题，涉及 eval artifact 安装、Windows 流读取、触发检测与并行 worker，是解决 #556 的主要方案。
+  - #1099：专门修复 Windows 下 `run_eval.py` 子进程管道读取崩溃，与 #1298 互补。
+  状态：两者均开放，前者更新至 6-23，后者至 5-24。
+- **文档排版技能**
+  - #514：新增 `document-typography` 技能，解决 AI 生成文档的孤行、寡行、编号对齐问题。
+  状态：3-13 后无进一步活动，但属于新技能提案。
+- **ODT 技能**
+  - #486：新增 OpenDocument 格式创建、模板填充与解析能力。
+  状态：4-14 更新，仍在等待。
+- **自我审计技能**
+  - #1367：在输出交付前进行机械文件验证与四维度推理质量审计（v1.3.0）。
+  状态：7-2 更新，较新提案。
+- **DOCX 跟踪修订 ID 冲突修复**
+  - #541：修复 `w:id` 与现有书签冲突导致的文档损坏。
+  状态：4-16 更新，专注 OOXML 细节。
+- **skill-creator 描述 YAML 校验**
+  - #539：检测未引用的 `description` 字段中的特殊字符，防止 YAML 解析错误。
+  状态：4-16 更新。
 
 ## 5. 跨仓库今日备注
-- Claude Skills 仓库的社区贡献形态以新技能提案和框架修复并重，关注点侧重于技能生态的扩展与信任模型；Codex Skills 仓库则更多是现有技能的功能维护和工具链缺失补全，贡献活跃度明显偏低。
-- 一个跨仓库共同存在的需求是**技能的可发现性与安装可靠性**（Claude 的重复安装、Codex 的实验性技能路径问题），但 Claude 侧进一步延伸到组织级共享，Codex 侧尚未出现类似诉求。
-- **事实备注**：
-  1. Anthropic 技能仓库的 `run_eval.py` 存在全线 0% 召回率问题，已持续数月，有多人独立复现（#556），多个 PR 尝试修复但仍未合并。
-  2. OpenAI 技能仓库的 `playwright-interactive` 因 `js_repl` 功能移除而失效（#386，已关闭），提示技能与平台特性耦合的风险。
-  3. 两个仓库均未见技能市场或共享机制的正式发布，但 Claude 侧已出现用户对命名空间冒用的强烈安全担忧（#492）。
+- Claude 生态以技能扩展和评估工具修复为核心，社区贡献量大但合并缓慢；Codex 生态则聚焦于技能安装器的体验缺陷和依赖清理，贡献活跃度较低。
+- 两个仓库均出现技能管理痛点：Claude 的插件重复安装（#189）与技能消失（#62），Codex 的安装无更新路径（#127），反映技能生命周期工具不成熟。
+- 事实备注：
+  1. Claude 的 `run_eval.py` 问题（#556）已关联 10+ 独立复现，其修复 PR 是当前维护优先级最高的待办项之一。
+  2. Codex 的 `playwright-interactive` 技能因依赖已移除的 `js_repl` 而无法使用（#386），已关闭但未说明修复计划。
+  3. 跨仓库的安全关注正在上升：Claude 的信任边界漏洞（#492）与 agent-governance 提案（#412）均指向 Agent 安全治理缺口。

@@ -1,6 +1,6 @@
 # AI CLI 工具社区动态日报 2026-07-23
 
-> 生成时间: 2026-07-23 03:03 UTC | 覆盖工具: 4 个
+> 生成时间: 2026-07-23 03:54 UTC | 覆盖工具: 4 个
 
 - [Claude Code](https://github.com/anthropics/claude-code)
 - [OpenAI Codex](https://github.com/openai/codex)
@@ -11,53 +11,58 @@
 
 ## 横向对比
 
-# AI CLI 工具社区横向对比日报 | 2026-07-23
+# 2026-07-23 AI CLI 工具社区动态横向对比
 
 ## 1. 今日横向概览
-今日仅有 **Claude Code** 与 **Kimi Code** 两个工具产出有效社区动态摘要，OpenAI Codex 和 OpenCode 的自动化摘要生成失败，无法纳入对比。Claude Code 发布了 v2.1.218，重点优化后台子代理与无障碍体验，社区围绕桌面工具缺陷、任务工具回归、沙盒回归等问题展开了大量讨论。Kimi Code 发布 0.29.0，新增 ACP 思考努力程度选择，社区焦点集中在权限配置一致性、模型消费感知、终端交互体验和 ACP 协议健壮性上。两个社区在**工具链可靠性、配额透明度、交互一致性**方面表现出共同的焦虑。
+
+今日 Claude Code 发布了 v2.1.218，重点改进 `/code-review` 后台执行与屏幕阅读器支持；OpenAI Codex 短时间内连续推送 4 个 Rust alpha 版本，但未附详细说明；Kimi Code 发布 v0.29.0，率先在 ACP 客户端中支持思考深度选择；OpenCode 当日无版本发布。四家工具的 Issue 区均保持活跃，Claude Code 与 Codex 各更新 50 条 Issue，OpenCode 同样达 50 条 Issue 和 50 条 PR，Kimi Code 则有 32 条 Issue 与 50 条 PR 的更新记录。跨端工作流、沙箱兼容性、Windows 平台稳定性及自动化控制成为今日多个社区共同关注的话题。
 
 ## 2. 各工具活跃度对比
-| 工具 | 今日新增/更新 Issues | 今日新增/更新 PRs | 版本发布 | 备注 |
-|------|---------------------|-------------------|----------|------|
-| Claude Code | 50 个 Issue 更新 | 9 个 PR 更新 | v2.1.218 | 热点 Issue 含 57 评论、99 赞等高互动 |
-| Kimi Code | 32 条 Issue 更新 | 50 条 PR 动态 | @moonshot-ai/kimi-code@0.29.0 | 多个 PR 修复历史遗留问题 |
-| OpenAI Codex | 摘要生成失败 | — | — | — |
-| OpenCode | 摘要生成失败 | — | — | — |
 
-*注：Kimi Code 的“50 条 PR 动态”统计口径可能包含已合入的 PR，Claude Code 的 9 个 PR 为“今日进展”数；两者直接可比性有限，但均反映当日合并与修复活跃度。*
+| 工具 | 今日 Issue 更新数 | 今日 PR 更新数 | 版本发布 | 最热 Issue（评论数） |
+|------|------------------|----------------|----------|---------------------|
+| Claude Code | 50 | 9 | v2.1.218 | #80002 macOS 桌面端工具调用失败（57 评论） |
+| OpenAI Codex | 50 | 10+（合入） | rust-v0.146.0-alpha.1~4 | #28969 禁用 60 秒自动回答（53 评论） |
+| Kimi Code | 32 | 50 | v0.29.0 | #2070 交互式会话忽略 hooks（数据截断） |
+| OpenCode | 50 | 50 | 无 | 自定义系统提示与模型自动发现（高票，具体评论数未提供） |
+
+> 注：Kimi Code 与 OpenCode 日报原文被截断，部分数据不完整，仅能反映已披露信息。
 
 ## 3. 共同出现的功能方向
-- **桌面应用与终端体验对齐**
-  Claude Code（#71726）要求桌面应用支持工具调用间的即时转向，削弱的能力与 CLI 不一致；Kimi Code 则大量 TUI 体验 Issue（#2039 闪烁、#2007 补全优先级、#2051 链接可点击）表明终端交互打磨是两方共同诉求。
 
-- **配额与模型消耗透明度**
-  Claude Code 用户抱怨 Fable 5 额度提示混乱（#80409 等），Kimi Code 用户反映 K3 模型输入 token 异常消耗（#2031）和近期配额消耗加快（#2072），两者均要求更清晰、实时的用量感知（Kimi #872 要求状态栏显示配额）。
+- **跨端一致性与会话共享**：Claude Code 用户强烈要求从 Web 端到 CLI 的上下文传递（#13843，99 👍），桌面端缺乏 mid-task 消息注入（#71726）被反复提及；OpenAI Codex 也存在 VS Code 扩展与 CLI 行为不一致的问题，如 Remote-SSH 加载失败（#27597）、工作区隔离需求（#25319）。两个社区均反映出“端到端体验对齐”的诉求。
 
-- **任务/计划与结构化工作流中断**
-  Claude Code 的任务工具（TaskCreate/TodoWrite）突然回归（#80210），计划命令改进（PR #18217）；Kimi Code 则通过双模型路由（PR #1996）和技能目录管理（#1983）尝试优化工作流编排，结构化任务管理的稳定性是共同痛点。
+- **沙箱与权限兼容性**：Claude Code 的 v2.1.216 沙箱回归导致 Bash 工具调用全面失败（#79997），OpenAI Codex 则出现 Windows 桌面沙箱启动失败（#22428，`CreateProcessAsUserW` 错误）。沙箱机制在非标环境下的脆弱性是今日两家的共同痛点。
 
-- **权限与安全策略一致性**
-  Claude Code 的沙盒回归（#79997）和 Kimi Code 的交互模式忽略 hooks 与权限规则（#2070）都暴露出安全机制在不同运行模式下的不一致，影响用户信任。
+- **自动化行为控制**：Claude Code 用户关注会话恢复后模型静默切换（#76363），OpenAI Codex 用户强烈反对 `/plan` 模式下的 60 秒自动提交（#28969，151 👍），两者均要求对 AI 的自动决策提供更透明的控制与可配置性。
 
-- **插件生态与可扩展性阻塞**
-  Claude Code 插件市场“已发布”不可见（#80263），Kimi Code 希望从 GitLab 安装插件（#2063），两个社区均面临插件发现与分发机制不成熟的问题。
+- **Windows 平台稳定性**：Claude Code 出现休眠恢复后 CPU 空转 200%（#80404），OpenAI Codex 则有 Windows 沙箱失败、webview 加载错误（#14745）、安装包启动失败等多起问题，Kimi Code 与 OpenCode 的已披露内容未涉及此方面。
 
 ## 4. 差异化定位分析
-- **Claude Code**：侧重**桌面应用 + CLI 双端统一**，并与 Claude.ai 生态打通，面向习惯 Anthropic 模型和 Max 订阅的专业开发者；当前核心矛盾是桌面端功能滞后于 CLI，以及沙盒、认证等基础设施稳定性问题。
-- **Kimi Code**：明显偏向**终端交互（TUI）与 ACP 协议**，以 Moonshot 的 K 系列模型为底座，用户群体对配额消耗极为敏感；社区诉求集中在 TUI 交互细节、多模型路由、中文支持等，呈现更“工具化”和“成本可控”的定位。
-- **OpenAI Codex / OpenCode**：今日无数据，无法对比。
+
+- **Claude Code**：侧重端到端 Agent 工作流与桌面端体验，社区反馈高度集中于桌面端功能补齐（steering、后台 agent、会话共享）、沙箱策略及认证计费稳定性，反映出其用户群对“原生桌面集成”和“复杂任务编排”有较高期待。插件生态处于早期，发布流程阻塞是当前薄弱环节。
+
+- **OpenAI Codex**：拥有更庞大的多代理（v2）与插件体系，Rust 后端迭代极为频繁。今日 PR 多为自动化合入，涉及插件缓存、权限控制、线程置顶、分析刷新等基础设施打磨。社区争议集中在自动行为强制（60 秒自动回答）、资源消耗（SQLite 日志、周用量限制）以及 Windows 与远程开发场景的兼容性，显示出其功能广度与体验打磨之间的拉扯。
+
+- **Kimi Code**：更新节奏轻快，v0.29.0 率先落地 ACP 客户端思考深度选择，PR 活跃度（50）显著高于 Issue 数（32），表明维护团队正积极合并功能。已披露的 Issue #2070 涉及交互式会话与 hooks 权限，可能指向其关注的安全与可定制性。受限于信息截断，更深差异无法判断。
+
+- **OpenCode**：今日无版本发布，但 Issue 与 PR 各 50 条，社区活跃度不低。讨论集中在自定义系统提示、模型自动发现与多模型兼容性（Qwen、Kimi 故障），桌面端内存占用与连接稳定性也被提及。这些信号指向其社区的“多模型接入”与“个性化提示”需求强烈，与 Codex 的集成生态、Claude Code 的桌面 Agent 路线形成差异。
 
 ## 5. 社区活跃度记录
-- **Claude Code**：单日 50 个 Issue 更新，且 Top 1 Issue 收到 57 评论和 25 赞，显示社区卷入度高；版本发布节奏稳定，且维护者已关闭部分高热度缺陷（如 #80002）。综合来看，用户反馈活跃且能推动维护者响应。
-- **Kimi Code**：PR 动态 50 条，说明代码合并与修复吞吐量较大，且多个 PR 直接关联历史 Issue（如 #2081 修复 #1931，#2074 修复 #1925），维护者响应链清晰。Issue 侧虽不及 Claude Code 热度集中，但功能需求、体验优化类 Issue 持续性高，生态建设期特征明显。
-- **OpenAI Codex / OpenCode**：摘要生成失败，无法评估当日活跃度。
+
+以今日 Issue 更新量计，Claude Code、OpenAI Codex 和 OpenCode 均更新 50 条 Issue，处于同一活跃水平，Kimi Code 稍低（32 条）。PR 方面，OpenCode 和 Kimi Code 均达到 50 条，显著高于 Claude Code（9 条）和 OpenAI Codex（约 10 条已合入 PR），但后两者 PR 质量与功能影响不可仅凭数量衡量。版本发布上，Claude Code 和 Kimi Code 均发布了带有明确 Changelog 的版本，Codex 发布了 4 个 alpha 版本但无说明，OpenCode 无发布。维护者回应方面，Claude Code 热门 Issue #80002 已关闭但讨论未息，Codex 则通过自动化工具密集合入 PR，社区反馈的 Issue 多数未显示已解决；Kimi Code 与 OpenCode 的维护者回应情况因信息截断不明。
 
 ## 6. 有证据支撑的观察
-- **双端体验一致性成为显性竞争因素**：Claude Code 的桌面应用在工具调用、转向输入、远程控制等方面的缺陷，与 Kimi Code 在 TUI 交互上的打磨诉求，共同指向“开发者在哪里使用 AI 编程”这一体验连贯性问题。
-- **模型配额与成本危机正在侵蚀用户信任**：两个工具均出现用户对“配额突然耗尽”“消耗异常加速”的抱怨，且维护者尚未提供彻底透明的解决机制，可能成为用户流失的导火索。
-- **安全机制在不同运行模式下的割裂感加剧**：Claude Code 的沙盒回归仅在特定安装方式下触发，Kimi Code 的权限规则在交互模式下失效，都表明安全策略未经过多模式一致性测试，是当前 CI/CD 流水线对手最忌讳的可靠性风险。
-- **插件生态仍处于早期阶段**：Claude Code 的插件市场“幽灵发布”和 Kimi Code 的安装源扩展需求，显示两个工具的插件体系均未达到“可发现、可安装、可信任”的成熟度，生态飞轮尚未启动。
-- **今日暂无明确跨工具信号**：由于仅有 Claude Code 和 Kimi Code 两个有效数据源，无法从中提炼出覆盖整个 AI CLI 赛道的明确趋势，以上观察仅基于两个社区的独立证据归纳。
+
+1. **桌面端体验成为 Claude Code 与 Codex 的共同短板**：Claude Code 桌面端文件系统工具调用静默失败、无法中途注入消息，Codex 桌面端沙箱启动失败、webview 错误，两个社区均出现多个相关 Issue，且 Windows 平台问题尤为集中。这并非孤立抱怨，而是跨工具的普遍现象。
+
+2. **用户对 AI 自动行为的控制需求在增强**：Claude Code 的“模型静默切换”和 Codex 的“60 秒自动回答”均获得大量投票与讨论，说明开发者在高频使用中对 AI 行为的可预测性、成本透明度和自主控制权提出了更高要求。
+
+3. **沙箱机制在非标准环境下的脆弱性显露**：Claude Code 的沙箱回归导致非 root 安装下 Bash 工具全部失效，Codex 的 Windows 沙箱调用 `CreateProcessAsUserW` 失败，两者均指向沙箱策略在路径权限、用户上下文等边界场景下的测试不足，可能成为后续版本稳定性修复的重点。
+
+4. **插件生态的发布流程存在结构性摩擦**：Claude Code 的插件发布后未出现在目录（#80263），Codex 则通过自动化 PR 优化插件缓存与元数据加载，形成对比：前者在发布环节卡顿，后者在积极优化加载体验，但两者都反映出插件分发链路仍需打磨。
+
+5. **今日暂无明确跨工具信号**：除上述观察外，各工具在认证、计费、远程开发等方向的反馈虽有重叠，但未形成足够多的独立证据链来支撑新的趋势判断，更多体现为各自社区的历史遗留问题延续。
 
 ---
 
@@ -68,252 +73,243 @@
 
 # Claude Code 社区动态日报 | 2026-07-23
 
-## 1. 今日更新概览
-过去 24 小时仓库发布 v2.1.218 版本，将 `/code-review` 改为后台子代理以节省对话上下文，并改善屏幕阅读器体验。社区活跃度维持高位，新增及更新 50 个 Issue 和 9 个 Pull Request，其中 macOS 桌面端工具调用缺陷、桌面应用转向对齐、任务工具回归等问题引发大量讨论。
+## 今日更新概览
+今日社区发布 v2.1.218 版本，重点优化了 `/code-review` 后台执行与屏幕阅读器辅助功能。过去 24 小时共更新 50 个 Issue 和 9 个 PR，其中 macOS 桌面端工具调用失败问题（#80002）引发 57 条讨论，成为当日最热议题；跨端会话共享、模型切换提示、沙箱兼容性等痛点持续受关注。
 
-## 2. 版本发布
+## 版本发布
 **v2.1.218**
-- `/code-review` 改为后台子代理运行，审查结果不再占用主对话上下文，并可保持堆叠斜杠命令作为审查目标。
-- 为删除操作（`Option+Delete`、`Ctrl+W`、`Cmd+Backspace`）的单词和行删除加入屏幕阅读器公告，增强无障碍支持。
+- `/code-review` 改为后台子代理运行，审核内容不再占用主对话且可锁定堆叠的斜杠命令为审查目标。
+- 增加屏幕阅读器对删除文本的播报支持（`Option+Delete`、`Ctrl+W`、`Cmd+Backspace`）。
+🔗 [Release v2.1.218](https://github.com/anthropics/claude-code/releases/tag/v2.1.218)
 
-## 3. 社区热点 Issues（Top 10）
+## 社区热点 Issues（Top 10）
+1. **macOS 桌面端 Filesystem 扩展工具调用静默失败** [#80002](https://github.com/anthropics/claude-code/issues/80002)
+   `tools/list` 成功但 `tools/call` 无任何日志输出，影响桌面端与 MCP 文件系统交互。57 条评论，25 👍，已关闭但仍为社区焦点。
 
-1. **#80002 [CLOSED] macOS 桌面端 Filesystem 扩展永不触发 tools/call**
-   57 评论 · 25 👍
-   macOS 桌面应用在 `tools/list` 成功返回后，第一方文件系统扩展从不派发 `tools/call`，日志中无任何调用记录，导致自动化流程中断。该问题已关闭，但社区反馈热度极高。
-   https://github.com/anthropics/claude-code/issues/80002
+2. **从 Claude.ai 到 Claude Code 共享会话上下文** [#13843](https://github.com/anthropics/claude-code/issues/13843)
+   用户希望将 Web 端规划好的项目上下文无缝迁移到 CLI/IDE，99 👍 反映出强烈的跨端工作流需求。
 
-2. **#13843 [OPEN] 从 Claude.ai 分享对话上下文到 Claude Code**
-   25 评论 · 99 👍
-   用户希望在 Claude.ai 中规划项目后，能将完整对话上下文导入 Claude Code 继续执行，避免重复描述。需求长期未解决，赞数接近 100。
-   https://github.com/anthropics/claude-code/issues/13843
+3. **Max 计划中途降级为 Free 计划** [#56897](https://github.com/anthropics/claude-code/issues/56897)
+   订阅状态下账户异常降级，影响付费用户权益，9 条讨论，3 👍。
 
-3. **#71726 [OPEN] 桌面应用：像 CLI 那样在工具调用间注入排队消息（转向对齐）**
-   9 评论 · 16 👍
-   桌面应用的 Code 窗口在任务运行时，用户输入的消息会排队至任务结束，而 CLI 可在工具调用间即时注入“转向”指令。两者行为不一致，影响流畅度。
-   https://github.com/anthropics/claude-code/issues/71726
+4. **桌面端不支持任务中途注入消息（steering）** [#71726](https://github.com/anthropics/claude-code/issues/71726)
+   桌面端消息在任务完成后才送达，而 CLI 可在工具调用间插入，16 👍 凸显桌面端与 CLI 功能差异的痛点。
 
-4. **#77966 [OPEN] Linux 平台 OAuth 循环：state 参数丢失**
-   8 评论 · 6 👍
-   在 Linux / IntelliJ 集成中，登录时重定向后 state 参数被丢弃，导致无限“sign in again”循环，影响多平台认证稳定性。
-   https://github.com/anthropics/claude-code/issues/77966
+5. **Linux/IntelliJ OAuth 登录循环** [#77966](https://github.com/anthropics/claude-code/issues/77966)
+   认证流程中 state 参数丢失导致反复登录，影响 Linux 平台及 IDE 插件用户，8 条评论。
 
-5. **#78933 [OPEN] Windows 桌面 Remote Control 无法连接**
-   8 评论 · 0 👍
-   运行 `/remote-control` 时抛出 `Cannot read properties of undefined (reading 'session_url')`，连接和断开均失败，远程控制功能完全不可用。
-   https://github.com/anthropics/claude-code/issues/78933
+6. **插件发布后未出现在目录中** [#80263](https://github.com/anthropics/claude-code/issues/80263)
+   提交状态显示“Published”但实际未公开，重复提交仍堵塞，打击插件开发者积极性，5 条评论。
 
-6. **#50894 [CLOSED] 焦点模式隐藏实质性助手消息**
-   5 评论 · 4 👍
-   Focus mode 原意是隐藏冗长工具输出，却错误地将工具调用之间的助手说明文字也一并隐藏，导致用户看不到关键回答。问题已关闭（stale）。
-   https://github.com/anthropics/claude-code/issues/50894
+7. **休眠恢复后 CPU 空转 200% 及输入延迟** [#80404](https://github.com/anthropics/claude-code/issues/80404)
+   Windows 下 libuv 事件循环超时归零，导致自旋和界面卡顿，4 条评论，怀疑与旧版 #62308 同源。
 
-7. **#80404 [OPEN] 休眠/恢复后事件循环饥饿导致 ~200% CPU 和输入延迟**
-   4 评论 · 0 👍
-   Windows 下休眠恢复后，空闲会话的 libuv 事件循环 `uv_backend_timeout() == 0`，造成两个核心满载旋转，数十分钟后自行终止，类似 macOS 历史问题 #62308。
-   https://github.com/anthropics/claude-code/issues/80404
+8. **日本地区 API 额度购买失败** [#80055](https://github.com/anthropics/claude-code/issues/80055)
+   信用卡授权通过但支付失败，可能涉及地区支付通道，3 条评论，直接影响使用。
 
-8. **#80263 [OPEN] 插件市场：已发布插件 “cortex” 从未出现**
-   3 评论 · 0 👍
-   插件在控制台显示“已发布”超过 10 天，但公开目录中搜索不到，且重新提交会产生重复条目，阻塞插件上线。
-   https://github.com/anthropics/claude-code/issues/80263
+9. **v2.1.216 沙箱回归：/opt/.claude 目录创建失败** [#79997](https://github.com/anthropics/claude-code/issues/79997)
+   非 root 安装下沙箱拒绝写入，致使所有 Bash 工具调用失败，2 👍，亟待修复。
 
-9. **#79997 [OPEN] v2.1.216 沙盒回归：bwrap 无法创建目录**
-   3 评论 · 2 👍
-   非 root 安装且上级目录为 root 所有时，沙盒挂载失败，导致所有 Bash 工具调用在运行前即被终止，属 2.1.216 引入的严重回归。
-   https://github.com/anthropics/claude-code/issues/79997
+10. **会话恢复后模型静默切换** [#76363](https://github.com/anthropics/claude-code/issues/76363)
+    `--resume` 不提示模型变更，用户可能从 Opus 切换到更廉价模型且未察觉，1 👍，关注成本与行为透明性。
 
-10. **#80210 [OPEN] 任务工具（TaskCreate/TodoWrite）回归**
-    1 评论 · 3 👍
-    `todoFeatureEnabled: true` 的情况下，结构化任务工具与 TodoWrite 自 2026-07-21 起突然不再暴露给模型，疑似账户级门控，严重影响工作流。
-    https://github.com/anthropics/claude-code/issues/80210
+## 重要 PR 进展
+1. **feat(plugins): 添加 `/planwith` 命令** [#18217](https://github.com/anthropics/claude-code/pull/18217)（已关闭）
+   支持内联计划提示，无需先切换模式再输入，简化计划工作流。
 
-## 4. 重要 PR 进展
+2. **docs(gcp): 校验和失败时停止部署** [#80353](https://github.com/anthropics/claude-code/pull/80353)
+   在 GCP 网关部署脚本中增加二进制校验和检查，防止损坏文件继续执行。
 
-1. **#18217 [CLOSED] 添加 `/planwith` 命令支持内联计划模式**
-   为 `/plan` 提供直接接受提示参数的能力，避免先切换模式再输入任务的繁琐两步操作。
-   https://github.com/anthropics/claude-code/pull/18217
+3. **添加 account-profiles 插件** [#80326](https://github.com/anthropics/claude-code/pull/80326)
+   提供多账户隔离启动环境管理，方便个人、工作、客户账户切换。
 
-2. **#80353 [OPEN] GCP 网关注：校验和失败时停止部署**
-   在 GCP 网关部署脚本中增加二进制校验和验证，失败时终止并清理，提升安全性。
-   https://github.com/anthropics/claude-code/pull/80353
+4. **修复文档失效链接** [#80294](https://github.com/anthropics/claude-code/pull/80294)
+   通过 archive.org 快照修复 README 中 1 个断链。另 [#80229](https://github.com/anthropics/claude-code/pull/80229) 同样修复断链。
 
-3. **#80326 [OPEN] 账户配置文件插件**
-   新增 `account-profiles` 插件，管理独立的 `CLAUDE_CONFIG_DIR` 环境，便于在个人、工作、客户账号间切换。
-   https://github.com/anthropics/claude-code/pull/80326
+5. **修复控制台文本追加时滚动到顶部的问题** [#80241](https://github.com/anthropics/claude-code/pull/80241)
+   解决控制台输出新内容时意外跳回历史顶部的 UI 缺陷。
 
-4. **#80294 [OPEN] 文档修复：替换 1 个失效链接（Wayback 存档）**
-   自动修复 README 中的 npm 包链接，使用 archive.org 快照，确保文档可达性。
-   https://github.com/anthropics/claude-code/pull/80294
+6. **修复自动压缩未触发（上下文 100% 仍不压缩）** [#80196](https://github.com/anthropics/claude-code/pull/80196)
+   针对 Max 订阅下 200K 模式未能自动压缩的问题，提出修复方案。
 
-5. **#80241 [OPEN] 修复：控制台在 Claude 添加文本时滚动到历史顶部**
-   解决终端输出更新时意外跳转至历史记录开头的问题，改善交互体验。
-   https://github.com/anthropics/claude-code/pull/80241
+7. **修复 Max 订阅瞬间达到用量上限** [#80195](https://github.com/anthropics/claude-code/pull/80195)
+   尝试解决付费用户遭遇的异常速率限制。
 
-6. **#80229 [OPEN] 文档修复：再次替换 1 个失效链接**
-   同 #80294，修复 README 中的另一处断链。
-   https://github.com/anthropics/claude-code/pull/80229
+8. **devcontainer 防火墙初始化增加 DNS 容错** [#80112](https://github.com/anthropics/claude-code/pull/80112)
+   避免单次 DNS 解析失败导致整个防火墙设置中断，提升开发容器稳定性。
 
-7. **#80196 [OPEN] 修复：自动压缩在上下文 100% 时从不触发**
-   解决 v2.1.153 中 Max 订阅、200K 模式下，自动压缩机制失效导致上下文满溢的问题。
-   https://github.com/anthropics/claude-code/pull/80196
+## 功能需求归类
+- **跨端工作流与会话共享**：从 Claude.ai 到 Claude Code 的上下文传递（#13843），桌面端 mid-task 消息注入（#71726），以及会话恢复后模型不变提示（#76363）。
+- **桌面端与 CLI 体验对齐**：桌面端 steering 缺失（#71726、#77724），后台 agent 会话管理（#66202），以及桌面端 webview 崩溃（#80403）。
+- **沙箱与权限兼容性**：沙箱回归导致 Bash 工具失效（#79997）、沙箱文件列表过大触发 E2BIG（#78253）、Cowork 安全根目录权限问题（#78368）。
+- **认证与计费稳定性**：OAuth 循环（#77966）、凭证令牌过期未刷新（#79688）、MCP OAuth 存储被清空（#80422）、购买额度失败（#80055）、订阅降级（#56897）。
+- **插件与 MCP 生态**：插件发布流程阻塞（#80263、#80423），MCP 连接器状态报告错误（#79319）。
+- **性能与资源管理**：休眠后 CPU 空转（#80404）、Windows 桌面端安装包启动失败（#80426）、CoworkVM 服务孤立导致重装失败（#80419）。
 
-8. **#80195 [OPEN] 修复：Max 订阅立即达到使用上限**
-   修复 Max 用户因特定计费或配额逻辑错误，会话刚开始即被限制的 bug。
-   https://github.com/anthropics/claude-code/pull/80195
-
-9. **#80112 [OPEN] 使 devcontainer 防火墙初始化容忍 DNS 解析失败**
-   改进防火墙脚本，单个域名解析失败不再中断整个初始化，提高容器开发环境可靠性。
-   https://github.com/anthropics/claude-code/pull/80112
-
-## 5. 功能需求归类
-
-- **桌面与 CLI 体验对齐**
-  #71726、#77724 要求桌面应用支持任务中途的即时“转向”输入，当前排队机制削弱了交互效率。
-
-- **跨端上下文共享**
-  #13843 请求从 Claude.ai 到 Claude Code 的对话迁移能力，呼声极高。
-
-- **任务与计划工具完善**
-  #80210、#80213 反映任务工具（TaskCreate/TodoWrite）意外消失，PR #18217 尝试将 `/plan` 与内联提示结合，说明用户对结构化任务管理有持续需求。
-
-- **沙盒与权限稳定性**
-  #79997、#80412、#80410 显示沙盒路径、权限降级等问题，尤其在 Linux 和 macOS 不同安装方式下频繁出现。
-
-- **插件市场与账户管理**
-  #80263 插件发布后不可见，PR #80326 提供账户配置文件切换，表明社区对插件生态和多账户支持的期待。
-
-- **模型配额与可用性**
-  #80409、#80382、#79410 涉及 Fable 5 额度提示混乱、调度锁定模型等问题，用户对 Max 订阅的模型使用透明度有较多抱怨。
-
-- **远程控制与多设备**
-  #78933 远程控制完全不可用，影响从移动端控制桌面会话的场景。
-
-- **无障碍与国际化**
-  #80415 韩文在 UI 卡片中乱码，v2.1.218 开始加入屏幕阅读器支持，无障碍关注度上升。
-
-## 6. 开发者关注点
-
-- **桌面应用功能滞后**：CLI 已有的转向、会话管理能力在桌面端缺失，导致开发者偏好终端而非桌面 App。
-- **认证与网络稳定性**：OAuth 重定向参数丢失、Cloudflare 403 循环、休眠后事件循环死锁等问题，频繁打断开发流程。
-- **任务与计划工具消失**：关键工具回归突然，且无明确恢复时间，打断了依赖结构化任务的工作流。
-- **沙盒回归困扰 Linux/非 root 用户**：2.1.216 后沙盒错误使 Bash 工具调用全灭，影响面广。
-- **模型配额界面混乱**：Fable 5 的可用性提示互相矛盾，用户难以判断是否真的耗尽额度，影响信任度。
-- **插件生态阻塞**：已发布插件无法在市场中展示，缺乏社区插件发现和安装体验。
-- **性能与资源消耗**：事件循环饥饿导致 CPU 满载，自动压缩失效，长文本丢失等问题，消耗计算资源并威胁数据完整性。
+## 开发者关注点
+- **沙箱兼容性**：v2.1.216 引入的沙箱策略导致多起工具调用失败，在非标准安装路径下尤为严重，需紧急修复。
+- **桌面端功能短板**：无法在任务执行中实时注入指令，且与 CLI 行为不一致，影响了 Agent 交互的实时性。
+- **认证流程脆弱性**：OAuth 状态丢失、令牌不刷新、MCP 认证被清空等问题频繁出现，跨平台（Linux/Windows/IntelliJ）修复需求迫切。
+- **插件发布堵塞**：多个插件提交后状态为“Published”但实际未上架，打击开发者贡献热情，需尽快清理重复条目并修复底层冲突。
+- **模型切换透明性**：会话恢复或 Cowork 调度时可能静默切换模型，用户对成本控制和行为预期缺失表达不满。
+- **Windows 端稳定性**：休眠恢复后 CPU 空转、MSIX 安装包启动失败、安装/卸载残留等问题集中爆发，Windows 用户基础体验受影响。
 
 </details>
 
 <details>
 <summary><strong>OpenAI Codex</strong> — <a href="https://github.com/openai/codex">openai/codex</a></summary>
 
-⚠️ 摘要生成失败。
+# OpenAI Codex 社区动态日报 | 2026-07-23
+
+## 1. 今日更新概览
+今日社区发布了 Rust 侧 4 个 alpha 版本（v0.146.0-alpha.1 至 alpha.4），但未提供详细变更说明。 Issues 区活跃，新增及更新了 50 条讨论，其中关于 CLI 自动解决机制、Windows 平台稳定性、多代理可用性等反馈热度较高。Merge 队列由自动化工具密集合入多项功能 PR，涉及插件缓存、权限控制、线程置顶、分析刷新等。
+
+## 2. 版本发布
+- **rust-v0.146.0-alpha.1 / alpha.2 / alpha.3 / alpha.4**
+  短时间内连续发布 4 个 alpha 版本，官方未附 Release Notes，推测为内部迭代或修复链，具体变更需查看提交记录。
+
+## 3. 社区热点 Issues
+选取过去 24 小时评论/反馈最集中的 10 个 Issue，覆盖 CLI、IDE 扩展、桌面应用、Windows 兼容性、多代理等场景。
+
+1. **#28969 添加设置项以禁用 60 秒自动回答问题**
+   作者请求允许在 CLI 配置中关闭 `/plan` 模式下的 60 秒自动提交行为，认为严重破坏计划模式使用体验。53 条评论，151 个 👍，是当前呼声最高的功能请求。
+   🔗 [github.com/openai/codex/issues/28969](https://github.com/openai/codex/issues/28969)
+
+2. **#29532 macOS 下 SQLite 日志持续输出问题未完全修复**
+   升级到 rust-v0.142.0 后，`~/.codex/logs_2.sqlite` 仍存在大量日志写入，尽管部分模块已有改善，但整体性能损耗未彻底解决。44 条评论。
+   🔗 [github.com/openai/codex/issues/29532](https://github.com/openai/codex/issues/29532)
+
+3. **#17827 可定制状态栏**
+   用户希望 CLI 能像 Claude Code 一样通过 shell 脚本自定义状态栏，实时显示 token 用量、模型名、Git 分支等信息。31 条讨论，119 个 👍。
+   🔗 [github.com/openai/codex/issues/17827](https://github.com/openai/codex/issues/17827)
+
+4. **#31573 OAuth 认证在 issuer 验证阶段失败**
+   使用 CLI 0.143.0 时 OAuth 流程无法通过 issuer 校验，影响 MCP 服务器连接。19 评论，45 👍。
+   🔗 [github.com/openai/codex/issues/31573](https://github.com/openai/codex/issues/31573)
+
+5. **#33685 周用量限制消耗速度与旧 5 小时限制相同**
+   用户反馈在正常使用 GPT-5.5 High 时，新的周用量限制下降速度与已被移除的 5 小时限制几乎一样快，疑似计费或限流逻辑未调整。19 评论。
+   🔗 [github.com/openai/codex/issues/33685](https://github.com/openai/codex/issues/33685)
+
+6. **#25319 将 VS Code 扩展聊天限定在当前工作区/项目**
+   希望会话历史及聊天上下文按项目隔离，避免跨项目串扰。17 评论，47 👍。
+   🔗 [github.com/openai/codex/issues/25319](https://github.com/openai/codex/issues/25319)
+
+7. **#32031 多代理 v2 下子代理模型覆盖不可用且调用失败**
+   在 gpt-5.6-sol 等多代理 v2 界面中，子代理模型选择无法发现，默认调用形状会报错，被视为严重回归。5 评论，14 👍。
+   🔗 [github.com/openai/codex/issues/32031](https://github.com/openai/codex/issues/32031)
+
+8. **#27597 VS Code Remote-SSH 中 IDE 扩展加载失败，CLI 正常**
+   扩展版本 26.602.71036 在 Remote-SSH 环境下无法加载，影响远程开发工作流。16 评论。
+   🔗 [github.com/openai/codex/issues/27597](https://github.com/openai/codex/issues/27597)
+
+9. **#22428 Windows 桌面沙箱启动失败（setup refresh failed）**
+   Windows 11 桌面应用在执行沙箱命令时提示 `CreateProcessAsUserW` 失败，涉及普通沙箱执行。15 评论，10 👍。
+   🔗 [github.com/openai/codex/issues/22428](https://github.com/openai/codex/issues/22428)
+
+10. **#14745 Windows 下 VS Code 扩展 webview 加载失败（ServiceWorker 错误）**
+    扩展 26.x 在 Windows 10 / Server 2016 上 webview 无法渲染，影响 UI 交互。13 评论。
+    🔗 [github.com/openai/codex/issues/14745](https://github.com/openai/codex/issues/14745)
+
+## 4. 重要 PR 进展
+以下 10 个 PR 多由自动化工具 `copyberry[bot]` 提交并快速合入，反映了后台持续的功能增强和稳定性修复。
+
+1. **#34851 使用批量元数据获取插件应用摘要**
+   改为通过认证批量 API 加载插件应用元数据，每批 100 个，失败时保留缓存，提升插件列表响应效率。
+   🔗 [github.com/openai/codex/pull/34851](https://github.com/openai/codex/pull/34851)
+
+2. **#34850 禁用免费计划账户的图像生成**
+   当检测到账户为 Free 计划时，跳过注册 `image_generation` 工具，避免未授权使用。
+   🔗 [github.com/openai/codex/pull/34850](https://github.com/openai/codex/pull/34850)
+
+3. **#34849 按作用域缓存远程插件目录**
+   为全局、用户、工作区级别的远程插件目录提供磁盘缓存，TTL 3 小时，后台刷新，加速启动和列表查询。
+   🔗 [github.com/openai/codex/pull/34849](https://github.com/openai/codex/pull/34849)
+
+4. **#34847 审查会话使用 Guardian 模型限制**
+   修复 Guardian 审查时可能误用父窗口上下文窗口和自动压缩配置的问题，确保使用正确的模型限制。
+   🔗 [github.com/openai/codex/pull/34847](https://github.com/openai/codex/pull/34847)
+
+5. **#34846 允许自定义提供商选择加入独立网络搜索**
+   新增 `supports_standalone_web_search` 设置项，开启后自定义 Responses 提供商可获得 `web.run` 工具。
+   🔗 [github.com/openai/codex/pull/34846](https://github.com/openai/codex/pull/34846)
+
+6. **#34845 在世界状态中追踪多代理模式**
+   将多代理模式指令持久化到世界状态中，使其在历史变更时仍可保留，避免重复发送无关设置提示。
+   🔗 [github.com/openai/codex/pull/34845](https://github.com/openai/codex/pull/34845)
+
+7. **#34840 为应用服务器添加持久化线程置顶功能**
+   增加 `isPinned` 字段和过滤参数，支持线程的置顶/取消置顶及分页查询，提升会话管理体验。
+   🔗 [github.com/openai/codex/pull/34840](https://github.com/openai/codex/pull/34840)
+
+8. **#34839 MCP 启动中断时保留用户输入**
+   修复在 MCP 工具启动期间中断轮次可能导致用户输入丢失的问题，将工具列表和路由保留到步骤快照中。
+   🔗 [github.com/openai/codex/pull/34839](https://github.com/openai/codex/pull/34839)
+
+9. **#34835 在轮次分析中追踪压缩耗时**
+   将手动和自动压缩耗时计入 `compaction_ms` 指标，完善轮次性能分析数据。
+   🔗 [github.com/openai/codex/pull/34835](https://github.com/openai/codex/pull/34835)
+
+10. **#34819 在 Codex 各入口启用 Git 归属**
+    将 git 归属扩展安装到应用服务器、MCP 服务器和调试工具中，使模型输出的提交和 PR 描述能遵循工作区策略。
+    🔗 [github.com/openai/codex/pull/34819](https://github.com/openai/codex/pull/34819)
+
+## 5. 功能需求归类
+从今日 Issues 中可提取出以下反复出现的诉求方向（仅基于事实，非路线图预测）：
+
+- **Windows 平台稳定性**
+  多个 Issue 反映 Windows 桌面应用沙箱、扩展 webview、远程 SSH、进程泄漏等问题，数量居各平台之首。
+
+- **配置与自动化控制**
+  强烈要求禁用 60 秒自动回答（#28969、#34310）、自定义状态栏（#17827）、调整计划模式限制等。
+
+- **性能与资源消耗**
+  持续关注 SQLite 日志写入（#29532）、周用量消耗过快（#33685）、上下文膨胀（#24336）、Ultra 模式浪费（#34743）等。
+
+- **多代理与模型选择**
+  多代理 v2 的易用性不足（#32031），子代理模型覆盖难以发现，引发用户质疑。
+
+- **IDE 扩展与远程开发**
+  Remote-SSH 加载失败（#27597）、工作区范围隔离（#25319）、Codespace 崩溃（#27892）等远程场景问题突出。
+
+- **国际化（RTL）**
+  要求增加阿拉伯语、希伯来语从右到左文本方向支持（#19504）。
+
+## 6. 开发者关注点
+今日反馈中，开发者的主要痛点与高频需求包括：
+
+- **Windows 生态体验割裂**：无论是桌面应用沙箱、VS Code 扩展 webview 还是 Remote-SSH，Windows 用户频繁遭遇功能不可用，影响日常
 
 </details>
 
 <details>
 <summary><strong>Kimi Code</strong> — <a href="https://github.com/MoonshotAI/kimi-code">MoonshotAI/kimi-code</a></summary>
 
-# Kimi Code 社区动态日报（2026-07-23）
+# 2026-07-23 Kimi Code 社区动态日报
 
-## 今日更新概览
-今日社区共产生 32 条 Issue 更新和 50 条 PR 动态，聚焦于权限配置一致性、模型消费感知、TUI 交互体验及 ACP 协议健壮性。版本 0.29.0 发布，新增 ACP 客户端思考努力程度选择支持。
+## 1. 今日更新概览
+今日发布 v0.29.0，支持从 ACP 客户端选择思考深度。社区 Issue 活跃度仍较高，过去 24 小时内有 32 条 Issue 更新，其中多个长期存在的配置与性能问题获持续讨论；同时有 50 个 PR 处于活跃状态，涵盖多实例可靠性、子代理模型分离、ACP 错误暴露等多个重要修复与功能增强。
 
-## 版本发布
-- **@moonshot-ai/kimi-code@0.29.0**
-  支持从 ACP 客户端选择思考努力程度（thinking effort level），通过 [#1992](https://github.com/MoonshotAI/kimi-code/pull/1992) 实现。
-  [Release 详情](https://github.com/MoonshotAI/kimi-code/releases/tag/%40moonshot-ai%2Fkimi-code%400.29.0)
+## 2. 版本发布
+**@moonshot-ai/kimi-code@0.29.0**
+- 支持 ACP 客户端选择思考努力水平（thinking effort level）。
+- 对应 PR [#1992](https://github.com/MoonshotAI/kimi-code/pull/1992)，由 [@RealKai42](https://github.com/RealKai42) 贡献。
 
-## 社区热点 Issues（精选 10 项）
-
-1. **交互式会话忽略 `config.toml` 中的 hooks 与权限规则**
-   [#2070](https://github.com/MoonshotAI/kimi-code/issues/2070) 在 Windows 下，交互模式（`kimi`）不应用 `[[hooks]]` 和 `[[permission.rules]]`，而 headless（`-p`）模式正常。用户配置了 45 条权限规则和 2 个钩子却完全失效，影响安全与自动化流程。当前 5 评论，暂无官方回应。
-
-2. **MCP 子进程代理注入 `[::1]` 导致 Python httpx 服务器崩溃**
-   [#1931](https://github.com/MoonshotAI/kimi-code/issues/1931) 配置 HTTP 代理后，stdio 类型的 MCP 子进程环境变量 `NO_PROXY` 被注入 `[::1]`，Python 的 `httpx` 将其视为非法端口而退出，MCP 握手失败。影响 Linux 用户，已有 PR #2081 尝试修复。
-
-3. **请求在状态栏展示 5 小时与每周配额余量**
-   [#872](https://github.com/MoonshotAI/kimi-code/issues/872) 当前状态栏仅显示上下文用量，但 `/status` 命令可查出 5 小时滚动窗口和每周配额余量。用户希望直接显示在底部状态栏，便于实时感知用量。得到 2 个点赞。
-
-4. **权限描述 `/auto` 与 `/yolo` 在 TUI 和 Web 版中相互矛盾**
-   [#1866](https://github.com/MoonshotAI/kimi-code/issues/1866) 用户截图显示 TUI 与 Web 端对自动权限模式的说明不一致，造成困惑。影响用户体验，有 1 点赞。
-
-5. **一次“高风险”拒绝后会话永久阻塞，无恢复路径**
-   [#2080](https://github.com/MoonshotAI/kimi-code/issues/2080) 会话运行 5 小时后，一个请求被 400“高风险”拒绝，随后所有后续请求（17-21 轮）均失败，疑似误判导致会话卡死。严重影响长时间编码任务。
-
-6. **TUI 在 Alacritty 中打开 `/usage` 时闪烁**
-   [#2039](https://github.com/MoonshotAI/kimi-code/issues/2039) 当 agent 状态框实时更新时，在 Alacritty 终端中打开 `/usage` 面板会导致 TUI 闪烁。影响终端体验。
-
-7. **`exit` 命令补全优先级过低**
-   [#2007](https://github.com/MoonshotAI/kimi-code/issues/2007) 用户经常使用 `/exit`，但其补全优先级很低，需要输入完整命令才能匹配，希望提升优先级。已有 PR #2079 解决（已关闭）。
-
-8. **K3 模型在自动模式下输入 token 消耗异常（单会话 1830 万）**
-   [#2031](https://github.com/MoonshotAI/kimi-code/issues/2031) 用户报告 `kimi-k3` 在 auto 模式下，一个会话的输入 token 消耗高达 18.3M，远超预期，可能涉及配额浪费。
-
-9. **Skill 描述超长时静默丢弃，无任何警告**
-   [#1972](https://github.com/MoonshotAI/kimi-code/issues/1972) 当 skill 的 frontmatter `description` 超过未公开的长度限制时，该 skill 被静默移除，会话中不可见且无错误提示，调试成本极高。
-
-10. **配额消耗速度在近期版本后明显加快**
-    [#2072](https://github.com/MoonshotAI/kimi-code/issues/2072) 用户反映升级到 0.29.0 后，会员周配额消耗显著加快，影响 K3 和 K2.7 模型。可能关联 token 消耗或频率变化。
-
-## 重要 PR 进展（精选 10 项）
-
-1. **修复 MCP 子进程代理环境变量安全性**
-   [#2081](https://github.com/MoonshotAI/kimi-code/pull/2081) 解决 #1931，保留 `[::1]` 对 Node 的 IPv6 支持，同时避免 Python `httpx` 崩溃，使 stdio MCP 子进程在代理环境下稳定运行。
-
-2. **ACP 适配器正确表面失败回合**
-   [#2076](https://github.com/MoonshotAI/kimi-code/pull/2076) 修复 #1813 和 #1865，非认证失败（如 400 错误、速率限制）现在会向 ACP 客户端返回错误，而非被静默视为成功空回合。
-
-3. **密码认证性能优化：缓存 bcrypt 验证结果**
-   [#2077](https://github.com/MoonshotAI/kimi-code/pull/2077) 修复 #1904，避免每次 API 请求都执行 cost-12 的 bcrypt 验证，显著提升 Kimi Web 在低性能设备上的启动和刷新速度。
-
-4. **恢复损坏的会话索引文件**
-   [#2074](https://github.com/MoonshotAI/kimi-code/pull/2074) 修复 #1925，当 `session_index.jsonl` 丢失换行符导致 JSON 拼接时，读取端可恢复记录，避免 `session.not_found` 错误，保障会话恢复可靠性。
-
-5. **在 VS Code 终端中启用进度更新**
-   [#2073](https://github.com/MoonshotAI/kimi-code/pull/2073) 修复 #1884，识别 `TERM_PROGRAM=vscode`，使 VS Code 集成终端能接收 OSC 9;4 进度更新，显示工作与空闲状态。
-
-6. **添加全局 MCP 服务器超时配置**
-   [#2065](https://github.com/MoonshotAI/kimi-code/pull/2065) 允许在配置中全局设置 MCP 服务器连接超时与工具调用超时，避免在慢速环境中逐个服务器配置。
-
-7. **双模型路由：主代理与子代理使用不同模型和思考深度**
-   [#1996](https://github.com/MoonshotAI/kimi-code/pull/1996) 解决 #568，支持主代理使用高性能推理模型，而子代理可路由到更快速便宜的模型，并独立设置思考努力程度。
-
-8. **`disabled_skills` 配置：共享技能目录的拒绝列表**
-   [#1983](https://github.com/MoonshotAI/kimi-code/pull/1983) 引入 `disabled_skills` 配置项，允许在共享技能目录中隐藏特定技能，不暴露给模型和菜单，解决 #1982。
-
-9. **隔离工作区基线内容与系统提示的可信边界**
-   [#2049](https://github.com/MoonshotAI/kimi-code/pull/2049) 修复 #2048，将 AGENTS.md、技能列表等用户可控内容从系统提示中分离，防止提示注入风险。
-
-10. **TUI 新增 `/titleon` 与 `/titleoff` 命令**
-    [#2019](https://github.com/MoonshotAI/kimi-code/pull/2019) 解决 #2018，允许在终端底部切换显示当前会话标题，便于在多个派生会话间快速区分。
-
-## 功能需求归类
-
-- **多语言与本地化**：多位用户要求 TUI 和 VSCode 插件提供中文界面（#1941、#2059），目前已有机翻的日文 README 合入（#2082）。
-- **权限与命令体验**：权限规则在交互模式下失效（#2070）、`/auto` 与 `/yolo` 文案矛盾（#1866）、`exit` 补全优先级低（#2007）等，反映出用户对一致性和效率的期待。
-- **记忆与规则系统扩展**：希望支持多规则文件、按目录定制（#2084），以及通用跨会话记忆提供者机制（#2075），对齐 Claude Code 的 rules 设计。
-- **配额与用量感知**：要求状态栏显示配额余量（#872），近期版本消耗过快引发担忧（#2072），用量透明化是普遍诉求。
-- **工作流与模型路由**：社区关注动态工作流（#2067）和双模型路由（#1996 已实现），希望通过模型分工提升效率与控制成本。
-- **插件生态**：希望支持从 GitLab 安装插件（#2063），以及添加 Eden AI 作为内置提供商（#2053）。
-- **TUI 交互细节**：链接可点击打开（#2051）、滚动时避免跳动（#1487）、降低闪烁（#2039）等终端体验优化需求持续出现。
-- **安全与隔离**：要求隔离用户工作区内容与系统提示边界（#2048），防止间接提示注入。
-
-## 开发者关注点
-
-- **交互模式下的配置一致性**：hooks 和权限规则在交互式会话被忽略是高频痛点，直接影响安全策略落地。
-- **ACP 协议健壮性**：多次出现失败回合静默的问题（#1813、#1865、#2080），维护者正通过 #2076 修复，但“高风险”拒绝导致的会话卡死仍需关注。
-- **模型消费可控性**：K3 模型输入 token 失控（#2031）和配额消耗加速（#2072）让用户对计费和资源使用产生疑虑，期待更透明的消耗机制。
-- **终端体验打磨**：从闪烁、补全优先级到链接点击，大量细节 Issue 表明开发者对 TUI 交互品质有较高要求。
-- **记忆与规则的可管理性**：单一 `AGENTS.md` 限制日益明显，社区呼吁更灵活的记忆管理，相关 PR #1983 和功能请求 #2084 指向模块化规则系统。
-
-*以上所有条目均附链接，可点击跳转至对应 GitHub Issue/PR。*
+## 3. 社区热点 Issues（10 个）
+1. **#2070 交互式会话忽略 hooks 与权限规则**
+   @
 
 </details>
 
 <details>
 <summary><strong>OpenCode</strong> — <a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a></summary>
 
-⚠️ 摘要生成失败。
+# OpenCode 社区动态日报 · 2026-07-23
+
+## 1. 今日更新概览
+过去 24 小时仓库活跃度较高，累计更新 Issues 50 条、PRs 50 条。社区讨论集中在自定义系统提示、模型自动发现两大高票需求，以及多款模型（Qwen、Kimi）的兼容性故障。桌面端稳定性问题（内存占用、本地连接丢失）也持续受到关注。今日无新版本发布，仅有一个用于 PR #38252 的验证视频。
+
+## 2. 版本发布
+无
 
 </details>
