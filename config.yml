@@ -51,7 +51,7 @@ tracks:
         repo: anthropics/skills
         name: Claude Skills
       - id: codex-skills
-        repo: openai/skills
+        repo: openai/plugins
         name: Codex Skills
 
   - id: ai-agents
