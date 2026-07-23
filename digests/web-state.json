@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-20T02:58:10.426Z",
+      "lastChecked": "2026-07-23T03:03:31.290Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -532,11 +532,19 @@
         "https://www.anthropic.com/news/canadian-ai-research": "2026-07-14T00:00:00.000Z",
         "https://www.anthropic.com/news/canadian-ai-research/": "2026-07-14T00:00:00.000Z",
         "https://www.anthropic.com/news/claude-for-teachers": "2026-07-14T00:00:00.000Z",
-        "https://www.anthropic.com/news/claude-for-teachers/": "2026-07-14T00:00:00.000Z"
+        "https://www.anthropic.com/news/claude-for-teachers/": "2026-07-14T00:00:00.000Z",
+        "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-22T00:00:00.000Z",
+        "https://www.anthropic.com/news/anthropic-economic-index-connector/": "2026-07-22T00:00:00.000Z",
+        "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-22T00:00:00.000Z",
+        "https://www.anthropic.com/news/economic-futures-research-fund-agenda/": "2026-07-22T00:00:00.000Z",
+        "https://www.anthropic.com/news/donation-public-first-action": "2026-07-21T00:00:00.000Z",
+        "https://www.anthropic.com/news/donation-public-first-action/": "2026-07-21T00:00:00.000Z",
+        "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-20T00:00:00.000Z",
+        "https://www.anthropic.com/news/rare-disease-research-grants/": "2026-07-20T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-07-20T02:58:10.569Z",
+      "lastChecked": "2026-07-23T03:03:31.728Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2702,11 +2710,29 @@
         "https://openai.com/index/cars24": "2026-07-16T00:00:00.000Z",
         "https://openai.com/index/cars24/": "2026-07-16T00:00:00.000Z",
         "https://openai.com/index/a-scorecard-for-the-ai-age": "2026-07-17T10:00:00.000Z",
-        "https://openai.com/index/a-scorecard-for-the-ai-age/": "2026-07-17T10:00:00.000Z"
+        "https://openai.com/index/a-scorecard-for-the-ai-age/": "2026-07-17T10:00:00.000Z",
+        "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": "2026-07-22T13:00:00.000Z",
+        "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/": "2026-07-22T13:00:00.000Z",
+        "https://openai.com/index/how-news-organizations-are-using-ai": "2026-07-22T13:00:00.000Z",
+        "https://openai.com/index/how-news-organizations-are-using-ai/": "2026-07-22T13:00:00.000Z",
+        "https://openai.com/index/advancing-the-next-era-of-national-science": "2026-07-22T12:00:00.000Z",
+        "https://openai.com/index/advancing-the-next-era-of-national-science/": "2026-07-22T12:00:00.000Z",
+        "https://openai.com/index/introducing-openai-presence": "2026-07-22T05:30:00.000Z",
+        "https://openai.com/index/introducing-openai-presence/": "2026-07-22T05:30:00.000Z",
+        "https://openai.com/index/ntt-data": "2026-07-22T00:00:00.000Z",
+        "https://openai.com/index/ntt-data/": "2026-07-22T00:00:00.000Z",
+        "https://openai.com/index/introducing-chatgpt-small-business-program": "2026-07-21T17:00:00.000Z",
+        "https://openai.com/index/introducing-chatgpt-small-business-program/": "2026-07-21T17:00:00.000Z",
+        "https://openai.com/index/hugging-face-model-evaluation-security-incident": "2026-07-21T07:00:00.000Z",
+        "https://openai.com/index/hugging-face-model-evaluation-security-incident/": "2026-07-21T07:00:00.000Z",
+        "https://openai.com/index/david-velez-robin-vince-join-openai-boards": "2026-07-21T00:00:00.000Z",
+        "https://openai.com/index/david-velez-robin-vince-join-openai-boards/": "2026-07-21T00:00:00.000Z",
+        "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-20T10:00:00.000Z",
+        "https://openai.com/index/safety-alignment-long-horizon-models/": "2026-07-20T10:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-20T02:58:10.315Z",
+      "lastChecked": "2026-07-23T03:03:31.216Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2938,10 +2964,10 @@
         "7zbgYCOZDfvIIsVrPpZ8xJ/": "2026-07-08T12:00:00.000Z",
         "https://blog.cloudflare.com/meerkat-introduction/": "2026-07-08T12:00:00.000Z",
         "https://blog.cloudflare.com/meerkat-introduction": "2026-07-08T12:00:00.000Z",
-        "5wMIF1Oa7DES2YNRpqiVB0": "2026-07-09T13:40:47.000Z",
-        "5wMIF1Oa7DES2YNRpqiVB0/": "2026-07-09T13:40:47.000Z",
-        "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-09T13:40:47.000Z",
-        "https://blog.cloudflare.com/ml-dsa-will-have-to-do": "2026-07-09T13:40:47.000Z",
+        "5wMIF1Oa7DES2YNRpqiVB0": "2026-07-09T14:00:00.000Z",
+        "5wMIF1Oa7DES2YNRpqiVB0/": "2026-07-09T14:00:00.000Z",
+        "https://blog.cloudflare.com/ml-dsa-will-have-to-do/": "2026-07-09T14:00:00.000Z",
+        "https://blog.cloudflare.com/ml-dsa-will-have-to-do": "2026-07-09T14:00:00.000Z",
         "2smERhDvpGH6FbC035djwD": "2026-07-10T12:00:00.000Z",
         "2smERhDvpGH6FbC035djwD/": "2026-07-10T12:00:00.000Z",
         "https://blog.cloudflare.com/smart-tiered-cache-for-public-clouds/": "2026-07-10T12:00:00.000Z",
@@ -2957,7 +2983,15 @@
         "01KXQS1XDD7HKB324JEWG6BZDA": "2026-07-17T21:30:43.000Z",
         "01KXQS1XDD7HKB324JEWG6BZDA/": "2026-07-17T21:30:43.000Z",
         "https://blog.cloudflare.com/wordpress-vulnerabilities/": "2026-07-17T21:30:43.000Z",
-        "https://blog.cloudflare.com/wordpress-vulnerabilities": "2026-07-17T21:30:43.000Z"
+        "https://blog.cloudflare.com/wordpress-vulnerabilities": "2026-07-17T21:30:43.000Z",
+        "01KY2432VQPD5FTF2RARXXYQGH": "2026-07-21T12:59:40.000Z",
+        "01KY2432VQPD5FTF2RARXXYQGH/": "2026-07-21T12:59:40.000Z",
+        "https://blog.cloudflare.com/2026-world-cup-internet-traffic/": "2026-07-21T12:59:40.000Z",
+        "https://blog.cloudflare.com/2026-world-cup-internet-traffic": "2026-07-21T12:59:40.000Z",
+        "01KXNA2XDCKTZTZQ1NC6HM40AZ": "2026-07-20T20:59:31.000Z",
+        "01KXNA2XDCKTZTZQ1NC6HM40AZ/": "2026-07-20T20:59:31.000Z",
+        "https://blog.cloudflare.com/internal-dns/": "2026-07-20T20:59:31.000Z",
+        "https://blog.cloudflare.com/internal-dns": "2026-07-20T20:59:31.000Z"
       }
     }
   }
