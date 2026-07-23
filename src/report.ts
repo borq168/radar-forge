@@ -52,6 +52,7 @@ function releaseSlot(): void {
 
 const MAX_RETRIES = 3;
 const RETRY_BASE_MS = 5_000; // 5 s, 10 s, 20 s
+const FETCH_TIMEOUT_MS = 90_000; // 90 s — covers slow cross-border links without blocking slots for minutes
 
 function is429(err: unknown): boolean {
   return (err as { status?: number })?.status === 429 || String(err).includes("429");
@@ -61,11 +62,31 @@ function isRetryableLlmError(err: unknown): boolean {
   if (is429(err)) return true;
 
   const text = String(err).toLowerCase();
+  const cause = (err as { cause?: unknown }).cause;
+  const causeText = cause ? String(cause).toLowerCase() : "";
+  const causeCode = (cause as { code?: string })?.code?.toLowerCase() ?? "";
+
   return (
     text.includes("timed out") ||
+    text.includes("fetch failed") ||
+    text.includes("aborted") ||
     text.includes("returned empty output") ||
     text.includes("returned no usable output") ||
-    text.includes("rate limit")
+    text.includes("rate limit") ||
+    causeText.includes("etimedout") ||
+    causeText.includes("econnrefused") ||
+    causeText.includes("econnreset") ||
+    causeText.includes("enotfound") ||
+    causeText.includes("eai_again") ||
+    causeText.includes("socket hang up") ||
+    causeCode === "etimedout" ||
+    causeCode === "econnrefused" ||
+    causeCode === "econnreset" ||
+    causeCode === "enotfound" ||
+    causeCode === "eai_again" ||
+    causeCode === "und_err_connect_timeout" ||
+    causeCode === "und_err_headers_timeout" ||
+    causeCode === "und_err_body_timeout"
   );
 }
 
@@ -244,19 +265,28 @@ async function callOpenAiCompatibleLlm(prompt: string, maxTokens: number): Promi
   const apiKey = getOpenAiCompatibleApiKey();
   if (!apiKey) throw new Error("Missing required environment variable: OPENAI_API_KEY");
 
-  const resp = await fetch(`${getLlmBaseUrl()}/chat/completions`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: getOpenAiCompatibleModel(),
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.2,
-      max_tokens: maxTokens,
-    }),
-  });
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+  let resp: Response;
+  try {
+    resp = await fetch(`${getLlmBaseUrl()}/chat/completions`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: getOpenAiCompatibleModel(),
+        messages: [{ role: "user", content: prompt }],
+        temperature: 0.2,
+        max_tokens: maxTokens,
+      }),
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timer);
+  }
   const body = await resp.text();
 
   if (!resp.ok) {
