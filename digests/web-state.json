@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-23T03:54:03.488Z",
+      "lastChecked": "2026-07-27T00:26:18.329Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -540,11 +540,13 @@
         "https://www.anthropic.com/news/donation-public-first-action": "2026-07-21T00:00:00.000Z",
         "https://www.anthropic.com/news/donation-public-first-action/": "2026-07-21T00:00:00.000Z",
         "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-20T00:00:00.000Z",
-        "https://www.anthropic.com/news/rare-disease-research-grants/": "2026-07-20T00:00:00.000Z"
+        "https://www.anthropic.com/news/rare-disease-research-grants/": "2026-07-20T00:00:00.000Z",
+        "https://www.anthropic.com/news/claude-opus-5": "2026-07-24T00:00:00.000Z",
+        "https://www.anthropic.com/news/claude-opus-5/": "2026-07-24T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-07-23T03:54:03.708Z",
+      "lastChecked": "2026-07-27T00:26:18.237Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2728,11 +2730,15 @@
         "https://openai.com/index/david-velez-robin-vince-join-openai-boards": "2026-07-21T00:00:00.000Z",
         "https://openai.com/index/david-velez-robin-vince-join-openai-boards/": "2026-07-21T00:00:00.000Z",
         "https://openai.com/index/safety-alignment-long-horizon-models": "2026-07-20T10:00:00.000Z",
-        "https://openai.com/index/safety-alignment-long-horizon-models/": "2026-07-20T10:00:00.000Z"
+        "https://openai.com/index/safety-alignment-long-horizon-models/": "2026-07-20T10:00:00.000Z",
+        "https://openai.com/index/health-in-chatgpt": "2026-07-23T00:00:00.000Z",
+        "https://openai.com/index/health-in-chatgpt/": "2026-07-23T00:00:00.000Z",
+        "https://openai.com/index/codex-collaborator-creative-team": "2026-07-16T07:00:00.000Z",
+        "https://openai.com/index/codex-collaborator-creative-team/": "2026-07-16T07:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-23T03:54:03.437Z",
+      "lastChecked": "2026-07-27T00:26:18.189Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -2991,7 +2997,15 @@
         "01KXNA2XDCKTZTZQ1NC6HM40AZ": "2026-07-20T20:59:31.000Z",
         "01KXNA2XDCKTZTZQ1NC6HM40AZ/": "2026-07-20T20:59:31.000Z",
         "https://blog.cloudflare.com/internal-dns/": "2026-07-20T20:59:31.000Z",
-        "https://blog.cloudflare.com/internal-dns": "2026-07-20T20:59:31.000Z"
+        "https://blog.cloudflare.com/internal-dns": "2026-07-20T20:59:31.000Z",
+        "01KYAFZ0EEBE4R099P8HT79D5X": "2026-07-24T17:25:28.000Z",
+        "01KYAFZ0EEBE4R099P8HT79D5X/": "2026-07-24T17:25:28.000Z",
+        "https://blog.cloudflare.com/bgp-origin-attribute/": "2026-07-24T17:25:28.000Z",
+        "https://blog.cloudflare.com/bgp-origin-attribute": "2026-07-24T17:25:28.000Z",
+        "01KY05J6W4B4TF7X9348W51RWP": "2026-07-23T18:40:38.000Z",
+        "01KY05J6W4B4TF7X9348W51RWP/": "2026-07-23T18:40:38.000Z",
+        "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-23T18:40:38.000Z",
+        "https://blog.cloudflare.com/introducing-cache-response-rules": "2026-07-23T18:40:38.000Z"
       }
     }
   }
