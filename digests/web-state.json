@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-27T00:26:18.329Z",
+      "lastChecked": "2026-07-30T00:46:51.050Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -542,11 +542,15 @@
         "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-20T00:00:00.000Z",
         "https://www.anthropic.com/news/rare-disease-research-grants/": "2026-07-20T00:00:00.000Z",
         "https://www.anthropic.com/news/claude-opus-5": "2026-07-24T00:00:00.000Z",
-        "https://www.anthropic.com/news/claude-opus-5/": "2026-07-24T00:00:00.000Z"
+        "https://www.anthropic.com/news/claude-opus-5/": "2026-07-24T00:00:00.000Z",
+        "https://www.anthropic.com/news/position-open-weights-models": "2026-07-27T00:00:00.000Z",
+        "https://www.anthropic.com/news/position-open-weights-models/": "2026-07-27T00:00:00.000Z",
+        "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-27T00:00:00.000Z",
+        "https://www.anthropic.com/news/cognizant-anthropic/": "2026-07-27T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-07-27T00:26:18.237Z",
+      "lastChecked": "2026-07-30T00:46:51.127Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2734,11 +2738,21 @@
         "https://openai.com/index/health-in-chatgpt": "2026-07-23T00:00:00.000Z",
         "https://openai.com/index/health-in-chatgpt/": "2026-07-23T00:00:00.000Z",
         "https://openai.com/index/codex-collaborator-creative-team": "2026-07-16T07:00:00.000Z",
-        "https://openai.com/index/codex-collaborator-creative-team/": "2026-07-16T07:00:00.000Z"
+        "https://openai.com/index/codex-collaborator-creative-team/": "2026-07-16T07:00:00.000Z",
+        "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores": "2026-07-29T15:00:00.000Z",
+        "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/": "2026-07-29T15:00:00.000Z",
+        "https://openai.com/index/chatgpt-for-academic-researchers": "2026-07-29T10:00:00.000Z",
+        "https://openai.com/index/chatgpt-for-academic-researchers/": "2026-07-29T10:00:00.000Z",
+        "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency": "2026-07-29T00:00:00.000Z",
+        "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/": "2026-07-29T00:00:00.000Z",
+        "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-28T17:00:00.000Z",
+        "https://openai.com/index/scientific-computing-agentic-ai/": "2026-07-28T17:00:00.000Z",
+        "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T03:30:00.000Z",
+        "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/": "2026-07-27T03:30:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-27T00:26:18.189Z",
+      "lastChecked": "2026-07-30T00:46:51.072Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3005,7 +3019,19 @@
         "01KY05J6W4B4TF7X9348W51RWP": "2026-07-23T18:40:38.000Z",
         "01KY05J6W4B4TF7X9348W51RWP/": "2026-07-23T18:40:38.000Z",
         "https://blog.cloudflare.com/introducing-cache-response-rules/": "2026-07-23T18:40:38.000Z",
-        "https://blog.cloudflare.com/introducing-cache-response-rules": "2026-07-23T18:40:38.000Z"
+        "https://blog.cloudflare.com/introducing-cache-response-rules": "2026-07-23T18:40:38.000Z",
+        "01KYMH71B35NXQ00E0M2D0WMQV": "2026-07-29T13:00:00.000Z",
+        "01KYMH71B35NXQ00E0M2D0WMQV/": "2026-07-29T13:00:00.000Z",
+        "https://blog.cloudflare.com/post-quantum-authentication-to-origins/": "2026-07-29T13:00:00.000Z",
+        "https://blog.cloudflare.com/post-quantum-authentication-to-origins": "2026-07-29T13:00:00.000Z",
+        "01KYJZQZHMFNYN2EGYDF73J99A": "2026-07-28T13:00:00.000Z",
+        "01KYJZQZHMFNYN2EGYDF73J99A/": "2026-07-28T13:00:00.000Z",
+        "https://blog.cloudflare.com/q2-2026-internet-disruption-summary/": "2026-07-28T13:00:00.000Z",
+        "https://blog.cloudflare.com/q2-2026-internet-disruption-summary": "2026-07-28T13:00:00.000Z",
+        "01KYGZXPC2FQ4NSXSKXXYY86FZ": "2026-07-27T13:00:00.000Z",
+        "01KYGZXPC2FQ4NSXSKXXYY86FZ/": "2026-07-27T13:00:00.000Z",
+        "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-27T13:00:00.000Z",
+        "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli": "2026-07-27T13:00:00.000Z"
       }
     }
   }
