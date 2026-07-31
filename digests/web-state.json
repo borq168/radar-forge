@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-07-30T00:46:51.050Z",
+      "lastChecked": "2026-07-31T00:26:01.733Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -550,7 +550,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-07-30T00:46:51.127Z",
+      "lastChecked": "2026-07-31T00:26:05.915Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2748,11 +2748,13 @@
         "https://openai.com/index/scientific-computing-agentic-ai": "2026-07-28T17:00:00.000Z",
         "https://openai.com/index/scientific-computing-agentic-ai/": "2026-07-28T17:00:00.000Z",
         "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work": "2026-07-27T03:30:00.000Z",
-        "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/": "2026-07-27T03:30:00.000Z"
+        "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/": "2026-07-27T03:30:00.000Z",
+        "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6": "2026-07-30T10:00:00.000Z",
+        "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/": "2026-07-30T10:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-07-30T00:46:51.072Z",
+      "lastChecked": "2026-07-31T00:26:01.722Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3031,7 +3033,11 @@
         "01KYGZXPC2FQ4NSXSKXXYY86FZ": "2026-07-27T13:00:00.000Z",
         "01KYGZXPC2FQ4NSXSKXXYY86FZ/": "2026-07-27T13:00:00.000Z",
         "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/": "2026-07-27T13:00:00.000Z",
-        "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli": "2026-07-27T13:00:00.000Z"
+        "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli": "2026-07-27T13:00:00.000Z",
+        "01KYQNRTVJ54SHCVBMMXFYGJ5P": "2026-07-30T13:00:00.000Z",
+        "01KYQNRTVJ54SHCVBMMXFYGJ5P/": "2026-07-30T13:00:00.000Z",
+        "https://blog.cloudflare.com/cdnjs-dev-platform-migration/": "2026-07-30T13:00:00.000Z",
+        "https://blog.cloudflare.com/cdnjs-dev-platform-migration": "2026-07-30T13:00:00.000Z"
       }
     }
   }
