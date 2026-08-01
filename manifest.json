@@ -1,6 +1,25 @@
 {
-  "generated": "2026-07-31T00:38:24.655Z",
+  "generated": "2026-08-01T08:20:59.358Z",
   "dates": [
+    {
+      "date": "2026-08-01",
+      "reports": [
+        "ai-daily",
+        "ai-daily-en",
+        "ai-cli",
+        "ai-cli-en",
+        "ai-skills",
+        "ai-skills-en",
+        "ai-agents",
+        "ai-agents-en",
+        "ai-web",
+        "ai-web-en",
+        "ai-trending",
+        "ai-trending-en",
+        "ai-hn",
+        "ai-hn-en"
+      ]
+    },
     {
       "date": "2026-07-31",
       "reports": [
