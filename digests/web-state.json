@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-02T03:56:26.198Z",
+      "lastChecked": "2026-08-03T00:25:49.684Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -552,7 +552,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-08-02T03:56:26.260Z",
+      "lastChecked": "2026-08-03T00:25:49.747Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2854,7 +2854,7 @@
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-02T03:56:26.175Z",
+      "lastChecked": "2026-08-03T00:25:49.670Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3141,7 +3141,11 @@
         "01KYVQDQC4RNEJ8Q0PMDQV2RGB": "2026-07-31T13:00:00.000Z",
         "01KYVQDQC4RNEJ8Q0PMDQV2RGB/": "2026-07-31T13:00:00.000Z",
         "https://blog.cloudflare.com/moq-relays/": "2026-07-31T13:00:00.000Z",
-        "https://blog.cloudflare.com/moq-relays": "2026-07-31T13:00:00.000Z"
+        "https://blog.cloudflare.com/moq-relays": "2026-07-31T13:00:00.000Z",
+        "01KYZDDR9B6VG028YHK8T709TD": "2026-08-02T16:00:00.000Z",
+        "01KYZDDR9B6VG028YHK8T709TD/": "2026-08-02T16:00:00.000Z",
+        "https://blog.cloudflare.com/agents-week-welcome/": "2026-08-02T16:00:00.000Z",
+        "https://blog.cloudflare.com/agents-week-welcome": "2026-08-02T16:00:00.000Z"
       }
     }
   }
