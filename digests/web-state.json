@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-03T00:25:49.684Z",
+      "lastChecked": "2026-08-04T01:00:08.435Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -552,7 +552,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-08-03T00:25:49.747Z",
+      "lastChecked": "2026-08-04T01:00:08.494Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2850,11 +2850,13 @@
         "https://openai.com/index/disrupting-malicious-uses-of-ai-spamouflage": "2024-05-01T00:00:00.000Z",
         "https://openai.com/index/disrupting-malicious-uses-of-ai-spamouflage/": "2024-05-01T00:00:00.000Z",
         "https://openai.com/index/disrupting-malicious-uses-of-ai-bad-grammar": "2024-05-01T00:00:00.000Z",
-        "https://openai.com/index/disrupting-malicious-uses-of-ai-bad-grammar/": "2024-05-01T00:00:00.000Z"
+        "https://openai.com/index/disrupting-malicious-uses-of-ai-bad-grammar/": "2024-05-01T00:00:00.000Z",
+        "https://openai.com/index/continuous-voice-interaction-with-gpt-live": "2026-08-03T07:00:00.000Z",
+        "https://openai.com/index/continuous-voice-interaction-with-gpt-live/": "2026-08-03T07:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-03T00:25:49.670Z",
+      "lastChecked": "2026-08-04T01:00:08.412Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3145,7 +3147,27 @@
         "01KYZDDR9B6VG028YHK8T709TD": "2026-08-02T16:00:00.000Z",
         "01KYZDDR9B6VG028YHK8T709TD/": "2026-08-02T16:00:00.000Z",
         "https://blog.cloudflare.com/agents-week-welcome/": "2026-08-02T16:00:00.000Z",
-        "https://blog.cloudflare.com/agents-week-welcome": "2026-08-02T16:00:00.000Z"
+        "https://blog.cloudflare.com/agents-week-welcome": "2026-08-02T16:00:00.000Z",
+        "01KZ0Q4HGGZF4CDMZVFZRGTTCF": "2026-08-03T13:15:24.000Z",
+        "01KZ0Q4HGGZF4CDMZVFZRGTTCF/": "2026-08-03T13:15:24.000Z",
+        "https://blog.cloudflare.com/cloudflare-computer/": "2026-08-03T13:15:24.000Z",
+        "https://blog.cloudflare.com/cloudflare-computer": "2026-08-03T13:15:24.000Z",
+        "01KZ21C4W4K7E7W8E61PNSYFQ1": "2026-08-03T13:00:00.000Z",
+        "01KZ21C4W4K7E7W8E61PNSYFQ1/": "2026-08-03T13:00:00.000Z",
+        "https://blog.cloudflare.com/grpc-workers/": "2026-08-03T13:00:00.000Z",
+        "https://blog.cloudflare.com/grpc-workers": "2026-08-03T13:00:00.000Z",
+        "01KZ1X08HVW808ZTAF030PTT5X": "2026-08-03T13:00:00.000Z",
+        "01KZ1X08HVW808ZTAF030PTT5X/": "2026-08-03T13:00:00.000Z",
+        "https://blog.cloudflare.com/billable-usage-api/": "2026-08-03T13:00:00.000Z",
+        "https://blog.cloudflare.com/billable-usage-api": "2026-08-03T13:00:00.000Z",
+        "01KZ1PQYERR7GDZ61F4H35QVT1": "2026-08-03T13:00:00.000Z",
+        "01KZ1PQYERR7GDZ61F4H35QVT1/": "2026-08-03T13:00:00.000Z",
+        "https://blog.cloudflare.com/smaller-faster-safer-models/": "2026-08-03T13:00:00.000Z",
+        "https://blog.cloudflare.com/smaller-faster-safer-models": "2026-08-03T13:00:00.000Z",
+        "01KYT15YJPSYBNRFS8G400P5P5": "2026-08-03T13:00:00.000Z",
+        "01KYT15YJPSYBNRFS8G400P5P5/": "2026-08-03T13:00:00.000Z",
+        "https://blog.cloudflare.com/python-workers-rpc/": "2026-08-03T13:00:00.000Z",
+        "https://blog.cloudflare.com/python-workers-rpc": "2026-08-03T13:00:00.000Z"
       }
     }
   }
