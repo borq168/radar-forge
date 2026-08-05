@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-04T01:00:08.435Z",
+      "lastChecked": "2026-08-05T00:25:22.673Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -552,7 +552,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-08-04T01:00:08.494Z",
+      "lastChecked": "2026-08-05T00:25:22.659Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2852,11 +2852,21 @@
         "https://openai.com/index/disrupting-malicious-uses-of-ai-bad-grammar": "2024-05-01T00:00:00.000Z",
         "https://openai.com/index/disrupting-malicious-uses-of-ai-bad-grammar/": "2024-05-01T00:00:00.000Z",
         "https://openai.com/index/continuous-voice-interaction-with-gpt-live": "2026-08-03T07:00:00.000Z",
-        "https://openai.com/index/continuous-voice-interaction-with-gpt-live/": "2026-08-03T07:00:00.000Z"
+        "https://openai.com/index/continuous-voice-interaction-with-gpt-live/": "2026-08-03T07:00:00.000Z",
+        "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": "2026-08-04T19:00:00.000Z",
+        "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/": "2026-08-04T19:00:00.000Z",
+        "https://openai.com/index/learn-teach-chatgpt-work-codex": "2026-08-04T00:00:00.000Z",
+        "https://openai.com/index/learn-teach-chatgpt-work-codex/": "2026-08-04T00:00:00.000Z",
+        "https://openai.com/index/apple-is-getting-this-wrong": "2026-08-03T22:00:00.000Z",
+        "https://openai.com/index/apple-is-getting-this-wrong/": "2026-08-03T22:00:00.000Z",
+        "https://openai.com/index/circles": "2026-08-03T00:00:00.000Z",
+        "https://openai.com/index/circles/": "2026-08-03T00:00:00.000Z",
+        "https://openai.com/index/introducing-the-openai-economic-research-exchange": "2026-06-08T00:00:00.000Z",
+        "https://openai.com/index/introducing-the-openai-economic-research-exchange/": "2026-06-08T00:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-04T01:00:08.412Z",
+      "lastChecked": "2026-08-05T00:25:22.599Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3167,7 +3177,35 @@
         "01KYT15YJPSYBNRFS8G400P5P5": "2026-08-03T13:00:00.000Z",
         "01KYT15YJPSYBNRFS8G400P5P5/": "2026-08-03T13:00:00.000Z",
         "https://blog.cloudflare.com/python-workers-rpc/": "2026-08-03T13:00:00.000Z",
-        "https://blog.cloudflare.com/python-workers-rpc": "2026-08-03T13:00:00.000Z"
+        "https://blog.cloudflare.com/python-workers-rpc": "2026-08-03T13:00:00.000Z",
+        "01KZ67XSDB3QZRT3JC43EGMSD1": "2026-08-04T13:00:00.000Z",
+        "01KZ67XSDB3QZRT3JC43EGMSD1/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/agent-development-lifecycle/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/agent-development-lifecycle": "2026-08-04T13:00:00.000Z",
+        "01KZ518N1HS1MZE4GF7XES27C5": "2026-08-04T13:00:00.000Z",
+        "01KZ518N1HS1MZE4GF7XES27C5/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/wallets/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/wallets": "2026-08-04T13:00:00.000Z",
+        "01KZ4ZEV9RTTBYR2S8AX9R4NNF": "2026-08-04T13:00:00.000Z",
+        "01KZ4ZEV9RTTBYR2S8AX9R4NNF/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/ci-workflows/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/ci-workflows": "2026-08-04T13:00:00.000Z",
+        "01KZ4XGGJ39E5ZDS4AHVQSB0M3": "2026-08-04T13:00:00.000Z",
+        "01KZ4XGGJ39E5ZDS4AHVQSB0M3/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/engineering-standards-enforcement/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/engineering-standards-enforcement": "2026-08-04T13:00:00.000Z",
+        "01KZ4WJAC5X5TGJJZKJDY8XHTD": "2026-08-04T13:00:00.000Z",
+        "01KZ4WJAC5X5TGJJZKJDY8XHTD/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/agents-on-cloudflare/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/agents-on-cloudflare": "2026-08-04T13:00:00.000Z",
+        "01KZ4VTTGC4FD3MQ89XQDW2ZZ6": "2026-08-04T13:00:00.000Z",
+        "01KZ4VTTGC4FD3MQ89XQDW2ZZ6/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/local-tracing/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/local-tracing": "2026-08-04T13:00:00.000Z",
+        "01KZ4HYXCHKAZHVPH6PMEG04RZ": "2026-08-04T13:00:00.000Z",
+        "01KZ4HYXCHKAZHVPH6PMEG04RZ/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/astro-issue-triage/": "2026-08-04T13:00:00.000Z",
+        "https://blog.cloudflare.com/astro-issue-triage": "2026-08-04T13:00:00.000Z"
       }
     }
   }
