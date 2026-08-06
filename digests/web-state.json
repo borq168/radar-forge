@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-05T00:25:22.673Z",
+      "lastChecked": "2026-08-06T01:45:52.291Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -548,11 +548,13 @@
         "https://www.anthropic.com/news/cognizant-anthropic": "2026-07-27T00:00:00.000Z",
         "https://www.anthropic.com/news/cognizant-anthropic/": "2026-07-27T00:00:00.000Z",
         "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-30T00:00:00.000Z",
-        "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals/": "2026-07-30T00:00:00.000Z"
+        "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals/": "2026-07-30T00:00:00.000Z",
+        "https://www.anthropic.com/news/tino-cuellar": "2026-08-04T00:00:00.000Z",
+        "https://www.anthropic.com/news/tino-cuellar/": "2026-08-04T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-08-05T00:25:22.659Z",
+      "lastChecked": "2026-08-06T01:45:52.281Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2866,7 +2868,7 @@
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-05T00:25:22.599Z",
+      "lastChecked": "2026-08-06T01:45:52.214Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3205,7 +3207,31 @@
         "01KZ4HYXCHKAZHVPH6PMEG04RZ": "2026-08-04T13:00:00.000Z",
         "01KZ4HYXCHKAZHVPH6PMEG04RZ/": "2026-08-04T13:00:00.000Z",
         "https://blog.cloudflare.com/astro-issue-triage/": "2026-08-04T13:00:00.000Z",
-        "https://blog.cloudflare.com/astro-issue-triage": "2026-08-04T13:00:00.000Z"
+        "https://blog.cloudflare.com/astro-issue-triage": "2026-08-04T13:00:00.000Z",
+        "01KZ7BXG1WSAKP11NS16P6XPPE": "2026-08-05T23:24:51.000Z",
+        "01KZ7BXG1WSAKP11NS16P6XPPE/": "2026-08-05T23:24:51.000Z",
+        "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/": "2026-08-05T23:24:51.000Z",
+        "https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026": "2026-08-05T23:24:51.000Z",
+        "01KZ7MGHAX6C81BVS5AM1DRP2Q": "2026-08-05T13:00:41.000Z",
+        "01KZ7MGHAX6C81BVS5AM1DRP2Q/": "2026-08-05T13:00:41.000Z",
+        "https://blog.cloudflare.com/the-agent-access-model/": "2026-08-05T13:00:41.000Z",
+        "https://blog.cloudflare.com/the-agent-access-model": "2026-08-05T13:00:41.000Z",
+        "01KZ7KS18W44EAET2511C0NY3V": "2026-08-05T13:00:01.000Z",
+        "01KZ7KS18W44EAET2511C0NY3V/": "2026-08-05T13:00:01.000Z",
+        "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os/": "2026-08-05T13:00:01.000Z",
+        "https://blog.cloudflare.com/how-we-use-ai-with-cloudflare-os": "2026-08-05T13:00:01.000Z",
+        "01KZ7PERAEJK3G9KDWDQ3BXZZQ": "2026-08-05T13:00:00.000Z",
+        "01KZ7PERAEJK3G9KDWDQ3BXZZQ/": "2026-08-05T13:00:00.000Z",
+        "https://blog.cloudflare.com/cloudflare-os/": "2026-08-05T13:00:00.000Z",
+        "https://blog.cloudflare.com/cloudflare-os": "2026-08-05T13:00:00.000Z",
+        "01KZ7CKXC5ECVNAP2GSTX54B48": "2026-08-05T13:00:00.000Z",
+        "01KZ7CKXC5ECVNAP2GSTX54B48/": "2026-08-05T13:00:00.000Z",
+        "https://blog.cloudflare.com/mcp-portal-writeguard-private-beta/": "2026-08-05T13:00:00.000Z",
+        "https://blog.cloudflare.com/mcp-portal-writeguard-private-beta": "2026-08-05T13:00:00.000Z",
+        "01KZ7B5XMX7JB1E4KZZP5QRR9P": "2026-08-05T13:00:00.000Z",
+        "01KZ7B5XMX7JB1E4KZZP5QRR9P/": "2026-08-05T13:00:00.000Z",
+        "https://blog.cloudflare.com/identity-aware-ai-gateway/": "2026-08-05T13:00:00.000Z",
+        "https://blog.cloudflare.com/identity-aware-ai-gateway": "2026-08-05T13:00:00.000Z"
       }
     }
   }
