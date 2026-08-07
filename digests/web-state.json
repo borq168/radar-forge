@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-06T01:45:52.291Z",
+      "lastChecked": "2026-08-07T02:10:31.721Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -554,7 +554,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-08-06T01:45:52.281Z",
+      "lastChecked": "2026-08-07T02:10:31.701Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2864,11 +2864,17 @@
         "https://openai.com/index/circles": "2026-08-03T00:00:00.000Z",
         "https://openai.com/index/circles/": "2026-08-03T00:00:00.000Z",
         "https://openai.com/index/introducing-the-openai-economic-research-exchange": "2026-06-08T00:00:00.000Z",
-        "https://openai.com/index/introducing-the-openai-economic-research-exchange/": "2026-06-08T00:00:00.000Z"
+        "https://openai.com/index/introducing-the-openai-economic-research-exchange/": "2026-06-08T00:00:00.000Z",
+        "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt": "2026-08-06T10:00:00.000Z",
+        "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/": "2026-08-06T10:00:00.000Z",
+        "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-06T06:00:00.000Z",
+        "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai/": "2026-08-06T06:00:00.000Z",
+        "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work": "2026-08-06T00:00:00.000Z",
+        "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work/": "2026-08-06T00:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-06T01:45:52.214Z",
+      "lastChecked": "2026-08-07T02:10:31.635Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3231,7 +3237,31 @@
         "01KZ7B5XMX7JB1E4KZZP5QRR9P": "2026-08-05T13:00:00.000Z",
         "01KZ7B5XMX7JB1E4KZZP5QRR9P/": "2026-08-05T13:00:00.000Z",
         "https://blog.cloudflare.com/identity-aware-ai-gateway/": "2026-08-05T13:00:00.000Z",
-        "https://blog.cloudflare.com/identity-aware-ai-gateway": "2026-08-05T13:00:00.000Z"
+        "https://blog.cloudflare.com/identity-aware-ai-gateway": "2026-08-05T13:00:00.000Z",
+        "01KZA4HXGQQ9FD8XRZB8E0CJEN": "2026-08-06T13:00:00.000Z",
+        "01KZA4HXGQQ9FD8XRZB8E0CJEN/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/ai-search-easier/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/ai-search-easier": "2026-08-06T13:00:00.000Z",
+        "01KZA4H1D8PD7BXJ5RQBK5JQX0": "2026-08-06T13:00:00.000Z",
+        "01KZA4H1D8PD7BXJ5RQBK5JQX0/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/mcp-v2/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/mcp-v2": "2026-08-06T13:00:00.000Z",
+        "01KZA2T3ZHH6G6Q1Z3CQJD7Q4D": "2026-08-06T13:00:00.000Z",
+        "01KZA2T3ZHH6G6Q1Z3CQJD7Q4D/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/aeo/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/aeo": "2026-08-06T13:00:00.000Z",
+        "01KZA0G6ZQF7ZGG8EJ2VPCFY2B": "2026-08-06T13:00:00.000Z",
+        "01KZA0G6ZQF7ZGG8EJ2VPCFY2B/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/the-agentic-internet/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/the-agentic-internet": "2026-08-06T13:00:00.000Z",
+        "01KZ9Z9511J0G655EQ0XMSVWQV": "2026-08-06T13:00:00.000Z",
+        "01KZ9Z9511J0G655EQ0XMSVWQV/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/kitesurf/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/kitesurf": "2026-08-06T13:00:00.000Z",
+        "01KZ9RBPN3JAYNT28NNJH6K9QJ": "2026-08-06T13:00:00.000Z",
+        "01KZ9RBPN3JAYNT28NNJH6K9QJ/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/webmcp/": "2026-08-06T13:00:00.000Z",
+        "https://blog.cloudflare.com/webmcp": "2026-08-06T13:00:00.000Z"
       }
     }
   }
