@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-07T02:10:31.721Z",
+      "lastChecked": "2026-08-08T00:58:14.972Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -550,11 +550,13 @@
         "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals": "2026-07-30T00:00:00.000Z",
         "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals/": "2026-07-30T00:00:00.000Z",
         "https://www.anthropic.com/news/tino-cuellar": "2026-08-04T00:00:00.000Z",
-        "https://www.anthropic.com/news/tino-cuellar/": "2026-08-04T00:00:00.000Z"
+        "https://www.anthropic.com/news/tino-cuellar/": "2026-08-04T00:00:00.000Z",
+        "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": "2026-08-07T00:00:00.000Z",
+        "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards/": "2026-08-07T00:00:00.000Z"
       }
     },
     "openai": {
-      "lastChecked": "2026-08-07T02:10:31.701Z",
+      "lastChecked": "2026-08-08T00:58:15.051Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2870,11 +2872,15 @@
         "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai": "2026-08-06T06:00:00.000Z",
         "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai/": "2026-08-06T06:00:00.000Z",
         "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work": "2026-08-06T00:00:00.000Z",
-        "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work/": "2026-08-06T00:00:00.000Z"
+        "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work/": "2026-08-06T00:00:00.000Z",
+        "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities": "2026-08-07T15:20:00.000Z",
+        "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/": "2026-08-07T15:20:00.000Z",
+        "https://openai.com/index/hsp-gruppe": "2026-08-07T09:00:00.000Z",
+        "https://openai.com/index/hsp-gruppe/": "2026-08-07T09:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-07T02:10:31.635Z",
+      "lastChecked": "2026-08-08T00:58:14.984Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3261,7 +3267,23 @@
         "01KZ9RBPN3JAYNT28NNJH6K9QJ": "2026-08-06T13:00:00.000Z",
         "01KZ9RBPN3JAYNT28NNJH6K9QJ/": "2026-08-06T13:00:00.000Z",
         "https://blog.cloudflare.com/webmcp/": "2026-08-06T13:00:00.000Z",
-        "https://blog.cloudflare.com/webmcp": "2026-08-06T13:00:00.000Z"
+        "https://blog.cloudflare.com/webmcp": "2026-08-06T13:00:00.000Z",
+        "01KZCHBWNB93JTTPTBKQZF0SG9": "2026-08-07T13:01:00.000Z",
+        "01KZCHBWNB93JTTPTBKQZF0SG9/": "2026-08-07T13:01:00.000Z",
+        "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/": "2026-08-07T13:01:00.000Z",
+        "https://blog.cloudflare.com/good-and-bad-agentic-behaviors": "2026-08-07T13:01:00.000Z",
+        "01KZCGVT7YXBW6BH8Y05159WAR": "2026-08-07T13:00:00.000Z",
+        "01KZCGVT7YXBW6BH8Y05159WAR/": "2026-08-07T13:00:00.000Z",
+        "https://blog.cloudflare.com/introducing-radar-researcher/": "2026-08-07T13:00:00.000Z",
+        "https://blog.cloudflare.com/introducing-radar-researcher": "2026-08-07T13:00:00.000Z",
+        "01KZCB7QVKW1EKYJAYCVTDKH4K": "2026-08-07T13:00:00.000Z",
+        "01KZCB7QVKW1EKYJAYCVTDKH4K/": "2026-08-07T13:00:00.000Z",
+        "https://blog.cloudflare.com/community-program-refresh/": "2026-08-07T13:00:00.000Z",
+        "https://blog.cloudflare.com/community-program-refresh": "2026-08-07T13:00:00.000Z",
+        "01KZA4HFQTZ276N6FJQ3CS9ACG": "2026-08-07T13:00:00.000Z",
+        "01KZA4HFQTZ276N6FJQ3CS9ACG/": "2026-08-07T13:00:00.000Z",
+        "https://blog.cloudflare.com/workers-ai-gateway-unification/": "2026-08-07T13:00:00.000Z",
+        "https://blog.cloudflare.com/workers-ai-gateway-unification": "2026-08-07T13:00:00.000Z"
       }
     }
   }
