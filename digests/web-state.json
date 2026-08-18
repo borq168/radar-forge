@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-17T03:50:55.625Z",
+      "lastChecked": "2026-08-18T00:42:12.534Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -558,7 +558,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-08-17T03:50:55.615Z",
+      "lastChecked": "2026-08-18T00:42:12.507Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2912,11 +2912,17 @@
         "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex": "2026-07-14T00:00:00.000Z",
         "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex/": "2026-07-14T00:00:00.000Z",
         "https://openai.com/academy/chatgpt-work/how-business-operations-teams-use-codex": "2026-05-15T00:00:00.000Z",
-        "https://openai.com/academy/chatgpt-work/how-business-operations-teams-use-codex/": "2026-05-15T00:00:00.000Z"
+        "https://openai.com/academy/chatgpt-work/how-business-operations-teams-use-codex/": "2026-05-15T00:00:00.000Z",
+        "https://openai.com/index/the-defenders-window": "2026-08-17T05:30:00.000Z",
+        "https://openai.com/index/the-defenders-window/": "2026-08-17T05:30:00.000Z",
+        "https://openai.com/index/openai-joins-ports-pike-project": "2026-08-17T05:00:00.000Z",
+        "https://openai.com/index/openai-joins-ports-pike-project/": "2026-08-17T05:00:00.000Z",
+        "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T03:15:00.000Z",
+        "https://openai.com/index/new-policy-ideas-for-the-intelligence-age/": "2026-08-17T03:15:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-17T03:50:55.550Z",
+      "lastChecked": "2026-08-18T00:42:12.522Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
