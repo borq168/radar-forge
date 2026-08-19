@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-18T00:42:12.534Z",
+      "lastChecked": "2026-08-19T00:42:28.646Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -558,7 +558,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-08-18T00:42:12.507Z",
+      "lastChecked": "2026-08-19T00:42:28.726Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2918,11 +2918,23 @@
         "https://openai.com/index/openai-joins-ports-pike-project": "2026-08-17T05:00:00.000Z",
         "https://openai.com/index/openai-joins-ports-pike-project/": "2026-08-17T05:00:00.000Z",
         "https://openai.com/index/new-policy-ideas-for-the-intelligence-age": "2026-08-17T03:15:00.000Z",
-        "https://openai.com/index/new-policy-ideas-for-the-intelligence-age/": "2026-08-17T03:15:00.000Z"
+        "https://openai.com/index/new-policy-ideas-for-the-intelligence-age/": "2026-08-17T03:15:00.000Z",
+        "https://openai.com/index/strengthening-democratic-oversight-in-national-security": "2026-08-18T19:00:00.000Z",
+        "https://openai.com/index/strengthening-democratic-oversight-in-national-security/": "2026-08-18T19:00:00.000Z",
+        "https://openai.com/index/partnering-with-codeai": "2026-08-18T11:00:00.000Z",
+        "https://openai.com/index/partnering-with-codeai/": "2026-08-18T11:00:00.000Z",
+        "https://openai.com/index/pacing-model-development-cyber-capabilities": "2026-08-18T11:00:00.000Z",
+        "https://openai.com/index/pacing-model-development-cyber-capabilities/": "2026-08-18T11:00:00.000Z",
+        "https://openai.com/index/chatgpt-for-teens": "2026-08-18T11:00:00.000Z",
+        "https://openai.com/index/chatgpt-for-teens/": "2026-08-18T11:00:00.000Z",
+        "https://openai.com/index/asana": "2026-08-18T07:00:00.000Z",
+        "https://openai.com/index/asana/": "2026-08-18T07:00:00.000Z",
+        "https://openai.com/index/nvidia/chatgpt-work": "2026-08-18T00:00:00.000Z",
+        "https://openai.com/index/nvidia/chatgpt-work/": "2026-08-18T00:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-18T00:42:12.522Z",
+      "lastChecked": "2026-08-19T00:42:28.663Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3353,7 +3365,11 @@
         "01KZQNDKFVX2ZXMBEHCJJHFH8N": "2026-08-11T13:00:00.000Z",
         "01KZQNDKFVX2ZXMBEHCJJHFH8N/": "2026-08-11T13:00:00.000Z",
         "https://blog.cloudflare.com/ddos-threat-report-2026-h1/": "2026-08-11T13:00:00.000Z",
-        "https://blog.cloudflare.com/ddos-threat-report-2026-h1": "2026-08-11T13:00:00.000Z"
+        "https://blog.cloudflare.com/ddos-threat-report-2026-h1": "2026-08-11T13:00:00.000Z",
+        "01M0ANY0TKGXDWAN9C58T3A1HR": "2026-08-18T15:21:32.000Z",
+        "01M0ANY0TKGXDWAN9C58T3A1HR/": "2026-08-18T15:21:32.000Z",
+        "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-18T15:21:32.000Z",
+        "https://blog.cloudflare.com/rfc9234-bgp-role-model": "2026-08-18T15:21:32.000Z"
       }
     }
   }
