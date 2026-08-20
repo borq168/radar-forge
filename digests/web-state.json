@@ -1,7 +1,7 @@
 {
   "sources": {
     "anthropic": {
-      "lastChecked": "2026-08-19T00:42:28.646Z",
+      "lastChecked": "2026-08-20T00:42:15.772Z",
       "seenUrls": {
         "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-24T00:00:00.000Z",
         "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -558,7 +558,7 @@
       }
     },
     "openai": {
-      "lastChecked": "2026-08-19T00:42:28.726Z",
+      "lastChecked": "2026-08-20T00:42:15.745Z",
       "seenUrls": {
         "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-24T13:40:00.000Z",
         "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2024-12-09T00:00:00.000Z",
@@ -2930,11 +2930,17 @@
         "https://openai.com/index/asana": "2026-08-18T07:00:00.000Z",
         "https://openai.com/index/asana/": "2026-08-18T07:00:00.000Z",
         "https://openai.com/index/nvidia/chatgpt-work": "2026-08-18T00:00:00.000Z",
-        "https://openai.com/index/nvidia/chatgpt-work/": "2026-08-18T00:00:00.000Z"
+        "https://openai.com/index/nvidia/chatgpt-work/": "2026-08-18T00:00:00.000Z",
+        "https://openai.com/index/offering-zero-data-retention-for-frontier-models": "2026-08-19T19:00:00.000Z",
+        "https://openai.com/index/offering-zero-data-retention-for-frontier-models/": "2026-08-19T19:00:00.000Z",
+        "https://openai.com/index/replit": "2026-08-19T07:00:00.000Z",
+        "https://openai.com/index/replit/": "2026-08-19T07:00:00.000Z",
+        "https://openai.com/index/chatgpt-ads-expands-across-europe": "2026-08-18T22:00:00.000Z",
+        "https://openai.com/index/chatgpt-ads-expands-across-europe/": "2026-08-18T22:00:00.000Z"
       }
     },
     "cloudflare-blog": {
-      "lastChecked": "2026-08-19T00:42:28.663Z",
+      "lastChecked": "2026-08-20T00:42:15.762Z",
       "seenUrls": {
         "6EfXlJEx6OJ21w9NlnS59D": "2026-05-01T21:07:30.000Z",
         "https://blog.cloudflare.com/code-orange-fail-small-complete/": "2026-05-01T21:07:30.000Z",
@@ -3369,7 +3375,11 @@
         "01M0ANY0TKGXDWAN9C58T3A1HR": "2026-08-18T15:21:32.000Z",
         "01M0ANY0TKGXDWAN9C58T3A1HR/": "2026-08-18T15:21:32.000Z",
         "https://blog.cloudflare.com/rfc9234-bgp-role-model/": "2026-08-18T15:21:32.000Z",
-        "https://blog.cloudflare.com/rfc9234-bgp-role-model": "2026-08-18T15:21:32.000Z"
+        "https://blog.cloudflare.com/rfc9234-bgp-role-model": "2026-08-18T15:21:32.000Z",
+        "01M00Y54SDH5EBZBFJ1FQZ2BX9": "2026-08-19T16:00:28.000Z",
+        "01M00Y54SDH5EBZBFJ1FQZ2BX9/": "2026-08-19T16:00:28.000Z",
+        "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/": "2026-08-19T16:00:28.000Z",
+        "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers": "2026-08-19T16:00:28.000Z"
       }
     }
   }
